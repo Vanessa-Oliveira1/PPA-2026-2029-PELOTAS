@@ -1,20 +1,29 @@
-<h2>Fale Conosco</h2>
-<p>Envie uma mensagem para nossa equipe via WhatsApp:</p>
-<form onsubmit="enviarMensagem(event)">
+
+<h2>Fale com a Secretaria</h2>
+<form onsubmit="enviar(event)">
   <label>Seu nome:</label><br>
   <input type="text" id="nome" required><br><br>
+  <label>Secretaria:</label><br>
+  <select id="secretaria" required>
+    <option value="Prefeitura">Gabinete</option>
+    <option value="Saude">Saúde</option>
+  </select><br><br>
   <label>Mensagem:</label><br>
   <textarea id="mensagem" rows="4" required></textarea><br><br>
   <button type="submit">Enviar pelo WhatsApp</button>
 </form>
-
 <script>
-function enviarMensagem(e) {
+const contatos = {
+  "Prefeitura": "555199999999",
+  "Saude": "555198888888"
+};
+function enviar(e) {
   e.preventDefault();
-  const nome = document.getElementById('nome').value;
-  const msg = document.getElementById('mensagem').value;
-  const texto = encodeURIComponent(`Olá, meu nome é ${nome}. ${msg}`);
-  const url = `https://wa.me/5551999999999?text=${texto}`;
-  window.open(url, '_blank');
+  const nome = document.getElementById("nome").value;
+  const secretaria = document.getElementById("secretaria").value;
+  const mensagem = document.getElementById("mensagem").value;
+  const tel = contatos[secretaria];
+  const texto = encodeURIComponent(`Olá, sou ${nome}. ${mensagem}`);
+  window.open(`https://wa.me/${tel}?text=${texto}`, '_blank');
 }
 </script>

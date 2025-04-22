@@ -1,36 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>PPA Pelotas 2026-2029</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
   <header class="topo">
-    <img src="https://drive.google.com/uc?export=view&id=1Q0B7U6Z0_ColjB8Bteb-Dger5URmR7TV" alt="Logo Prefeitura">
-    <h1>Plano Plurianual 2026-2029, Pelotas/RS</h1>
-    <img src="https://drive.google.com/uc?export=view&id=1G_Ds48FaNIZ8KQahw56-CVvaNkqOtHlV" alt="Logo SEPLAG">
+    <img src="img/logo_prefeitura.png" alt="Prefeitura">
+    <h1>Plano Plurianual 2026-2029</h1>
+    <img src="img/logo_seplag.png" alt="SEPLAG">
   </header>
 
   <nav class="menu-lateral">
     <button onclick="carregar('index.html')">🏠</button>
     <button onclick="carregar('construcao.html')">📊</button>
-    <button onclick="carregar('contato.html')">💬</button>
+    <button onclick="carregar('contato.html')">📲</button>
   </nav>
 
   <main class="conteudo" id="conteudo-principal">
-    <h2>Bem-vindo ao PPA Participativo</h2>
-    <p>Escolha uma seção no menu à esquerda.</p>
+    <h2>Objetivos de Desenvolvimento Sustentável</h2>
+    <div class="ods-grid">
+      <!-- 17 ODS -->
+      <div class="ods-item"><img src="img/ods/1.png" alt="ODS 1"><span>ODS 1</span></div><div class="ods-item"><img src="img/ods/2.png" alt="ODS 2"><span>ODS 2</span></div><div class="ods-item"><img src="img/ods/3.png" alt="ODS 3"><span>ODS 3</span></div><div class="ods-item"><img src="img/ods/4.png" alt="ODS 4"><span>ODS 4</span></div><div class="ods-item"><img src="img/ods/5.png" alt="ODS 5"><span>ODS 5</span></div><div class="ods-item"><img src="img/ods/6.png" alt="ODS 6"><span>ODS 6</span></div><div class="ods-item"><img src="img/ods/7.png" alt="ODS 7"><span>ODS 7</span></div><div class="ods-item"><img src="img/ods/8.png" alt="ODS 8"><span>ODS 8</span></div><div class="ods-item"><img src="img/ods/9.png" alt="ODS 9"><span>ODS 9</span></div><div class="ods-item"><img src="img/ods/10.png" alt="ODS 10"><span>ODS 10</span></div><div class="ods-item"><img src="img/ods/11.png" alt="ODS 11"><span>ODS 11</span></div><div class="ods-item"><img src="img/ods/12.png" alt="ODS 12"><span>ODS 12</span></div><div class="ods-item"><img src="img/ods/13.png" alt="ODS 13"><span>ODS 13</span></div><div class="ods-item"><img src="img/ods/14.png" alt="ODS 14"><span>ODS 14</span></div><div class="ods-item"><img src="img/ods/15.png" alt="ODS 15"><span>ODS 15</span></div><div class="ods-item"><img src="img/ods/16.png" alt="ODS 16"><span>ODS 16</span></div><div class="ods-item"><img src="img/ods/17.png" alt="ODS 17"><span>ODS 17</span></div>
+    </div>
   </main>
 
   <script>
     function carregar(pagina) {
-      fetch(pagina)
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById('conteudo-principal').innerHTML = html;
-        });
+      fetch(pagina).then(r => r.text()).then(html => {
+        document.getElementById("conteudo-principal").innerHTML = html;
+      });
     }
   </script>
 </body>
