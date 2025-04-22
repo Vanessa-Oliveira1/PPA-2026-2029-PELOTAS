@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>PPA Pelotas 2026-2029</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <img src="https://drive.google.com/uc?export=view&id=1Q0B7U6Z0_ColjB8Bteb-Dger5URmR7TV" alt="Logo Prefeitura">
+    <h1>Plano Plurianual 2026-2029, Pelotas/RS</h1>
+    <img src="https://drive.google.com/uc?export=view&id=1G_Ds48FaNIZ8KQahw56-CVvaNkqOtHlV" alt="Logo SEPLAG">
+  </header>
+
+  <nav class="menu-lateral">
+    <button onclick="carregar('index.html')">🏠</button>
+    <button onclick="carregar('construcao.html')">📊</button>
+    <button onclick="carregar('contato.html')">💬</button>
+  </nav>
+
+  <main class="conteudo" id="conteudo-principal">
+    <h2>Bem-vindo ao PPA Participativo</h2>
+    <p>Escolha uma seção no menu à esquerda.</p>
+  </main>
+
+  <script>
+    function carregar(pagina) {
+      fetch(pagina)
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('conteudo-principal').innerHTML = html;
+        });
+    }
+  </script>
+</body>
+</html>

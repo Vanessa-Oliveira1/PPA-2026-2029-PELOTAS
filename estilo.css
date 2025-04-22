@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+}
+.topo {
+  background-color: #4CB2FF;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topo img {
+  height: 50px;
+}
+.menu-lateral {
+  position: fixed;
+  left: 0;
+  top: 80px;
+  width: 60px;
+  background: #fff;
+  border-right: 1px solid #ccc;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-lateral button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+.conteudo {
+  margin-left: 80px;
+  padding: 20px;
+}

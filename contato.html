@@ -1,0 +1,20 @@
+<h2>Fale Conosco</h2>
+<p>Envie uma mensagem para nossa equipe via WhatsApp:</p>
+<form onsubmit="enviarMensagem(event)">
+  <label>Seu nome:</label><br>
+  <input type="text" id="nome" required><br><br>
+  <label>Mensagem:</label><br>
+  <textarea id="mensagem" rows="4" required></textarea><br><br>
+  <button type="submit">Enviar pelo WhatsApp</button>
+</form>
+
+<script>
+function enviarMensagem(e) {
+  e.preventDefault();
+  const nome = document.getElementById('nome').value;
+  const msg = document.getElementById('mensagem').value;
+  const texto = encodeURIComponent(`Olá, meu nome é ${nome}. ${msg}`);
+  const url = `https://wa.me/5551999999999?text=${texto}`;
+  window.open(url, '_blank');
+}
+</script>
