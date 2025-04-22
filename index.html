@@ -1,4 +1,4 @@
-
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,21 +12,34 @@
     <h1>Plano Plurianual 2026-2029</h1>
     <img src="img/logo_seplag.png" alt="SEPLAG">
   </header>
-
   <nav class="menu-lateral">
     <button onclick="carregar('index.html')">🏠</button>
     <button onclick="carregar('construcao.html')">📊</button>
     <button onclick="carregar('contato.html')">📲</button>
   </nav>
-
   <main class="conteudo" id="conteudo-principal">
     <h2>Objetivos de Desenvolvimento Sustentável</h2>
     <div class="ods-grid">
       <!-- 17 ODS -->
-      <div class="ods-item"><img src="img/ods/1.png" alt="ODS 1"><span>ODS 1</span></div><div class="ods-item"><img src="img/ods/2.png" alt="ODS 2"><span>ODS 2</span></div><div class="ods-item"><img src="img/ods/3.png" alt="ODS 3"><span>ODS 3</span></div><div class="ods-item"><img src="img/ods/4.png" alt="ODS 4"><span>ODS 4</span></div><div class="ods-item"><img src="img/ods/5.png" alt="ODS 5"><span>ODS 5</span></div><div class="ods-item"><img src="img/ods/6.png" alt="ODS 6"><span>ODS 6</span></div><div class="ods-item"><img src="img/ods/7.png" alt="ODS 7"><span>ODS 7</span></div><div class="ods-item"><img src="img/ods/8.png" alt="ODS 8"><span>ODS 8</span></div><div class="ods-item"><img src="img/ods/9.png" alt="ODS 9"><span>ODS 9</span></div><div class="ods-item"><img src="img/ods/10.png" alt="ODS 10"><span>ODS 10</span></div><div class="ods-item"><img src="img/ods/11.png" alt="ODS 11"><span>ODS 11</span></div><div class="ods-item"><img src="img/ods/12.png" alt="ODS 12"><span>ODS 12</span></div><div class="ods-item"><img src="img/ods/13.png" alt="ODS 13"><span>ODS 13</span></div><div class="ods-item"><img src="img/ods/14.png" alt="ODS 14"><span>ODS 14</span></div><div class="ods-item"><img src="img/ods/15.png" alt="ODS 15"><span>ODS 15</span></div><div class="ods-item"><img src="img/ods/16.png" alt="ODS 16"><span>ODS 16</span></div><div class="ods-item"><img src="img/ods/17.png" alt="ODS 17"><span>ODS 17</span></div>
+      <div class="ods-item"><img src="img/ods/1.png"><span><strong>ODS 1</strong><br>Erradicar a pobreza</span></div>
+      <div class="ods-item"><img src="img/ods/2.png"><span><strong>ODS 2</strong><br>Fome zero e agricultura sustentável</span></div>
+      <div class="ods-item"><img src="img/ods/3.png"><span><strong>ODS 3</strong><br>Saúde e bem-estar</span></div>
+      <div class="ods-item"><img src="img/ods/4.png"><span><strong>ODS 4</strong><br>Educação de qualidade</span></div>
+      <div class="ods-item"><img src="img/ods/5.png"><span><strong>ODS 5</strong><br>Igualdade de gênero</span></div>
+      <div class="ods-item"><img src="img/ods/6.png"><span><strong>ODS 6</strong><br>Água potável e saneamento</span></div>
+      <div class="ods-item"><img src="img/ods/7.png"><span><strong>ODS 7</strong><br>Energia acessível e limpa</span></div>
+      <div class="ods-item"><img src="img/ods/8.png"><span><strong>ODS 8</strong><br>Trabalho decente e crescimento econômico</span></div>
+      <div class="ods-item"><img src="img/ods/9.png"><span><strong>ODS 9</strong><br>Indústria, inovação e infraestrutura</span></div>
+      <div class="ods-item"><img src="img/ods/10.png"><span><strong>ODS 10</strong><br>Redução das desigualdades</span></div>
+      <div class="ods-item"><img src="img/ods/11.png"><span><strong>ODS 11</strong><br>Cidades e comunidades sustentáveis</span></div>
+      <div class="ods-item"><img src="img/ods/12.png"><span><strong>ODS 12</strong><br>Consumo e produção responsáveis</span></div>
+      <div class="ods-item"><img src="img/ods/13.png"><span><strong>ODS 13</strong><br>Ação contra a mudança global do clima</span></div>
+      <div class="ods-item"><img src="img/ods/14.png"><span><strong>ODS 14</strong><br>Vida na água</span></div>
+      <div class="ods-item"><img src="img/ods/15.png"><span><strong>ODS 15</strong><br>Vida terrestre</span></div>
+      <div class="ods-item"><img src="img/ods/16.png"><span><strong>ODS 16</strong><br>Paz, justiça e instituições eficazes</span></div>
+      <div class="ods-item"><img src="img/ods/17.png"><span><strong>ODS 17</strong><br>Parcerias e meios de implementação</span></div>
     </div>
   </main>
-
   <script>
     function carregar(pagina) {
       fetch(pagina).then(r => r.text()).then(html => {
