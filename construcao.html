@@ -1,11 +1,105 @@
+<!-- construcao.html -->
+<h2>Construção do Plano Plurianual</h2>
+<p>Aqui estão todos os eixos, objetivos estratégicos, programas, justificativas e ODS vinculadas do PPA 2026-2029:</p>
 
-<h2>Construção do PPA</h2>
-<div class="eixo">
-  <button onclick="document.getElementById('e1').classList.toggle('hidden')">Eixo 1 - Justiça Social</button>
-  <div id="e1" class="">
-    <p><strong>Objetivo 1.1:</strong> Participação popular</p>
-    <p><strong>Programa 1.1.1:</strong> Gestão Participativa</p>
-  </div>
-</div>
-<h3>Cronograma</h3>
-<img src="img/cronograma.png" alt="Cronograma" style="width: 100%; max-width: 800px;">
+<div id="ppa-estrutura"></div>
+
+<h3 style="margin-top: 40px;">Cronograma</h3>
+<ul>
+  <li><strong>Formalizar Comissão:</strong> 07/04 a 10/04</li>
+  <li><strong>Formação e envio de formulários:</strong> 11/04</li>
+  <li><strong>Construção pelas Secretarias:</strong> 11/04 a 12/05</li>
+  <li><strong>Validação pelo Prefeito:</strong> 12/05 a 30/05</li>
+  <li><strong>Envio ao Legislativo:</strong> Limite 31/07</li>
+  <li><strong>Construção da LDO e LOA:</strong> 31/07 a 30/10</li>
+  <li><strong>Envio da LDO:</strong> Limite 15/09</li>
+  <li><strong>Envio da LOA:</strong> Limite 15/11</li>
+</ul>
+
+<script>
+const dados = [
+  {
+    eixo: "Eixo 1. Democracia e Justiça Social",
+    objetivos: [
+      {
+        nome: "Objetivo 1.1. Fortalecer a participação social",
+        programas: [
+          {
+            nome: "Programa 1.1.1. Gestão Participativa",
+            justificativa: "Promover canais efetivos de participação social e transparência.",
+            objetivoPrograma: "Instituir plataformas e instâncias de escuta e deliberação social.",
+            ods: [16, 17]
+          }
+        ]
+      }
+    ]
+  }
+  // Aqui incluirão os demais eixos com base na planilha
+];
+
+function renderODS(odsArray) {
+  return `<div class="ods-programa">` +
+    odsArray.map(o => `
+      <img src="https://odsbrasil.gov.br/content/ods/${o}.png" alt="ODS ${o}" title="ODS ${o}" style="width:30px; height:30px; margin-right:5px;">
+    `).join('') + `</div>`;
+}
+
+function renderEstrutura(dados) {
+  let html = "";
+  dados.forEach(eixo => {
+    html += `<div class="eixo-box">
+      <button class="eixo-btn" onclick="toggle('${eixo.eixo}')">📊 ${eixo.eixo}</button>
+      <div id="${eixo.eixo}" style="display:none; margin-left: 20px;">`;
+
+    eixo.objetivos.forEach(obj => {
+      html += `<div class="objetivo-box">
+        <button class="objetivo-btn" onclick="toggle('${obj.nome}')">🎯 ${obj.nome}</button>
+        <div id="${obj.nome}" style="display:none; margin-left: 20px;">`;
+
+      obj.programas.forEach(p => {
+        html += `<div class="programa-box" style="margin-bottom:10px;">
+          <p><strong>Programa:</strong> ${p.nome}</p>
+          <p><strong>Justificativa:</strong> ${p.justificativa}</p>
+          <p><strong>Objetivo do Programa:</strong> ${p.objetivoPrograma}</p>
+          ${renderODS(p.ods)}
+        </div>`;
+      });
+
+      html += `</div></div>`;
+    });
+
+    html += `</div></div>`;
+  });
+
+  document.getElementById("ppa-estrutura").innerHTML = html;
+}
+
+function toggle(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+}
+
+renderEstrutura(dados);
+</script>
+
+<style>
+.eixo-btn, .objetivo-btn {
+  background-color: #e1f5fe;
+  border: 1px solid #90caf9;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+.programa-box {
+  background: #f9f9f9;
+  border-left: 4px solid #4CB2FF;
+  padding: 10px;
+  border-radius: 6px;
+}
+.ods-programa img {
+  vertical-align: middle;
+}
+</style>
