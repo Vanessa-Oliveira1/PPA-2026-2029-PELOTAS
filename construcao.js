@@ -75,7 +75,7 @@ fetch('estrutura_ppa_2026_2029.json')
           event.stopPropagation();
           const isOpen = objContent.style.display === 'block';
           objContent.style.display = isOpen ? 'none' : 'block';
-          objBtn.textContent = isOpen ? 'Ver Programas' : 'Oculta Programa';
+          objBtn.textContent = isOpen ? 'Ver Programas' : 'Ocultar Programas';
         };
 
         obj.programas.forEach(prog => {
