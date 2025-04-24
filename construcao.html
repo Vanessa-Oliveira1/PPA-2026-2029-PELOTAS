@@ -1,126 +1,100 @@
-<!-- construcao.html -->
-<div class="construcao-container">
-  <h2>Construção do PPA</h2>
-  <p>Aqui estão os eixos, objetivos estratégicos, programas e suas informações detalhadas:</p>
-
-  <div id="estruturaPPA"></div>
-
-  <h3>Cronograma</h3>
-  <img src="img/cronograma_ppa.png" alt="Cronograma" class="cronograma-img">
-</div>
-
-<script>
-fetch('dados/estrutura_completa.json')
-  .then(response => response.json())
-  .then(dados => {
-    const container = document.getElementById('estruturaPPA');
-    const eixosMap = new Map();
-
-    // Organiza os dados por eixo > objetivo > programa
-    dados.forEach(item => {
-      const eixoId = item["ID EIXO"];
-      const eixoNome = item["EIXO"];
-      const objetivoId = item["ID OBJETIVO"];
-      const objetivoNome = item["OBJETIVO ESTRATEGICO"];
-      const programaId = item["ID PROGRAMA"];
-      const programaNome = item["PROGRAMA"];
-      const justificativa = item["JUSTIFICATIVA"];
-      const objetivoPrograma = item["OBJETIVO DO PROGRAMA"];
-      const ods = item["ODS_PROGRAMAS"];
-
-      if (!eixosMap.has(eixoId)) {
-        eixosMap.set(eixoId, {
-          nome: eixoNome,
-          objetivos: new Map()
-        });
-      }
-
-      const eixo = eixosMap.get(eixoId);
-
-      if (!eixo.objetivos.has(objetivoId)) {
-        eixo.objetivos.set(objetivoId, {
-          nome: objetivoNome,
-          programas: []
-        });
-      }
-
-      eixo.objetivos.get(objetivoId).programas.push({
-        id: programaId,
-        nome: programaNome,
-        justificativa: justificativa,
-        objetivo: objetivoPrograma,
-        ods: ods
-      });
-    });
-
-    // Gera o HTML
-    eixosMap.forEach((eixo, eixoId) => {
-      const eixoDiv = document.createElement('div');
-      eixoDiv.classList.add('eixo-box');
-      eixoDiv.innerHTML = `<button class="eixo-btn" onclick="this.nextElementSibling.classList.toggle('ativo')">${eixoId} - ${eixo.nome}</button>`;
-
-      const objetivosContainer = document.createElement('div');
-      objetivosContainer.classList.add('objetivos-container');
-
-      eixo.objetivos.forEach((objetivo, objetivoId) => {
-        const objetivoDiv = document.createElement('div');
-        objetivoDiv.classList.add('objetivo-box');
-        objetivoDiv.innerHTML = `<h4>${objetivoId} - ${objetivo.nome}</h4>`;
-
-        objetivo.programas.forEach(programa => {
-          const progDiv = document.createElement('div');
-          progDiv.classList.add('programa-box');
-          progDiv.innerHTML = `
-            <p><strong>${programa.id}</strong> - ${programa.nome}</p>
-            <p><em>Justificativa:</em> ${programa.justificativa}</p>
-            <p><em>Objetivo do Programa:</em> ${programa.objetivo}</p>
-            <p><em>ODS:</em> ${programa.ods}</p>
-          `;
-          objetivoDiv.appendChild(progDiv);
-        });
-
-        objetivosContainer.appendChild(objetivoDiv);
-      });
-
-      eixoDiv.appendChild(objetivosContainer);
-      container.appendChild(eixoDiv);
-    });
-  });
-</script>
+<section id="construcao" class="conteudo">
+  <h1>Construção do PPA 2026–2029</h1>
+  <div id="estrutura-container"></div>
+</section>
 
 <style>
-  .construcao-container {
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
+  .eixo, .objetivo, .programa {
+    margin: 10px 0;
+    border-left: 4px solid #ccc;
+    padding-left: 10px;
   }
-  .eixo-box { margin-bottom: 20px; }
-  .eixo-btn {
-    background: #0043ce;
-    color: white;
-    padding: 10px;
-    border: none;
-    width: 100%;
-    text-align: left;
-    font-size: 16px;
+
+  .eixo > h2, .objetivo > h3, .programa > h4 {
     cursor: pointer;
-    border-radius: 4px;
+    margin: 8px 0;
   }
-  .objetivos-container { display: none; padding: 10px; background: #f2f2f2; }
-  .objetivos-container.ativo { display: block; }
-  .objetivo-box { margin-top: 10px; }
-  .programa-box {
-    padding: 8px;
-    border: 1px solid #ccc;
-    background: #fff;
-    margin-top: 5px;
-    border-radius: 4px;
+
+  .objetivo, .programa {
+    display: none;
   }
-  .cronograma-img {
-    width: 100%;
-    max-width: 700px;
-    margin-top: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+
+  .ods-icon {
+    height: 24px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  .meta-info {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 10px;
+  }
+
+  h1 {
+    color: #0043ce;
+    margin-bottom: 20px;
   }
 </style>
+
+<script>
+  fetch('estrutura_ppa_2026_2029.json')
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('estrutura-container');
+
+      data.forEach(eixo => {
+        const eixoDiv = document.createElement('div');
+        eixoDiv.classList.add('eixo');
+
+        const totalObj = eixo.objetivos.length;
+        const totalProg = eixo.objetivos.reduce((soma, obj) => soma + obj.programas.length, 0);
+
+        eixoDiv.innerHTML = `<h2>${eixo.nome}
+          <span class="meta-info">(${totalObj} objetivos, ${totalProg} programas)</span></h2>`;
+
+        eixo.objetivos.forEach(obj => {
+          const objDiv = document.createElement('div');
+          objDiv.classList.add('objetivo');
+
+          objDiv.innerHTML = `<h3>${obj.nome}
+            <span class="meta-info">(${obj.programas.length} programas)</span></h3>`;
+
+          obj.programas.forEach(prog => {
+            const progDiv = document.createElement('div');
+            progDiv.classList.add('programa');
+
+            const odsIcons = prog.ods.map(ods =>
+              `<img src="https://odsbrasil.gov.br/images/ods/ods${ods}.png" alt="ODS ${ods}" class="ods-icon">`).join('');
+
+            progDiv.innerHTML = `
+              <h4>${prog.nome}</h4>
+              <p><strong>Justificativa:</strong> ${prog.justificativa}</p>
+              <p><strong>Objetivo do Programa:</strong> ${prog.objetivo_programa}</p>
+              <p><strong>ODS:</strong> ${odsIcons}</p>
+            `;
+            objDiv.appendChild(progDiv);
+          });
+
+          eixoDiv.appendChild(objDiv);
+        });
+
+        container.appendChild(eixoDiv);
+      });
+
+      // Interatividade: abrir/fechar seções
+      container.addEventListener('click', (e) => {
+        if (e.target.tagName === 'H2') {
+          const objetivos = e.target.parentElement.querySelectorAll('.objetivo');
+          objetivos.forEach(o => o.style.display = o.style.display === 'block' ? 'none' : 'block');
+        }
+        if (e.target.tagName === 'H3') {
+          const programas = e.target.parentElement.querySelectorAll('.programa');
+          programas.forEach(p => p.style.display = p.style.display === 'block' ? 'none' : 'block');
+        }
+      });
+    })
+    .catch(error => {
+      console.error("Erro ao carregar dados da construção:", error);
+    });
+</script>
