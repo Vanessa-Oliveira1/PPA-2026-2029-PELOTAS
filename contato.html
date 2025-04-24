@@ -3,7 +3,7 @@
   <p>Escolha a secretaria e envie sua mensagem diretamente pelo WhatsApp.</p>
 
   <label for="secretaria">Secretaria:</label>
-  <select id="secretaria" size="10" style="padding: 10px; width: 100%; margin-bottom: 15px; overflow-y: auto;">
+  <select id="secretaria" style="padding: 10px; width: 100%; margin-bottom: 15px; max-height: 220px; overflow-y: auto;">
     <option value="">Selecione uma secretaria</option>
   </select>
 
@@ -22,7 +22,7 @@
   fetch('secretarias.json')
     .then(response => response.json())
     .then(data => {
-      console.log("Secretarias carregadas:", data); // para debug
+      console.log("Secretarias carregadas:", data);
       secretariasData = data;
       const select = document.getElementById("secretaria");
       data.forEach(sec => {
