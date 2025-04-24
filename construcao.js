@@ -40,7 +40,8 @@ fetch('estrutura_ppa_2026_2029.json')
       eixoBtn.style.borderRadius = '6px';
       eixoBtn.style.cursor = 'pointer';
 
-      eixoBtn.onclick = () => {
+      eixoBtn.onclick = (event) => {
+        event.stopPropagation();  // evita conflito com clique interno
         const isOpen = eixoContent.style.display === 'block';
         eixoContent.style.display = isOpen ? 'none' : 'block';
         eixoBtn.textContent = isOpen ? 'Ver Objetivos' : 'Ocultar Objetivos';
@@ -70,7 +71,8 @@ fetch('estrutura_ppa_2026_2029.json')
         objBtn.style.backgroundColor = '#ffffff';
         objBtn.style.cursor = 'pointer';
 
-        objBtn.onclick = () => {
+        objBtn.onclick = (event) => {
+          event.stopPropagation();  // evita conflito com clique no eixo
           const isOpen = objContent.style.display === 'block';
           objContent.style.display = isOpen ? 'none' : 'block';
           objBtn.textContent = isOpen ? 'Ver Programas' : 'Ocultar Programas';
