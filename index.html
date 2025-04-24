@@ -10,10 +10,12 @@
       font-family: Arial, sans-serif;
       background-color: #f5f7fa;
     }
+
     header img {
       width: 100%;
       display: block;
     }
+
     .menu-lateral {
       position: fixed;
       top: 0;
@@ -26,6 +28,7 @@
       align-items: center;
       padding-top: 20px;
     }
+
     .menu-lateral button {
       background: none;
       border: none;
@@ -34,16 +37,19 @@
       margin: 15px 0;
       cursor: pointer;
     }
+
     .conteudo {
       margin-left: 70px;
       padding: 20px;
     }
+
     .ods-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 20px;
       margin-top: 20px;
     }
+
     .ods-item {
       background-color: #ffffff;
       border: 1px solid #ccc;
@@ -52,10 +58,12 @@
       text-align: center;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
+
     .ods-item img {
       width: 80px;
       height: auto;
     }
+
     .ods-item span {
       display: block;
       margin-top: 10px;
@@ -65,19 +73,19 @@
 </head>
 <body>
 
-  <!-- CABEÇALHO COM BANNER -->
+  <!-- CABEÇALHO COM IMAGEM -->
   <header>
     <img src="img/cabeçalho.png" alt="Cabeçalho PPA Pelotas 2026-2029">
   </header>
 
-  <!-- MENU LATERAL -->
+  <!-- MENU LATERAL FUNCIONAL -->
   <nav class="menu-lateral">
     <button onclick="carregar('index.html')" title="Início">🏠</button>
     <button onclick="carregar('construcao.html')" title="Construção">📊</button>
     <button onclick="carregar('contato.html')" title="Contato">📲</button>
   </nav>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- CONTEÚDO PRINCIPAL COM ODS -->
   <main class="conteudo" id="conteudo-principal">
     <h2>Objetivos de Desenvolvimento Sustentável</h2>
     <div class="ods-grid">
@@ -103,12 +111,11 @@
 
   <script>
     function carregar(pagina) {
-      fetch(pagina)
-        .then(r => r.text())
-        .then(html => {
-          document.getElementById("conteudo-principal").innerHTML = html;
-        });
+      fetch(pagina).then(r => r.text()).then(html => {
+        document.getElementById("conteudo-principal").innerHTML = html;
+      });
     }
   </script>
+
 </body>
 </html>
