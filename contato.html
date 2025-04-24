@@ -1,15 +1,15 @@
 <section class="conteudo">
-  <h1>Tire suas dúvidas!</h1>
-  <p>Selecione a sua secretaria e envie uma mensagem diretamente para o WhatsApp do responsável.</p>
+  <h1>Fale com a Secretaria</h1>
+  <p>Escolha a secretaria e envie sua mensagem diretamente pelo WhatsApp.</p>
 
   <label for="secretaria">Secretaria:</label>
   <select id="secretaria" size="10" style="padding: 10px; width: 100%; margin-bottom: 15px; overflow-y: auto;">
-  <option value="">Selecione uma secretaria</option>
-</select>
+    <option value="">Selecione uma secretaria</option>
+  </select>
 
   <label for="mensagem">Mensagem:</label>
   <textarea id="mensagem" rows="5" style="width: 100%; padding: 10px; margin-bottom: 15px;"
-            placeholder="Digite sua mensagem aqui."></textarea>
+            placeholder="Digite sua mensagem aqui..."></textarea>
 
   <button onclick="enviarWhatsApp()" style="padding: 10px 20px; background-color: #25D366; color: white; border: none; border-radius: 5px; cursor: pointer;">
     Enviar pelo WhatsApp
@@ -19,11 +19,10 @@
 <script>
   let secretariasData = [];
 
-  // Carrega o JSON com as secretarias
   fetch('secretarias.json')
     .then(response => response.json())
     .then(data => {
-      console.log("Secretarias carregadas:", data); // debug
+      console.log("Secretarias carregadas:", data); // para debug
       secretariasData = data;
       const select = document.getElementById("secretaria");
       data.forEach(sec => {
