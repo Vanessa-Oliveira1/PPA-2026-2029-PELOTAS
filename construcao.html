@@ -4,8 +4,15 @@
 </section>
 
 <style>
-  .eixo-btn, .objetivo-btn {
-    background-color: #0043ce;
+  :root {
+    --azul: #0043ce;
+    --vermelho: #e11d48;
+    --amarelo: #facc15;
+    --verde: #22c55e;
+    --cinza: #9ca3af;
+  }
+
+  .eixo-btn {
     color: white;
     padding: 10px 15px;
     border: none;
@@ -15,19 +22,38 @@
     width: 100%;
     text-align: left;
     cursor: pointer;
+    transition: background 0.3s;
   }
+
+  .eixo-1 { background-color: var(--azul); }
+  .eixo-2 { background-color: var(--vermelho); }
+  .eixo-3 { background-color: var(--amarelo); color: #333; }
+  .eixo-4 { background-color: var(--verde); }
+  .eixo-5 { background-color: var(--cinza); }
 
   .eixo-content, .objetivo-content {
     display: none;
     margin-left: 20px;
     padding: 10px 0;
-    border-left: 3px solid #0043ce;
+    border-left: 3px solid #1e3a8a;
+  }
+
+  .objetivo-btn {
+    background-color: #e0e7ff;
+    color: #1e3a8a;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    margin: 8px 0;
+    width: 95%;
+    text-align: left;
+    cursor: pointer;
   }
 
   .programa {
     margin-left: 40px;
     margin-bottom: 10px;
-    background-color: #e5e7eb;
+    background-color: #f3f4f6;
     padding: 10px;
     border-radius: 6px;
   }
@@ -47,13 +73,16 @@
 
 <script>
   fetch('estrutura_ppa_2026_2029.json')
-    .then(res => res.json())
+    .then(response => {
+      if (!response.ok) throw new Error('Erro ao carregar JSON');
+      return response.json();
+    })
     .then(data => {
       const container = document.getElementById('estrutura-container');
 
       data.forEach(eixo => {
         const eixoBtn = document.createElement('button');
-        eixoBtn.className = 'eixo-btn';
+        eixoBtn.className = 'eixo-btn eixo-' + eixo.id;
         const totalObj = eixo.objetivos.length;
         const totalProg = eixo.objetivos.reduce((sum, obj) => sum + obj.programas.length, 0);
         eixoBtn.innerHTML = `${eixo.nome} <span style="font-weight:normal;">(${totalObj} objetivos, ${totalProg} programas)</span>`;
@@ -104,5 +133,6 @@
     })
     .catch(error => {
       console.error("Erro ao carregar dados da construção:", error);
+      document.getElementById('estrutura-container').innerHTML = "<p style='color:red;'>Erro ao carregar dados. Verifique o arquivo JSON.</p>";
     });
 </script>
