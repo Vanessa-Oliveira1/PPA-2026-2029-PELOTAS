@@ -7,13 +7,9 @@ const eixoCores = {
 };
 
 fetch('estrutura_ppa_2026_2029.json')
-  .then(response => {
-    if (!response.ok) throw new Error('Erro ao carregar JSON');
-    return response.json();
-  })
+  .then(response => response.json())
   .then(data => {
     const container = document.getElementById('estrutura-container');
-
     data.forEach(eixo => {
       const eixoCard = document.createElement('div');
       eixoCard.className = 'eixo-card';
@@ -36,17 +32,14 @@ fetch('estrutura_ppa_2026_2029.json')
         obj.programas.forEach(prog => {
           const progDiv = document.createElement('div');
           progDiv.className = 'programa-card';
-
           const odsIcons = prog.ods.map(ods =>
             `<img src="https://odsbrasil.gov.br/images/ods/ods${ods}.png" alt="ODS ${ods}" class="ods-icon">`).join('');
-
           progDiv.innerHTML = `
             <h4>${prog.nome}</h4>
             <p><strong>Justificativa:</strong> ${prog.justificativa}</p>
             <p><strong>Objetivo do Programa:</strong> ${prog.objetivo_programa}</p>
             <div class="ods-icons"><strong>ODS:</strong> ${odsIcons}</div>
           `;
-
           objContent.appendChild(progDiv);
         });
 
