@@ -17,7 +17,7 @@ fetch('estrutura_ppa_2026_2029.json')
       eixoCard.style.borderLeft = `6px solid ${eixoCores[eixo.id] || '#ccc'}`;
       eixoCard.style.background = '#fff';
       eixoCard.style.padding = '20px';
-      eixoCard.style.margin = '20px 0';
+      eixoCard.style.margin = '30px 0';
       eixoCard.style.borderRadius = '10px';
       eixoCard.style.boxShadow = '0 2px 6px rgba(0,0,0,0.08)';
 
@@ -28,7 +28,7 @@ fetch('estrutura_ppa_2026_2029.json')
 
       const eixoContent = document.createElement('div');
       eixoContent.style.display = 'none';
-      eixoContent.style.marginTop = '10px';
+      eixoContent.style.marginTop = '15px';
 
       const eixoBtn = document.createElement('button');
       eixoBtn.textContent = 'Ver Objetivos';
@@ -49,9 +49,9 @@ fetch('estrutura_ppa_2026_2029.json')
 
       eixo.objetivos.forEach(obj => {
         const objCard = document.createElement('div');
-        objCard.style.background = '#f8f9fa';
+        objCard.style.background = '#f3f4f6';
         objCard.style.border = '1px solid #ddd';
-        objCard.style.margin = '10px 0';
+        objCard.style.margin = '20px 0';
         objCard.style.padding = '15px';
         objCard.style.borderRadius = '8px';
 
@@ -60,7 +60,7 @@ fetch('estrutura_ppa_2026_2029.json')
 
         const objContent = document.createElement('div');
         objContent.style.display = 'none';
-        objContent.style.marginTop = '10px';
+        objContent.style.marginTop = '12px';
 
         const objBtn = document.createElement('button');
         objBtn.textContent = 'Ver Programas';
@@ -75,7 +75,7 @@ fetch('estrutura_ppa_2026_2029.json')
           event.stopPropagation();
           const isOpen = objContent.style.display === 'block';
           objContent.style.display = isOpen ? 'none' : 'block';
-          objBtn.textContent = isOpen ? 'Ver Programas' : 'Ocultar Programas';
+          objBtn.textContent = isOpen ? 'Ver Programas' : 'Oculta Programa';
         };
 
         obj.programas.forEach(prog => {
@@ -84,10 +84,10 @@ fetch('estrutura_ppa_2026_2029.json')
           progDiv.style.margin = '10px 0';
           progDiv.style.padding = '10px';
           progDiv.style.borderRadius = '6px';
-          progDiv.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+          progDiv.style.boxShadow = '0 1px 4px rgba(0,0,0,0.06)';
 
           const odsIcons = prog.ods.map(ods =>
-            `<img src="https://odsbrasil.gov.br/content/ods/${ods}.png" alt="ODS ${ods}" style="height:24px;margin-right:4px;vertical-align:middle;">`
+            `<img src="https://odsbrasil.gov.br/content/ods/${ods}.png" onerror="this.style.display='none'" alt="ODS ${ods}" style="height:24px;margin-right:4px;vertical-align:middle;">`
           ).join('');
 
           progDiv.innerHTML = `
