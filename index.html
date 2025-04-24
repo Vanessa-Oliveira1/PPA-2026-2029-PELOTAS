@@ -1,26 +1,86 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>PPA Pelotas 2026-2029</title>
   <link rel="stylesheet" href="estilo.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+    }
+    header img {
+      width: 100%;
+      display: block;
+    }
+    .menu-lateral {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #0043ce;
+      height: 100vh;
+      width: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+    .menu-lateral button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: white;
+      margin: 15px 0;
+      cursor: pointer;
+    }
+    .conteudo {
+      margin-left: 70px;
+      padding: 20px;
+    }
+    .ods-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .ods-item {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .ods-item img {
+      width: 80px;
+      height: auto;
+    }
+    .ods-item span {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <header class="topo">
-    <img src="img/logo_prefeitura.png" alt="Prefeitura">
-    <h1>Plano Plurianual 2026-2029</h1>
-    <img src="img/logo_seplag.png" alt="SEPLAG">
+
+  <!-- CABEÇALHO COM BANNER -->
+  <header>
+    <img src="img/cabeçalho.png" alt="Cabeçalho PPA Pelotas 2026-2029">
   </header>
+
+  <!-- MENU LATERAL -->
   <nav class="menu-lateral">
-    <button onclick="carregar('index.html')">🏠</button>
-    <button onclick="carregar('construcao.html')">📊</button>
-    <button onclick="carregar('contato.html')">📲</button>
+    <button onclick="carregar('index.html')" title="Início">🏠</button>
+    <button onclick="carregar('construcao.html')" title="Construção">📊</button>
+    <button onclick="carregar('contato.html')" title="Contato">📲</button>
   </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
   <main class="conteudo" id="conteudo-principal">
     <h2>Objetivos de Desenvolvimento Sustentável</h2>
     <div class="ods-grid">
-      <!-- 17 ODS com links atualizados da ONU Brasil -->
       <div class="ods-item"><img src="https://odsbrasil.gov.br/content/ods/1.png" alt="ODS 1"><span><strong>ODS 1</strong><br>Erradicar a pobreza</span></div>
       <div class="ods-item"><img src="https://odsbrasil.gov.br/content/ods/2.png" alt="ODS 2"><span><strong>ODS 2</strong><br>Fome zero e agricultura sustentável</span></div>
       <div class="ods-item"><img src="https://odsbrasil.gov.br/content/ods/3.png" alt="ODS 3"><span><strong>ODS 3</strong><br>Saúde e bem-estar</span></div>
@@ -40,11 +100,14 @@
       <div class="ods-item"><img src="https://odsbrasil.gov.br/content/ods/17.png" alt="ODS 17"><span><strong>ODS 17</strong><br>Parcerias e meios de implementação</span></div>
     </div>
   </main>
+
   <script>
     function carregar(pagina) {
-      fetch(pagina).then(r => r.text()).then(html => {
-        document.getElementById("conteudo-principal").innerHTML = html;
-      });
+      fetch(pagina)
+        .then(r => r.text())
+        .then(html => {
+          document.getElementById("conteudo-principal").innerHTML = html;
+        });
     }
   </script>
 </body>
