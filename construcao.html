@@ -4,19 +4,32 @@
 </section>
 
 <style>
-  .eixo, .objetivo, .programa {
+  .eixo-btn, .objetivo-btn {
+    background-color: #0043ce;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
     margin: 10px 0;
-    border-left: 4px solid #ccc;
-    padding-left: 10px;
-  }
-
-  .eixo > h2, .objetivo > h3, .programa > h4 {
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
     cursor: pointer;
-    margin: 8px 0;
   }
 
-  .objetivo, .programa {
+  .eixo-content, .objetivo-content {
     display: none;
+    margin-left: 20px;
+    padding: 10px 0;
+    border-left: 3px solid #0043ce;
+  }
+
+  .programa {
+    margin-left: 40px;
+    margin-bottom: 10px;
+    background-color: #e5e7eb;
+    padding: 10px;
+    border-radius: 6px;
   }
 
   .ods-icon {
@@ -25,15 +38,10 @@
     vertical-align: middle;
   }
 
-  .meta-info {
-    font-size: 0.9em;
-    color: #666;
-    margin-left: 10px;
-  }
-
   h1 {
     color: #0043ce;
-    margin-bottom: 20px;
+    text-align: center;
+    margin: 20px 0;
   }
 </style>
 
@@ -44,25 +52,26 @@
       const container = document.getElementById('estrutura-container');
 
       data.forEach(eixo => {
-        const eixoDiv = document.createElement('div');
-        eixoDiv.classList.add('eixo');
-
+        const eixoBtn = document.createElement('button');
+        eixoBtn.className = 'eixo-btn';
         const totalObj = eixo.objetivos.length;
-        const totalProg = eixo.objetivos.reduce((soma, obj) => soma + obj.programas.length, 0);
+        const totalProg = eixo.objetivos.reduce((sum, obj) => sum + obj.programas.length, 0);
+        eixoBtn.innerHTML = `${eixo.nome} <span style="font-weight:normal;">(${totalObj} objetivos, ${totalProg} programas)</span>`;
 
-        eixoDiv.innerHTML = `<h2>${eixo.nome}
-          <span class="meta-info">(${totalObj} objetivos, ${totalProg} programas)</span></h2>`;
+        const eixoContent = document.createElement('div');
+        eixoContent.className = 'eixo-content';
 
         eixo.objetivos.forEach(obj => {
-          const objDiv = document.createElement('div');
-          objDiv.classList.add('objetivo');
+          const objBtn = document.createElement('button');
+          objBtn.className = 'objetivo-btn';
+          objBtn.textContent = `${obj.nome} (${obj.programas.length} programas)`;
 
-          objDiv.innerHTML = `<h3>${obj.nome}
-            <span class="meta-info">(${obj.programas.length} programas)</span></h3>`;
+          const objContent = document.createElement('div');
+          objContent.className = 'objetivo-content';
 
           obj.programas.forEach(prog => {
             const progDiv = document.createElement('div');
-            progDiv.classList.add('programa');
+            progDiv.className = 'programa';
 
             const odsIcons = prog.ods.map(ods =>
               `<img src="https://odsbrasil.gov.br/images/ods/ods${ods}.png" alt="ODS ${ods}" class="ods-icon">`).join('');
@@ -73,25 +82,24 @@
               <p><strong>Objetivo do Programa:</strong> ${prog.objetivo_programa}</p>
               <p><strong>ODS:</strong> ${odsIcons}</p>
             `;
-            objDiv.appendChild(progDiv);
+
+            objContent.appendChild(progDiv);
           });
 
-          eixoDiv.appendChild(objDiv);
+          objBtn.onclick = () => {
+            objContent.style.display = objContent.style.display === 'block' ? 'none' : 'block';
+          };
+
+          eixoContent.appendChild(objBtn);
+          eixoContent.appendChild(objContent);
         });
 
-        container.appendChild(eixoDiv);
-      });
+        eixoBtn.onclick = () => {
+          eixoContent.style.display = eixoContent.style.display === 'block' ? 'none' : 'block';
+        };
 
-      // Interatividade: abrir/fechar seções
-      container.addEventListener('click', (e) => {
-        if (e.target.tagName === 'H2') {
-          const objetivos = e.target.parentElement.querySelectorAll('.objetivo');
-          objetivos.forEach(o => o.style.display = o.style.display === 'block' ? 'none' : 'block');
-        }
-        if (e.target.tagName === 'H3') {
-          const programas = e.target.parentElement.querySelectorAll('.programa');
-          programas.forEach(p => p.style.display = p.style.display === 'block' ? 'none' : 'block');
-        }
+        container.appendChild(eixoBtn);
+        container.appendChild(eixoContent);
       });
     })
     .catch(error => {
