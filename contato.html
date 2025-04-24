@@ -1,6 +1,6 @@
 <section class="conteudo">
-  <h1>Tire suas dúvidas!</h1>
-  <p>Envie sua mensagem diretamente para o WhatsApp da responsável.</p>
+  <h1>Fale com a Prefeitura</h1>
+  <p>Envie sua mensagem diretamente pelo WhatsApp.</p>
 
   <label for="mensagem">Mensagem:</label>
   <textarea id="mensagem" rows="5" style="width: 100%; padding: 10px; margin-bottom: 15px;"
@@ -14,7 +14,7 @@
 <script>
   function enviarWhatsApp() {
     const texto = encodeURIComponent(document.getElementById("mensagem").value || "Olá!");
-    const numero = "53981469044"; // número fixo com DDD
+    const numero = "53981469044"; // número fixo: +55 53 98146-9044
     window.open(`https://wa.me/55${numero}?text=${texto}`, '_blank');
   }
 </script>
