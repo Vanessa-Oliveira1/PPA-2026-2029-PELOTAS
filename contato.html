@@ -3,7 +3,9 @@
   <p>Escolha a secretaria e envie sua mensagem diretamente pelo WhatsApp.</p>
 
   <label for="secretaria">Secretaria:</label>
-  <select id="secretaria" style="padding: 10px; width: 100%; margin-bottom: 15px;"></select>
+  <select id="secretaria" style="padding: 10px; width: 100%; margin-bottom: 15px;">
+    <option value="">Selecione uma secretaria</option>
+  </select>
 
   <label for="mensagem">Mensagem:</label>
   <textarea id="mensagem" rows="5" style="width: 100%; padding: 10px; margin-bottom: 15px;"
@@ -17,21 +19,26 @@
 <script>
   let secretariasData = [];
 
-  // Carrega o JSON com os dados das secretarias
+  // Carrega o JSON com as secretarias
   fetch('secretarias.json')
     .then(response => response.json())
     .then(data => {
+      console.log("Secretarias carregadas:", data); // debug
       secretariasData = data;
       const select = document.getElementById("secretaria");
       data.forEach(sec => {
-        const opt = document.createElement("option");
-        opt.value = sec.telefone;
-        opt.textContent = sec.secretaria;
-        select.appendChild(opt);
+        if (sec.secretaria && sec.telefone) {
+          const opt = document.createElement("option");
+          opt.value = sec.telefone;
+          opt.textContent = sec.secretaria;
+          select.appendChild(opt);
+        }
       });
+    })
+    .catch(error => {
+      console.error("Erro ao carregar secretarias.json:", error);
     });
 
-  // Redireciona para o WhatsApp com a mensagem
   function enviarWhatsApp() {
     const telefone = document.getElementById("secretaria").value;
     const texto = encodeURIComponent(document.getElementById("mensagem").value || "Olá!");
