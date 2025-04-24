@@ -10,43 +10,71 @@ fetch('estrutura_ppa_2026_2029.json')
   .then(response => response.json())
   .then(data => {
     const container = document.getElementById('estrutura-container');
-    container.innerHTML = ''; // limpa se já tiver conteúdo
+    container.innerHTML = '';
 
     data.forEach(eixo => {
       const eixoCard = document.createElement('div');
       eixoCard.style.borderLeft = `6px solid ${eixoCores[eixo.id] || '#ccc'}`;
       eixoCard.style.background = '#fff';
-      eixoCard.style.padding = '15px';
-      eixoCard.style.margin = '15px 0';
+      eixoCard.style.padding = '20px';
+      eixoCard.style.margin = '20px 0';
       eixoCard.style.borderRadius = '10px';
       eixoCard.style.boxShadow = '0 2px 6px rgba(0,0,0,0.08)';
-      eixoCard.style.cursor = 'pointer';
 
       const eixoHeader = document.createElement('div');
-      eixoHeader.innerHTML = `<strong>${eixo.nome}</strong> (${eixo.objetivos.length} objetivos, ${
+      eixoHeader.innerHTML = `<h2 style="margin: 0;">${eixo.nome}</h2><p>(${eixo.objetivos.length} objetivos, ${
         eixo.objetivos.reduce((sum, obj) => sum + obj.programas.length, 0)
-      } programas)`;
-      eixoHeader.style.fontSize = '18px';
-      eixoHeader.style.marginBottom = '10px';
+      } programas)</p>`;
 
       const eixoContent = document.createElement('div');
       eixoContent.style.display = 'none';
+      eixoContent.style.marginTop = '10px';
+
+      const eixoBtn = document.createElement('button');
+      eixoBtn.textContent = 'Ver Objetivos';
+      eixoBtn.style.marginTop = '10px';
+      eixoBtn.style.padding = '6px 12px';
+      eixoBtn.style.border = 'none';
+      eixoBtn.style.backgroundColor = eixoCores[eixo.id] || '#0043ce';
+      eixoBtn.style.color = 'white';
+      eixoBtn.style.borderRadius = '6px';
+      eixoBtn.style.cursor = 'pointer';
+
+      eixoBtn.onclick = () => {
+        const isOpen = eixoContent.style.display === 'block';
+        eixoContent.style.display = isOpen ? 'none' : 'block';
+        eixoBtn.textContent = isOpen ? 'Ver Objetivos' : 'Ocultar Objetivos';
+      };
 
       eixo.objetivos.forEach(obj => {
         const objCard = document.createElement('div');
-        objCard.style.background = '#f9fafb';
+        objCard.style.background = '#f8f9fa';
         objCard.style.border = '1px solid #ddd';
         objCard.style.margin = '10px 0';
-        objCard.style.padding = '10px 15px';
+        objCard.style.padding = '15px';
         objCard.style.borderRadius = '8px';
 
         const objHeader = document.createElement('div');
         objHeader.innerHTML = `<strong>${obj.nome}</strong> (${obj.programas.length} programas)`;
-        objHeader.style.cursor = 'pointer';
 
         const objContent = document.createElement('div');
         objContent.style.display = 'none';
         objContent.style.marginTop = '10px';
+
+        const objBtn = document.createElement('button');
+        objBtn.textContent = 'Ver Programas';
+        objBtn.style.marginTop = '10px';
+        objBtn.style.padding = '6px 12px';
+        objBtn.style.border = '1px solid #bbb';
+        objBtn.style.borderRadius = '5px';
+        objBtn.style.backgroundColor = '#ffffff';
+        objBtn.style.cursor = 'pointer';
+
+        objBtn.onclick = () => {
+          const isOpen = objContent.style.display === 'block';
+          objContent.style.display = isOpen ? 'none' : 'block';
+          objBtn.textContent = isOpen ? 'Ver Programas' : 'Ocultar Programas';
+        };
 
         obj.programas.forEach(prog => {
           const progDiv = document.createElement('div');
@@ -70,20 +98,14 @@ fetch('estrutura_ppa_2026_2029.json')
           objContent.appendChild(progDiv);
         });
 
-        objHeader.onclick = () => {
-          objContent.style.display = objContent.style.display === 'block' ? 'none' : 'block';
-        };
-
         objCard.appendChild(objHeader);
+        objCard.appendChild(objBtn);
         objCard.appendChild(objContent);
         eixoContent.appendChild(objCard);
       });
 
-      eixoCard.onclick = () => {
-        eixoContent.style.display = eixoContent.style.display === 'block' ? 'none' : 'block';
-      };
-
       eixoCard.appendChild(eixoHeader);
+      eixoCard.appendChild(eixoBtn);
       eixoCard.appendChild(eixoContent);
       container.appendChild(eixoCard);
     });
