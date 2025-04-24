@@ -1,29 +1,44 @@
+<section class="conteudo">
+  <h1>Fale com a Secretaria</h1>
+  <p>Escolha a secretaria e envie sua mensagem diretamente pelo WhatsApp.</p>
 
-<h2>Fale com a Secretaria</h2>
-<form onsubmit="enviar(event)">
-  <label>Seu nome:</label><br>
-  <input type="text" id="nome" required><br><br>
-  <label>Secretaria:</label><br>
-  <select id="secretaria" required>
-    <option value="Prefeitura">Gabinete</option>
-    <option value="Saude">Saúde</option>
-  </select><br><br>
-  <label>Mensagem:</label><br>
-  <textarea id="mensagem" rows="4" required></textarea><br><br>
-  <button type="submit">Enviar pelo WhatsApp</button>
-</form>
+  <label for="secretaria">Secretaria:</label>
+  <select id="secretaria" style="padding: 10px; width: 100%; margin-bottom: 15px;"></select>
+
+  <label for="mensagem">Mensagem:</label>
+  <textarea id="mensagem" rows="5" style="width: 100%; padding: 10px; margin-bottom: 15px;"
+            placeholder="Digite sua mensagem aqui..."></textarea>
+
+  <button onclick="enviarWhatsApp()" style="padding: 10px 20px; background-color: #25D366; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Enviar pelo WhatsApp
+  </button>
+</section>
+
 <script>
-const contatos = {
-  "Prefeitura": "555199999999",
-  "Saude": "555198888888"
-};
-function enviar(e) {
-  e.preventDefault();
-  const nome = document.getElementById("nome").value;
-  const secretaria = document.getElementById("secretaria").value;
-  const mensagem = document.getElementById("mensagem").value;
-  const tel = contatos[secretaria];
-  const texto = encodeURIComponent(`Olá, sou ${nome}. ${mensagem}`);
-  window.open(`https://wa.me/${tel}?text=${texto}`, '_blank');
-}
+  let secretariasData = [];
+
+  // Carrega o JSON com os dados das secretarias
+  fetch('secretarias.json')
+    .then(response => response.json())
+    .then(data => {
+      secretariasData = data;
+      const select = document.getElementById("secretaria");
+      data.forEach(sec => {
+        const opt = document.createElement("option");
+        opt.value = sec.telefone;
+        opt.textContent = sec.secretaria;
+        select.appendChild(opt);
+      });
+    });
+
+  // Redireciona para o WhatsApp com a mensagem
+  function enviarWhatsApp() {
+    const telefone = document.getElementById("secretaria").value;
+    const texto = encodeURIComponent(document.getElementById("mensagem").value || "Olá!");
+    if (!telefone) {
+      alert("Selecione uma secretaria.");
+      return;
+    }
+    window.open(`https://wa.me/55${telefone}?text=${texto}`, '_blank');
+  }
 </script>
