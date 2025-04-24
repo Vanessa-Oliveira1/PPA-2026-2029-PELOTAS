@@ -41,7 +41,7 @@ fetch('estrutura_ppa_2026_2029.json')
       eixoBtn.style.cursor = 'pointer';
 
       eixoBtn.onclick = (event) => {
-        event.stopPropagation();  // evita conflito com clique interno
+        event.stopPropagation();
         const isOpen = eixoContent.style.display === 'block';
         eixoContent.style.display = isOpen ? 'none' : 'block';
         eixoBtn.textContent = isOpen ? 'Ver Objetivos' : 'Ocultar Objetivos';
@@ -72,7 +72,7 @@ fetch('estrutura_ppa_2026_2029.json')
         objBtn.style.cursor = 'pointer';
 
         objBtn.onclick = (event) => {
-          event.stopPropagation();  // evita conflito com clique no eixo
+          event.stopPropagation();
           const isOpen = objContent.style.display === 'block';
           objContent.style.display = isOpen ? 'none' : 'block';
           objBtn.textContent = isOpen ? 'Ver Programas' : 'Ocultar Programas';
@@ -87,7 +87,7 @@ fetch('estrutura_ppa_2026_2029.json')
           progDiv.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
 
           const odsIcons = prog.ods.map(ods =>
-            `<img src="https://odsbrasil.gov.br/images/ods/ods${ods}.png" alt="ODS ${ods}" style="height:24px;margin-right:4px;vertical-align:middle;">`
+            `<img src="https://odsbrasil.gov.br/content/ods/${ods}.png" alt="ODS ${ods}" style="height:24px;margin-right:4px;vertical-align:middle;">`
           ).join('');
 
           progDiv.innerHTML = `
