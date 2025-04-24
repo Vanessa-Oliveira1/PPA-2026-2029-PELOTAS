@@ -128,13 +128,19 @@
 
   <!-- SPA para páginas que funcionam via fetch -->
   <script>
-    function carregar(pagina) {
-      fetch(pagina)
-        .then(r => r.text())
-        .then(html => {
-          document.getElementById("conteudo-principal").innerHTML = html;
-        });
-    }
+  function carregar(pagina) {
+  fetch(pagina)
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("conteudo-principal").innerHTML = html;
+
+      if (pagina === 'construcao.html') {
+        const script = document.createElement("script");
+        script.src = "construcao.js";
+        document.body.appendChild(script);
+      }
+    });
+}
   </script>
 
 </body>
