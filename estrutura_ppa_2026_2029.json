@@ -1,0 +1,801 @@
+[
+  {
+    "id": "1",
+    "nome": "Democracia, Cidadania e Justica Social",
+    "objetivos": [
+      {
+        "id": "1.1",
+        "nome": "Ampliar e qualificar espaços de participação e controle social",
+        "programas": [
+          {
+            "id": "1.1.1",
+            "nome": "Gestão Participativa",
+            "justificativa": "A criação de fóruns e ferramentas na perspectiva de gestão participativa, tem se mostrado eficaz na aproximação entre governo e sociedade, promovendo a articulação de demandas locais e o monitoramento das políticas públicas, com fortalecimento da democracia.\n",
+            "objetivo_programa": "Estabelecer e apoiar a formação de Fóruns Participativos e/ou Audiências Públicas para garantir instâncias permanentes de discussão e monitoramento dos projetos e programas municipais, podendo ser utilizado formato de workshops, oficinas,como metodologias facilitadoras\n",
+            "ods": [
+              "16",
+              "17"
+            ]
+          },
+          {
+            "id": "1.1.2",
+            "nome": "Conecta Cidadania",
+            "justificativa": "A participação social por meio digital tem demonstrado resultados positivos, com a utilização de plataformas online para escutar, debater, formular e informar sobre políticas públicas",
+            "objetivo_programa": "Ampliar a participação por meios digitais, através da implementação de uma plataforma digital interativa que possibilite a participação cidadã ativa, através do acesso à informação, da contribuição e do monitoramento das políticas públicas.\n",
+            "ods": [
+              "9",
+              "16",
+              "17"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1.2",
+        "nome": "Enfrentar desigualdades sociais, raciais, territoriais e de gênero",
+        "programas": [
+          {
+            "id": "1.2.1",
+            "nome": "Socioeducação em Pauta",
+            "justificativa": "Adolescentes e jovens em cumprimento de medidas socioeducativas ou egressos do Sistema Socioeducativo enfrentam o estigma social que lhes dificulta acesso à efetivação de novos projetos de vida",
+            "objetivo_programa": "Promover ações intersetoriais que facilitem o acesso a direitos, oportunidades e desenvolvimento de potencialidades",
+            "ods": [
+              "4",
+              "10",
+              "16"
+            ]
+          },
+          {
+            "id": "1.2.2",
+            "nome": "Políticas para as Mulheres",
+            "justificativa": "Enfrentar desigualdades de gênero e garantir acesso a direitos e proteção às mulheres",
+            "objetivo_programa": "Promover ações para equidade de gênero e combate à violência contra mulheres",
+            "ods": [
+              "5",
+              "10",
+              "16"
+            ]
+          },
+          {
+            "id": "1.2.3",
+            "nome": "Políticas de Igualdade Racial",
+            "justificativa": "O racismo não se limita a ações individuais, mas está enraizado em instituições e estruturas sociais. Reconhecer e combater o racismo é crucial para criar uma cidade mais justa e inclusiva para todos",
+            "objetivo_programa": "Promover ações de enfrentamento do racismo estrutural e garantir acesso equitativo a direitos para a população negra, povos indígenas e comunidades tradicionais",
+            "ods": [
+              "10",
+              "16"
+            ]
+          },
+          {
+            "id": "1.2.4",
+            "nome": "Garantia de Direitos LGBTQIA+",
+            "justificativa": "A comunidade LGBTQIA+ enfrenta múltiplas formas de discriminação e violação de direitos, que impactam diretamente sua dignidade, segurança e acesso a políticas públicas",
+            "objetivo_programa": "Desenvolver políticas públicas que assegurem a cidadania plena da população LGBTQIA+, com foco em acolhimento, inclusão, combate à violência, acesso a serviços públicos de qualidade e valorização da diversidade",
+            "ods": [
+              "5",
+              "10",
+              "16"
+            ]
+          },
+          {
+            "id": "1.2.5",
+            "nome": "Garantia de Direitos de Pessoas com Deficiência",
+            "justificativa": "Pessoas com deficiência enfrentam barreiras no acesso a direitos fundamentais como educação, saúde, mobilidade, trabalho e participação social",
+            "objetivo_programa": "Promover a inclusão e a garantia de direitos das pessoas com deficiência por meio de políticas públicas intersetoriais que assegurem acessibilidade, atendimento especializado, participação social e combate à discriminação",
+            "ods": [
+              "3",
+              "4",
+              "10"
+            ]
+          },
+          {
+            "id": "1.2.6",
+            "nome": "Territórios Inclusivos",
+            "justificativa": "As desigualdades territoriais refletem a distribuição desigual de infraestrutura e serviços públicos. Estudos e práticas demonstram a eficácia de intervenções direcionadas para o desenvolvimento de áreas historicamente negligenciadas, promovendo maior equilíbrio e inclusão",
+            "objetivo_programa": "Implementar ações de planejamento, investimentos e melhorias na rede de serviços e infraestrutura em áreas periféricas e rurais, visando reduzir as desigualdades de acesso a serviços básicos e promover o desenvolvimento regional equilibrado",
+            "ods": [
+              "1",
+              "10",
+              "11"
+            ]
+          },
+          {
+            "id": "1.2.7",
+            "nome": "Atenção a Migrantes, Refugiados e Apátridas",
+            "justificativa": "Migrantes, refugiados e apátridas frequentemente enfrentam dificuldades de acesso a direitos fundamentais, inclusão social e integração cultural",
+            "objetivo_programa": "Promover espaços de acolhimento e inclusão social dos migrantes, refugiados e apátridas garantindo acesso aos direitos, empregabilidade e integração cultural.\n",
+            "ods": [
+              "10",
+              "11",
+              "16"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1.3",
+        "nome": "Integrar ações intersetoriais para inclusão e equidade",
+        "programas": [
+          {
+            "id": "1.3.1",
+            "nome": "Rede Integrada",
+            "justificativa": "A fragmentação dos serviços públicos compromete a efetividade das políticas de inclusão e equidade. Boas práticas em municípios que adotaram modelos de governança intersetorial demonstram que a articulação entre diferentes secretarias e parceiros institucionais melhora a qualidade dos serviços prestados e amplia o alcance das políticas públicas",
+            "objetivo_programa": "Implementar um sistema de governança intersetorial para integrar as políticas de assistência social, saúde, educação e habitação, entre outras, garantindo uma resposta mais eficiente às demandas da população em situação de vulnerabilidade",
+            "ods": [
+              "3",
+              "11",
+              "16"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "nome": "Bem-Viver e Desenvolvimento Humano",
+    "objetivos": [
+      {
+        "id": "2.1",
+        "nome": "Expandir acesso a serviços públicos universais",
+        "programas": [
+          {
+            "id": "2.1.1",
+            "nome": "Saúde Ativa",
+            "justificativa": "O tempo de espera para atendimento em saúde, especialmente no âmbito especializado, é uma das principais preocupações da comunidade.",
+            "objetivo_programa": "Desenvolver ações que ampliem o acesso à prevenção, promoção e recuperação em saúde com humanização e agilidade",
+            "ods": [
+              "3"
+            ]
+          },
+          {
+            "id": "2.1.2",
+            "nome": "Saúde Integrada",
+            "justificativa": "Diante de pautas em saúde que necessitam de um olhar integrado e considerem o âmbito local e regional, são necessárias ações organizadas em rede",
+            "objetivo_programa": "Promover a saúde e o bem-estar da população, assegurando o acesso equitativo e universal aos serviços do SUS em todas as suas complexidades (ambulatorial, emergencial e hospitalar), fortalecendo também a vigilância sanitária e a resposta integrada às demandas da comunidade local e regional, através da organização de redes temáticas.",
+            "ods": [
+              "3",
+              "10"
+            ]
+          },
+          {
+            "id": "2.1.3",
+            "nome": "Saúde Popular",
+            "justificativa": "Considerando as desigualdades no acesso e os vazios assistenciais em áreas periféricas, o programa busca descentralizar os serviços, fortalecer as unidades básicas de saúde, ampliar a cobertura do SUS e garantir assistência integral à saúde, com acolhimento digno e resolutivo",
+            "objetivo_programa": "Reforçar a atenção primária e garantir o atendimento das necessidades de saúde da população com foco na equidade, através de ações de promoção da saúde, prevenção, diagnóstico, tratamento e reabilitação, com serviços humanizados e próximos da comunidade",
+            "ods": [
+              "3",
+              "10"
+            ]
+          },
+          {
+            "id": "2.1.4",
+            "nome": "Qualificação das Práticas Pedagógicas",
+            "justificativa": "As práticas administrativo-pedagógicas na rede municipal de ensino necessitam aperfeiçoamento constante, para qualificação dos indicadores de qualidade da educação",
+            "objetivo_programa": "Qualificar os processos de ensino e aprendizagem por meio da avaliação, formação continuada e uso de tecnologias educacionais.",
+            "ods": [
+              "4"
+            ]
+          },
+          {
+            "id": "2.1.5",
+            "nome": "Educação Integral e Inclusiva",
+            "justificativa": "A permanência na escola é um tema com necessidade de especial atenção, não somente pelo foco na aprendizagem, mas pelo impacto social que envolve",
+            "objetivo_programa": "Ampliar e qualificar o atendimento educacional, com foco na permanência, aprendizagem, inclusão e equidade",
+            "ods": [
+              "4",
+              "10"
+            ]
+          },
+          {
+            "id": "2.1.6",
+            "nome": "Inclusão Digital nas Escolas",
+            "justificativa": "Desde a pandemia de covid-19 restou evidenciada a desigualdade digital entre os estudantes. A falta de acesso à internet e equipamentos compromete o processo de aprendizagem, tornando urgente a adoção de políticas públicas de universalização do acesso digital.",
+            "objetivo_programa": "Ampliar o acesso e a qualidade do uso das tecnologias da informação e comunicação (TIC) no ambiente escolar, promovendo a inclusão digital dos estudantes da rede pública e o fortalecimento das práticas pedagógicas.\nPúblico-alvo: Alunos e professores da rede municipal de ensino",
+            "ods": [
+              "4",
+              "9"
+            ]
+          },
+          {
+            "id": "2.1.7",
+            "nome": "Infraestrutura Escolar",
+            "justificativa": "Muitas unidades da rede apresentam deficiências estruturais, falta de manutenção, acessibilidade limitada e déficit de espaços pedagógicos, o que impacta negativamente a qualidade do ensino e o bem-estar de estudantes e profissionais.",
+            "objetivo_programa": "Qualificar a infraestrutura das unidades escolares, garantindo ambientes adequados, seguros e acolhedores para o ensino e aprendizagem, com foco na universalização do acesso e na ampliação da oferta de vagas.",
+            "ods": [
+              "4",
+              "9",
+              "11"
+            ]
+          },
+          {
+            "id": "2.1.8",
+            "nome": "Segurança Alimentar e Nutricional",
+            "justificativa": "A insegurança alimentar e nutricional causa impactos profundos na saúde, na qualidade de vida, no desenvolvimento, e na economia",
+            "objetivo_programa": "Garantir políticas de segurança alimentar com distribuição de alimentos, apoio à agricultura familiar e educação nutricional.",
+            "ods": [
+              "2",
+              "3"
+            ]
+          },
+          {
+            "id": "2.1.9",
+            "nome": "Cultura Viva",
+            "justificativa": "Necessidade de valorização cultural local e conclusão de obras culturais estratégicas.",
+            "objetivo_programa": "Ampliar o acesso à cultura através da conclusão de obras estratégicas e fomento a eventos culturais.\n",
+            "ods": [
+              "11"
+            ]
+          },
+          {
+            "id": "2.1.10",
+            "nome": "Esporte para Todos",
+            "justificativa": "A implementação de políticas de ocupação de espaços públicos e incentivo a atividades esportivas, proporcionam melhoria da saúde geral, redução da violência juvenil e aumento da convivência comunitária",
+            "objetivo_programa": "Criar e fortalecer centros esportivos em bairros periféricos, promovendo atividades gratuitas de lazer e esporte para todas as idades, com a criação de um calendário de atividades esportivas descentralizadas e inclusivas, tanto por iniciativa exclusiva do município, como em parceria com a iniciativa privada e organizações não governamentais",
+            "ods": [
+              "3",
+              "10"
+            ]
+          },
+          {
+            "id": "2.1.11",
+            "nome": "Proteção Social Básica e Especial",
+            "justificativa": "A crescente demanda por atendimento nos equipamentos do SUAS,, torna necessário o fortalecimento da rede de proteção social",
+            "objetivo_programa": "teste",
+            "ods": [
+              "1",
+              "10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2.2",
+        "nome": "Respeitar ciclos de vida e territórios",
+        "programas": [
+          {
+            "id": "2.2.1",
+            "nome": "Primeira Infância",
+            "justificativa": "O investimento no potencial da janela de oportunidades da primeira infância tem impacto direto no desenvolvimento cognitivo, emocional e social durante toda a vida. A adoção de políticas integradas voltadas a essa fase da vida reduzem índices de evasão escolar, desnutrição e vulnerabilidade social",
+            "objetivo_programa": "Implementar um conjunto de ações intersetoriais voltadas ao desenvolvimento integral na primeira infância",
+            "ods": [
+              "3",
+              "4"
+            ]
+          },
+          {
+            "id": "2.2.2",
+            "nome": "Juventude em Rede",
+            "justificativa": "Jovens, especialmente em situação de vulnerabilidade e risco social, enfrentam desafios no acesso à educação, trabalho, lazer e cultura. A implementação de redes de apoio reduzem índices de desemprego, violência e evasão escolar nessa faixa etária.",
+            "objetivo_programa": "Criar uma rede municipal integrada para fortalecer o acesso de jovens no mundo do trabalho, na educação, em atividades de lazer e culturais, promovendo oportunidades de crescimento pessoal e profissional.",
+            "ods": [
+              "4",
+              "8",
+              "10"
+            ]
+          },
+          {
+            "id": "2.2.3",
+            "nome": "Cidade Amiga do Idoso",
+            "justificativa": "O envelhecimento populacional exige políticas públicas específicas para garantir qualidade de vida à população idosa. A implementação de políticas para idosos, resultam em melhorias na saúde e no bem-estar dessa população.",
+            "objetivo_programa": "Adaptar espaços públicos e serviços municipais para atender às necessidades da população idosa, garantindo acessibilidade, inclusão digital, lazer e atendimento integrado em saúde e assistência social.",
+            "ods": [
+              "3",
+              "10",
+              "11"
+            ]
+          },
+          {
+            "id": "2.2.4",
+            "nome": "Territórios que Cuidam",
+            "justificativa": "A descentralização e busca ativa dos serviços públicos são  essenciais para garantir equidade no atendimento à população. A implementação de modelos de gestão territorializada observam melhorias no acesso da população a serviços essenciais, especialmente em regiões periféricas e rurais",
+            "objetivo_programa": "Criar protocolos de trabalho que priorizem a descentralização e proatividade em territórios estratégicos, garantindo a agilidade de ações em benefício das necessidades expressas pela população",
+            "ods": [
+              "3",
+              "10",
+              "11"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2.3",
+        "nome": "Estimular práticas de cuidado e prevenção",
+        "programas": [
+          {
+            "id": "2.3.1",
+            "nome": "Comunidade Viva",
+            "justificativa": "O fortalecimento dos laços comunitários melhora a qualidade de vida e reduz índices de violência e isolamento social. O investimento na criação de espaços de convivência e atividades comunitárias promovem maior engajamento da população e fortalecimento das redes de apoio",
+            "objetivo_programa": "Criar e fortalecer espaços de convivência comunitária, incentivando a participação cidadã por meio de atividades diversas",
+            "ods": [
+              "3",
+              "11"
+            ]
+          },
+          {
+            "id": "2.3.2",
+            "nome": "Comunidade Segura",
+            "justificativa": "A segurança pública é um fator essencial para a qualidade de vida e o bem-estar da população. Estratégias de fortalecimento do vínculo social, urbanismo tático, abordagens integradas de policiamento e fiscalização administrativa, iluminação pública eficiente e espaços de convivência seguros promovem redução na violência e aumento na sensação de segurança.",
+            "objetivo_programa": "Manter e qualificar ações preventivas e integradas de segurança pública, promovendo o fortalecimento da convivência comunitária, a revitalização de espaços urbanos e a colaboração entre órgãos de segurança e a sociedade civil.",
+            "ods": [
+              "11",
+              "16"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "nome": "Economia para a Vida e Inovacao com Sustentabilidade",
+    "objetivos": [
+      {
+        "id": "3.1",
+        "nome": "Fortalecer empreendedorismo e inovação",
+        "programas": [
+          {
+            "id": "3.1.1",
+            "nome": "Desenvolvimento e Empreendedorismo",
+            "justificativa": "Fomentar a geração de trabalho e renda a partir do fortalecimento do empreendedorismo local.  ",
+            "objetivo_programa": "Promover a recuperação da economia local, ofertando programas que gerem trabalho e renda à população.",
+            "ods": [
+              "8",
+              "9"
+            ]
+          },
+          {
+            "id": "3.1.2",
+            "nome": "Empreende Sustentável",
+            "justificativa": "A adoção de práticas sustentáveis e de eficiência energética no empreendedorismo tem se mostrado um diferencial competitivo e um fator de redução de impactos ambientais. O incentivo a negócios sustentáveis através de capacitação e linhas de crédito verde possibilitam fortalecer a economia local com responsabilidade socioambiental.",
+            "objetivo_programa": "Fomentar o empreendedorismo sustentável por meio de incentivos, capacitação e certificação para negócios que adotem práticas ambientalmente responsáveis.\n",
+            "ods": [
+              "8",
+              "12"
+            ]
+          },
+          {
+            "id": "3.1.3",
+            "nome": "Inova Pelotas",
+            "justificativa": "A inovação é um motor essencial para o crescimento econômico e o desenvolvimento sustentável. O investimento em ecossistemas de inovação promovem crescimento na geração de empregos e atração de investimentos.",
+            "objetivo_programa": "Ajudar a desenvolver os ecossistemas de inovação que integram universidades, setor produtivo e governo; incentivando o crescimento de empreendimentos, atraindo investidores e promovendo soluções tecnológicas sustentáveis.",
+            "ods": [
+              "8",
+              "9"
+            ]
+          },
+          {
+            "id": "3.1.4",
+            "nome": "Feiras da Economia Criativa",
+            "justificativa": "A economia criativa é um setor estratégico para o desenvolvimento inclusivo e sustentável. A promoção de feiras e espaços para comercialização de produtos culturais e artesanais fortalecem pequenos negócios e impulsionam a geração de renda local.\n",
+            "objetivo_programa": "Criar,  institucionalizar e fortalecer feiras periódicas de economia criativa, conectando produtores locais a consumidores e incentivando práticas de comércio justo e sustentável.",
+            "ods": [
+              "8",
+              "12"
+            ]
+          },
+          {
+            "id": "3.1.5",
+            "nome": "LabCom – Laboratório de Inovação Comunitária",
+            "justificativa": "O fomento à inovação em comunidades impulsiona o surgimento de soluções para desafios locais, promovendo inclusão produtiva e desenvolvimento sustentável. O investimento em laboratórios de inovação comunitária observaram aumento no empreendedorismo social e tecnológico em diversos territórios da cidade",
+            "objetivo_programa": "Criar espaços de inovação comunitária para capacitação, desenvolvimento de projetos e apoio a empreendedores nas periferias, que busquem soluções inovadoras para demandas locais.\n",
+            "ods": [
+              "8",
+              "9",
+              "11"
+            ]
+          },
+          {
+            "id": "3.1.6",
+            "nome": "Turismo",
+            "justificativa": " Potencializar o turismo como vetor de desenvolvimento econômico e valorização da identidade local. ",
+            "objetivo_programa": "Promover o turismo sustentável e a preservação do patrimônio histórico e cultural de Pelotas.",
+            "ods": [
+              "8",
+              "11"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3.2",
+        "nome": "Promover inclusão produtiva",
+        "programas": [
+          {
+            "id": "3.2.1",
+            "nome": "Qualifica Futuro",
+            "justificativa": "A falta de qualificação profissional é um dos principais obstáculos à inserção no mercado de trabalho. O investimento em formação técnica gratuita e qualificação profissional registram aumento na empregabilidade e na geração de renda.\n",
+            "objetivo_programa": "Oferecer capacitação profissional gratuita em áreas de alta demanda no mercado de trabalho, priorizando setores estratégicos como tecnologia, serviços e economia verde",
+            "ods": [
+              "4",
+              "8"
+            ]
+          },
+          {
+            "id": "3.2.2",
+            "nome": "Emprega+",
+            "justificativa": "A intermediação entre trabalhadores e empresas facilita a colocação/ recolocação profissional e impulsiona o mercado de trabalho local. A implementação de programas de empregabilidade e parcerias com empresas demonstram resultados positivos na geração de empregos.",
+            "objetivo_programa": "Criar um sistema municipal de intermediação de mão de obra para a juventude e populações vulneráveis, conectando trabalhadores a oportunidades de emprego por meio de parcerias com empresas e setores produtivos",
+            "ods": [
+              "8"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3.3",
+        "nome": "Ampliar parcerias estratégicas",
+        "programas": [
+          {
+            "id": "3.3.1",
+            "nome": "Conexão Pesquisa & Negócios",
+            "justificativa": "A aproximação entre universidades e setor produtivo é essencial para impulsionar a inovação, fomentar a pesquisa aplicada e aumentar a competitividade da economia local. A integração entre ensino superior e mercado de trabalho demonstram crescimento na geração de patentes, startups e soluções tecnológicas.",
+            "objetivo_programa": "Mediar e criar mecanismos de cooperação entre estabelecimentos de ensino e pesquisa, setor produtivo e município para o desenvolvimento de pesquisas aplicadas, inovação tecnológica, qualificação profissional, que respondam aos desafios locais",
+            "ods": [
+              "8",
+              "9"
+            ]
+          },
+          {
+            "id": "3.3.2",
+            "nome": "Cidade do Conhecimento",
+            "justificativa": "A disseminação do conhecimento científico e tecnológico pode fortalecer a economia local, gerar novas oportunidades de emprego e incentivar a formação de mão de obra qualificada. As parcerias estratégicas para a popularização do conhecimento resultam no aumento na empregabilidade e no empreendedorismo de base tecnológica.",
+            "objetivo_programa": "Implementar um programa municipal de divulgação científica e formação profissional contínua, integrando universidades, setor produtivo e escolas públicas para qualificação e capacitação da população",
+            "ods": [
+              "4",
+              "9",
+              "11"
+            ]
+          },
+          {
+            "id": "3.3.3",
+            "nome": "Pelotas Conectada",
+            "justificativa": "A inclusão digital é fundamental para o acesso a direitos, serviços e oportunidades, reduzindo desigualdades sociais e territoriais.",
+            "objetivo_programa": "Disponibilizar acesso gratuito à internet em espaços públicos e áreas de maior vulnerabilidade social.\n",
+            "ods": [
+              "9",
+              "11"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3.4",
+        "nome": "Modernizar processos administrativos",
+        "programas": [
+          {
+            "id": "3.4.1",
+            "nome": "Prefeitura Digital",
+            "justificativa": "A digitalização nos serviços públicos melhora a eficiência da administração, reduz burocracias e amplia o acesso da população a serviços essenciais. Municípios que implantaram plataformas digitais centralizadas registraram maior satisfação dos cidadãos e redução de custos operacionais",
+            "objetivo_programa": "Criar um portal único que integre todos os serviços municipais, permitindo que cidadãos e empresas realizem solicitações, acompanhem processos e recebam notificações online",
+            "ods": [
+              "9",
+              "16"
+            ]
+          },
+          {
+            "id": "3.4.2",
+            "nome": "Gestão Sem Papel",
+            "justificativa": "A digitalização dos procedimentos administrativos reduz custos, melhora a transparência e aumenta a agilidade na tramitação de processos. Municípios que implantaram sistemas 100% digitais, eliminaram desperdícios e garantiram maior segurança da informação, além de contribuir com o meio ambiente",
+            "objetivo_programa": "Digitalizar todos os documentos e processos administrativos da prefeitura, eliminando gradativamente o uso de papel nos serviços internos e externos, trazendo segurança de dados e informações, e preservando a memória e história documentada do município.\n",
+            "ods": [
+              "12",
+              "13"
+            ]
+          },
+          {
+            "id": "3.4.3",
+            "nome": "Frota Inteligente",
+            "justificativa": "A gestão tradicional da frota pública geralmente enfrenta desafios como alto custo de manutenção, consumo excessivo de combustível, uso ineficiente dos veículos e falta de transparência. A informatização e monitoramento em tempo real da frota permitem maior controle, economia e planejamento, além de promover maior segurança, sustentabilidade e qualidade nos serviços prestados à população",
+            "objetivo_programa": "Modernizar a frota pública por meio da instalação de sistemas de rastreamento, monitoramento e controle digital de uso, manutenção e consumo, promovendo a eficiência operacional e a sustentabilidade ambiental.",
+            "ods": [
+              "9",
+              "11",
+              "13"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3.5",
+        "nome": "Ampliar transparência e governança",
+        "programas": [
+          {
+            "id": "3.5.1",
+            "nome": "Portal da Transparência 360°",
+            "justificativa": "O acesso à informação é um direito do cidadão e um instrumento fundamental para o controle social. A modernização do Portal da Transparência, adotando interfaces mais acessíveis e dados em tempo real, conseguem ampliar a participação cidadã e reduzir índices de corrupção.",
+            "objetivo_programa": "Aprimorar e modernizar o Portal da Transparência municipal, garantindo acesso fácil, dados atualizados e relatórios interativos sobre gastos públicos e processos administrativos.",
+            "ods": [
+              "16"
+            ]
+          },
+          {
+            "id": "3.5.2",
+            "nome": "Orçamento Participativo Digital",
+            "justificativa": "A participação popular na definição de investimentos municipais melhora a governança e torna as decisões mais alinhadas às necessidades reais da população. A digitalização do Orçamento Participativo promoveu aumento na participação cidadã e maior eficiência na alocação de recursos públicos.",
+            "objetivo_programa": "Criar uma plataforma digital que permita aos cidadãos sugerir e votar em propostas de investimento público, promovendo maior transparência e participação social.",
+            "ods": [
+              "16",
+              "17"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "nome": "Gestao Publica Eficiente",
+    "objetivos": [
+      {
+        "id": "4.1",
+        "nome": "Ampliar transparência e governança",
+        "programas": [
+          {
+            "id": "4.1.1",
+            "nome": "Controla Pelotas",
+            "justificativa": "A criação de mecanismos de controle interno e auditoria fortalece a governança e reduz riscos de irregularidades na administração pública. Municípios que implementam e qualificam sistemas de auditoria preventiva e capacitação para servidores conseguem aprimorar a prestação de contas e evitar irregularidades.",
+            "objetivo_programa": "Criar um sistema integrado de auditoria e controle interno para monitoramento contínuo dos gastos públicos e capacitação de servidores sobre prestação de contas e compliance.\n",
+            "ods": [
+              "16"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4.2",
+        "nome": "Fortalecer capacidade institucional",
+        "programas": [
+          {
+            "id": "4.2.1",
+            "nome": "Gestão Financeira Sustentável",
+            "justificativa": "Déficit orçamentário significativo, insuficiência financeira e dificuldade de gestão financeira diagnosticadas no relatório dos primeiros 60 dias de governo",
+            "objetivo_programa": "Reduzir o déficit orçamentário e melhorar a gestão financeira do município.\n",
+            "ods": [
+              "16",
+              "17"
+            ]
+          },
+          {
+            "id": "4.2.2",
+            "nome": "Escola de Gestão Pública",
+            "justificativa": "A capacitação contínua dos servidores públicos melhora a eficiência da gestão e a qualidade dos serviços prestados à população. O investimento em formação permanente decorre do aumento na produtividade, na inovação no setor público e na satisfação dos servidores.",
+            "objetivo_programa": "Ampliar a atuação da Escola de Gestão Pública, tornando-a uma estrutura permanente de formação para servidores municipais, promovendo cursos presenciais e online em gestão, liderança, inovação, atendimento ao cidadão e temas vinculados às políticas setoriais.\n",
+            "ods": [
+              "4",
+              "16"
+            ]
+          },
+          {
+            "id": "4.2.3",
+            "nome": "Valorização e Bem-Estar no Serviço Público",
+            "justificativa": "A valorização e o bem-estar dos servidores impactam diretamente na qualidade dos serviços prestados à população. As políticas de reconhecimento, programas de saúde mental e ações de valorização resultam em maior engajamento e redução do absenteísmo",
+            "objetivo_programa": "Implementar ações de valorização dos servidores, incluindo programas de saúde mental, ergonomia no trabalho e campanhas de reconhecimento profissional.\n",
+            "ods": [
+              "8"
+            ]
+          },
+          {
+            "id": "4.2.4",
+            "nome": "Carreira Pública Atrativa",
+            "justificativa": "A criação e modernização dos planos de carreira e a criação de políticas de incentivo ao funcionalismo público são fundamentais para atrair e reter talentos na administração municipal. Municípios que revisaram seus planos de cargos e salários conseguiram reduzir a evasão de servidores e aumentar a motivação interna.\n",
+            "objetivo_programa": "Criar planos de carreira do funcionalismo público municipal, criando novas diretrizes de progressão, incentivos por desempenho e mecanismos de retenção de talentos.",
+            "ods": [
+              "8"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4.3",
+        "nome": "Gestão baseada em dados",
+        "programas": [
+          {
+            "id": "4.3.1",
+            "nome": "Observatório da Cidade",
+            "justificativa": "A tomada de decisão informada por dados melhora a eficiência da administração pública, reduz desperdícios e aprimora os serviços prestados à população. A implementação de sistemas de inteligência de dados possibilitam a melhoria da alocação de recursos e aumentar a qualidade dos serviços públicos.\n",
+            "objetivo_programa": "Ampliar a atuação do Observatório Municipal de Segurança Pública e Prevenção social para subsidiar a gestão pública com informações atualizadas sobre indicadores, demandas e impactos das políticas públicas",
+            "ods": [
+              "11",
+              "16"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "nome": "Cidade Resiliente e Justica Ambiental",
+    "objetivos": [
+      {
+        "id": "5.1",
+        "nome": "Infraestrutura com justiça territorial",
+        "programas": [
+          {
+            "id": "5.1.1",
+            "nome": "Infraestrutura para Todos",
+            "justificativa": "O acesso desigual à infraestrutura urbana perpetua desigualdades sociais e territoriais. A adoção de planos integrados de infraestrutura conseguem reduzir as disparidades entre regiões centrais e periféricas, promovendo maior equidade no desenvolvimento urbano.",
+            "objetivo_programa": "Executar obras de pavimentação, drenagem, saneamento básico e iluminação pública em áreas historicamente negligenciadas, garantindo maior equidade territorial.",
+            "ods": [
+              "9",
+              "11"
+            ]
+          },
+          {
+            "id": "5.1.2",
+            "nome": "Mobilidade Inclusiva e Sustentável",
+            "justificativa": "A falta de acesso a transporte público, problemas na trafegabilidade das vias  e pouca infraestrutura cicloviária limita a mobilidade da população, principalmente em áreas periféricas. O investimento em transporte público acessível e sustentável, qualificação das vias e ampliação de ciclovias diminui a circulação de automóveis particulares, reduz o tempo de deslocamento e melhora a qualidade de vida da população",
+            "objetivo_programa": "Expandir e qualificar a infraestrutura de mobilidade urbana, priorizando transporte público eficiente e sustentável, melhoria da trafegabilidade e ampliação da malha cicloviária.",
+            "ods": [
+              "11",
+              "13"
+            ]
+          },
+          {
+            "id": "5.1.3",
+            "nome": "Cidade Resiliente",
+            "justificativa": "As mudanças climáticas aumentaram a vulnerabilidade da cidade com a ocorrência de enchentes e eventos climáticos extremos, como a estiagem. O investimento em infraestrutura resiliente e prevenção de desastres minimiza impactos ambientais e garante a segurança da população.",
+            "objetivo_programa": "Executar obras de drenagem urbana sustentável e adaptação de áreas de risco para mitigar impactos das mudanças climáticas.\n",
+            "ods": [
+              "11",
+              "13",
+              "17"
+            ]
+          },
+          {
+            "id": "5.1.4",
+            "nome": "Água e Saneamento para Todos",
+            "justificativa": "O acesso ao saneamento básico e ao abastecimento de água de qualidade é um direito fundamental e um fator essencial para a saúde pública. Municípios que investiram na universalização do saneamento reduziram doenças de veiculação hídrica e melhoraram a qualidade ambiental.",
+            "objetivo_programa": "Ampliar a rede de saneamento básico e abastecimento de água, priorizando comunidades com baixa cobertura e garantindo um serviço eficiente e sustentável.",
+            "ods": [
+              "6",
+              "11"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5.2",
+        "nome": "Urbanismo e habitação",
+        "programas": [
+          {
+            "id": "5.2.1",
+            "nome": "Regularização Fundiária",
+            "justificativa": "A insegurança fundiária impede o acesso das famílias a serviços básicos e ao crédito para melhorias habitacionais. Municípios que promoveram programas de regularização fundiária reduziram a vulnerabilidade social e ampliaram a inclusão territorial.",
+            "objetivo_programa": "Regularizar e titular moradias em áreas informais, garantindo segurança jurídica e acesso à infraestrutura urbana para os moradores.",
+            "ods": [
+              "1",
+              "11"
+            ]
+          },
+          {
+            "id": "5.2.2",
+            "nome": "Moradia e Sustentabilidade",
+            "justificativa": "A oferta de moradia digna e sustentável contribui para o desenvolvimento urbano e a qualidade de vida das comunidades que mais precisam",
+            "objetivo_programa": "Promover projetos habitacionais sustentáveis, com uso de tecnologia, eficiência energética e reaproveitamento de recursos naturais",
+            "ods": [
+              "1",
+              "11",
+              "13"
+            ]
+          },
+          {
+            "id": "5.2.3",
+            "nome": "Mobilidade Viva",
+            "justificativa": "As cidades inteligentes priorizam a mobilidade urbana eficiente, segura, acessível e sustentável. A adoção de tecnologias para monitoramento do tráfego, integração de modais e incentivo ao transporte não motorizado contribui para a redução de emissões, melhoria do trânsito e aumento da qualidade de vida da população.",
+            "objetivo_programa": "Implantar soluções tecnológicas e sustentáveis para aprimorar a mobilidade urbana, priorizando a segurança viária, a integração dos meios de transporte e o estímulo ao uso de bicicletas e caminhadas.",
+            "ods": [
+              "11",
+              "3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5.3",
+        "nome": "Gestão e educação ambiental",
+        "programas": [
+          {
+            "id": "5.3.1",
+            "nome": "Guardiões do Meio Ambiente",
+            "justificativa": "A participação comunitária na proteção ambiental fortalece a preservação de recursos naturais e incentiva práticas sustentáveis. Programas de multiplicadores ambientais e engajamento comunitário obtém bons resultados na conservação de áreas verdes e na conscientização da população",
+            "objetivo_programa": "Criar redes comunitárias e capacitar pessoas para atuar na preservação de áreas naturais, no monitoramento ambiental e na disseminação de boas práticas sustentáveis nos territórios",
+            "ods": [
+              "13",
+              "15"
+            ]
+          },
+          {
+            "id": "5.3.2",
+            "nome": "Eco Escola",
+            "justificativa": "A educação ambiental nas escolas é fundamental para formar cidadãos conscientes e engajados na preservação dos recursos naturais. Municípios que implantaram programas de sustentabilidade vinculados às escolas registraram melhorias na gestão de resíduos, no uso racional da água e na conscientização dos alunos.",
+            "objetivo_programa": "Incorporar a educação ambiental e o brincar livre e em contato com a natureza à rotina das escolas municipais, promovendo práticas sustentáveis como hortas escolares, coleta seletiva e eficiência energética; bem como criar um espaço de uso comum à rede municipal, para promoção de atividades lúdicas e educativas em contato com a natureza.",
+            "ods": [
+              "4",
+              "12",
+              "13"
+            ]
+          },
+          {
+            "id": "5.3.3",
+            "nome": "Cidade que Recicla",
+            "justificativa": "A reciclagem é uma alternativa eficiente para reduzir impactos ambientais e promover inclusão socioeconômica. A implantação e qualificação de programas de reciclagem com participação de cooperativas aumentam a destinação correta de resíduos e geram renda para os catadores.",
+            "objetivo_programa": "Fortalecer a coleta seletiva e a reciclagem, integrando cooperativas de catadores e promovendo a destinação correta de resíduos recicláveis, qualificando as ações de educação ambiental",
+            "ods": [
+              "11",
+              "12"
+            ]
+          },
+          {
+            "id": "5.3.4",
+            "nome": "Observatório Ambiental Municipal",
+            "justificativa": "O monitoramento ambiental é essencial para garantir uma gestão territorial eficiente e prevenir impactos negativos ao meio ambiente. Os Observatórios Ambientais ampliam a capacidade de resposta a problemas ambientais e melhoram a governança territorial.",
+            "objetivo_programa": "Criar um sistema municipal de monitoramento ambiental, com dados em tempo real sobre qualidade do ar, recursos hídricos e indicadores ambientais.",
+            "ods": [
+              "13",
+              "15"
+            ]
+          },
+          {
+            "id": "5.3.5",
+            "nome": "Zeladoria Eficiente",
+            "justificativa": "Alta demanda por manutenção urbana, descarte irregular de resíduos e necessidade de otimizar serviços urbanos",
+            "objetivo_programa": "Melhorar a qualidade dos serviços urbanos, ampliando ações preventivas e corretivas.",
+            "ods": [
+              "11",
+              "12"
+            ]
+          },
+          {
+            "id": "5.3.6",
+            "nome": "Zeladoria Participativa",
+            "justificativa": "A manutenção e conservação dos espaços públicos são essenciais para garantir uma cidade limpa, organizada e ambientalmente sustentável. A zeladoria urbana com participação da comunidade e enfoque ambiental promove melhorias na qualidade de vida, redução de descarte irregular de resíduos e maior engajamento da população na preservação dos espaços coletivos.",
+            "objetivo_programa": "Fortalecer a gestão e a educação ambiental por meio da manutenção contínua dos espaços públicos, aliando o trabalho de zeladoria realizado pelo poder público ao protagonismo comunitário.",
+            "ods": [
+              "11",
+              "17"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5.4",
+        "nome": "Enfrentamento a emergências climáticas",
+        "programas": [
+          {
+            "id": "5.4.1",
+            "nome": "Cidade Verde",
+            "justificativa": "A ampliação das áreas verdes urbanas melhora a regulação térmica, reduz enchentes e contribui para a qualidade do ar. Os corredores ecológicos e projetos de reflorestamento urbano conseguem mitigar impactos climáticos e melhorar a qualidade de vida da população.",
+            "objetivo_programa": "Criar e expandir áreas verdes urbanas, promovendo o plantio de árvores, a criação de parques e a recuperação de nascentes para reduzir impactos climáticos adversos",
+            "ods": [
+              "11",
+              "15"
+            ]
+          },
+          {
+            "id": "5.4.2",
+            "nome": "Plano de Adaptação e Resiliência",
+            "justificativa": "O planejamento prévio das estratégias de resposta e prevenção de desastres naturais melhora a eficiência da Defesa Civil e reduz impactos em áreas vulneráveis. O investimento em digitalização, capacitação e tecnologia conseguiram ampliar a capacidade de resposta e reduzir riscos climáticos.",
+            "objetivo_programa": "Modernizar a Defesa Civil municipal por meio da digitalização de processos, capacitação de agentes e uso de tecnologia para monitoramento e resposta a desastres, bem como organizar o planejamento municipal de adaptação e resiliência.",
+            "ods": [
+              "11",
+              "13"
+            ]
+          },
+          {
+            "id": "5.4.3",
+            "nome": "Cidade sem Alagamentos",
+            "justificativa": "O aumento da frequência e intensidade das chuvas tem gerado sérios problemas de alagamento nas áreas urbanas. Muitas vezes, a causa está na falta de manutenção de canais, bocas de lobo e galerias pluviais, além do assoreamento de banhados e corpos d’água. Cidades inteligentes priorizam ações preventivas, baseadas em dados, com rotinas planejadas de limpeza e manutenção que evitam emergências e reduzem danos.",
+            "objetivo_programa": "Reduzir os alagamentos urbanos por meio da limpeza e manutenção contínua de canais, galerias pluviais, bueiros e áreas naturais de escoamento, com apoio de tecnologias para mapeamento, monitoramento e priorização das ações.",
+            "ods": [
+              "6",
+              "11",
+              "13"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
