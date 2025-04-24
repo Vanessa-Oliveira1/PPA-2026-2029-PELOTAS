@@ -1,12 +1,6 @@
-
 <section class="conteudo">
-  <h1>Fale com a Secretaria</h1>
-  <p>Escolha a secretaria e envie sua mensagem diretamente pelo WhatsApp.</p>
-
-  <label for="secretaria">Secretaria:</label>
-  <select id="secretaria" style="padding: 10px; width: 100%; margin-bottom: 15px;">
-    <option value="">Selecione uma secretaria</option>
-  </select>
+  <h1>Tire suas dúvidas!</h1>
+  <p>Envie sua mensagem diretamente para o WhatsApp da responsável.</p>
 
   <label for="mensagem">Mensagem:</label>
   <textarea id="mensagem" rows="5" style="width: 100%; padding: 10px; margin-bottom: 15px;"
@@ -18,34 +12,9 @@
 </section>
 
 <script>
-  let secretariasData = [];
-
-  fetch('secretarias.json')
-    .then(response => response.json())
-    .then(data => {
-      console.log("Secretarias carregadas:", data);
-      secretariasData = data;
-      const select = document.getElementById("secretaria");
-      data.forEach(sec => {
-        if (sec.secretaria && sec.telefone) {
-          const opt = document.createElement("option");
-          opt.value = sec.telefone;
-          opt.textContent = sec.secretaria;
-          select.appendChild(opt);
-        }
-      });
-    })
-    .catch(error => {
-      console.error("Erro ao carregar secretarias.json:", error);
-    });
-
   function enviarWhatsApp() {
-    const telefone = document.getElementById("secretaria").value;
     const texto = encodeURIComponent(document.getElementById("mensagem").value || "Olá!");
-    if (!telefone) {
-      alert("Selecione uma secretaria.");
-      return;
-    }
-    window.open(`https://wa.me/55${telefone}?text=${texto}`, '_blank');
+    const numero = "53981469044"; // número fixo com DDD
+    window.open(`https://wa.me/55${numero}?text=${texto}`, '_blank');
   }
 </script>
