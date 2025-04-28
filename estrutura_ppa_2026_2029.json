@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "nome": "Democracia, Cidadania e Justica Social",
+    "nome": "Democracia, Cidadania e Justiça Social",
     "objetivos": [
       {
         "id": "1.1",
@@ -328,7 +328,7 @@
   },
   {
     "id": "3",
-    "nome": "Economia para a Vida e Inovacao com Sustentabilidade",
+    "nome": "Economia para a Vida e Inovação com Sustentabilidade",
     "objetivos": [
       {
         "id": "3.1",
@@ -639,7 +639,7 @@
   },
   {
     "id": "5",
-    "nome": "Cidade Resiliente e Justica Ambiental",
+    "nome": "Cidade Resiliente e Justiça Ambiental",
     "objetivos": [
       {
         "id": "5.1",
