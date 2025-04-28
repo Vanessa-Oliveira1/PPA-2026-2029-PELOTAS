@@ -87,7 +87,7 @@ fetch('estrutura_ppa_2026_2029.json')
           progDiv.style.boxShadow = '0 1px 4px rgba(0,0,0,0.06)';
 
           const odsIcons = prog.ods.map(ods =>
-            `<img src="https://odsbrasil.gov.br/content/ods/${ods}.png" onerror="this.style.display='none'" alt="ODS ${ods}" style="height:24px;margin-right:4px;vertical-align:middle;">`
+            `<img src="https://odsbrasil.gov.br/content/ods/${ods}.png" onerror="this.style.display='none'" alt="ODS ${ods}" style="height:24px;margin-right:10px;vertical-align:middle;">`
           ).join('');
 
           progDiv.innerHTML = `
