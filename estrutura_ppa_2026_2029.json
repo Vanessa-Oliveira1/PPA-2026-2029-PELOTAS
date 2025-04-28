@@ -525,14 +525,47 @@
   },
   {
     "id": "4",
-    "nome": "Gestao Publica Eficiente",
+    "nome": "Gestão Pública Eficiente",
     "objetivos": [
       {
         "id": "4.1",
-        "nome": "Ampliar transparência e governança",
+        "nome": "Modernizar processos administrativos com foco na digitalização e simplificação",
         "programas": [
           {
             "id": "4.1.1",
+            "nome": "Prefeitura Digital",
+            "justificativa": "A digitalização nos serviços públicos melhora a eficiência da administração, reduz burocracias e amplia o acesso da população a serviços essenciais. Municípios que implantaram plataformas digitais centralizadas registraram maior satisfação dos cidadãos e redução de custos operacionais.",
+            "objetivo_programa": "Criar um portal único que integre todos os serviços municipais, permitindo que cidadãos e empresas realizem solicitações, acompanhem processos e recebam notificações online",
+            "ods": [
+              "16"
+            ]
+          },
+          {
+            "id": "4.1.2",
+            "nome": "Gestão Sem Papel",
+            "justificativa": "A digitalização dos procedimentos administrativos reduz custos, melhora a transparência e aumenta a agilidade na tramitação de processos. Municípios que implantaram sistemas 100% digitais, eliminaram desperdícios e garantiram maior segurança da informação, além de contribuir com o meio ambiente.",
+            "objetivo_programa": ""Digitalizar todos os documentos e processos administrativos da prefeitura, eliminando gradativamente o uso de papel nos serviços internos e externos, trazendo segurança de dados e informações, e preservando a memória e história documentada do município.",
+            "ods": [
+              "16"
+            ]
+          },
+        {
+            "id": "4.1.3",
+            "nome": "Frota Inteligente",
+            "justificativa": "A gestão tradicional da frota pública geralmente enfrenta desafios como alto custo de manutenção, consumo excessivo de combustível, uso ineficiente dos veículos e falta de transparência. A informatização e monitoramento em tempo real da frota permitem maior controle, economia e planejamento, além de promover maior segurança, sustentabilidade e qualidade nos serviços prestados à população.",
+            "objetivo_programa": "Modernizar a frota pública por meio da instalação de sistemas de rastreamento, monitoramento e controle digital de uso, manutenção e consumo, promovendo a eficiência operacional e a sustentabilidade ambiental.",
+            "ods": [
+              "16"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4.2",
+        "nome": "Ampliar transparência e governança",
+        "programas": [
+          {
+            "id": "4.2.1",
             "nome": "Controla Pelotas",
             "justificativa": "A criação de mecanismos de controle interno e auditoria fortalece a governança e reduz riscos de irregularidades na administração pública. Municípios que implementam e qualificam sistemas de auditoria preventiva e capacitação para servidores conseguem aprimorar a prestação de contas e evitar irregularidades.",
             "objetivo_programa": "Criar um sistema integrado de auditoria e controle interno para monitoramento contínuo dos gastos públicos e capacitação de servidores sobre prestação de contas e compliance.\n",
@@ -543,11 +576,11 @@
         ]
       },
       {
-        "id": "4.2",
+        "id": "4.3",
         "nome": "Fortalecer capacidade institucional",
         "programas": [
           {
-            "id": "4.2.1",
+            "id": "4.3.1",
             "nome": "Gestão Financeira Sustentável",
             "justificativa": "Déficit orçamentário significativo, insuficiência financeira e dificuldade de gestão financeira diagnosticadas no relatório dos primeiros 60 dias de governo",
             "objetivo_programa": "Reduzir o déficit orçamentário e melhorar a gestão financeira do município.\n",
@@ -557,7 +590,7 @@
             ]
           },
           {
-            "id": "4.2.2",
+            "id": "4.3.2",
             "nome": "Escola de Gestão Pública",
             "justificativa": "A capacitação contínua dos servidores públicos melhora a eficiência da gestão e a qualidade dos serviços prestados à população. O investimento em formação permanente decorre do aumento na produtividade, na inovação no setor público e na satisfação dos servidores.",
             "objetivo_programa": "Ampliar a atuação da Escola de Gestão Pública, tornando-a uma estrutura permanente de formação para servidores municipais, promovendo cursos presenciais e online em gestão, liderança, inovação, atendimento ao cidadão e temas vinculados às políticas setoriais.\n",
@@ -567,7 +600,7 @@
             ]
           },
           {
-            "id": "4.2.3",
+            "id": "4.3.3",
             "nome": "Valorização e Bem-Estar no Serviço Público",
             "justificativa": "A valorização e o bem-estar dos servidores impactam diretamente na qualidade dos serviços prestados à população. As políticas de reconhecimento, programas de saúde mental e ações de valorização resultam em maior engajamento e redução do absenteísmo",
             "objetivo_programa": "Implementar ações de valorização dos servidores, incluindo programas de saúde mental, ergonomia no trabalho e campanhas de reconhecimento profissional.\n",
@@ -576,7 +609,7 @@
             ]
           },
           {
-            "id": "4.2.4",
+            "id": "4.3.4",
             "nome": "Carreira Pública Atrativa",
             "justificativa": "A criação e modernização dos planos de carreira e a criação de políticas de incentivo ao funcionalismo público são fundamentais para atrair e reter talentos na administração municipal. Municípios que revisaram seus planos de cargos e salários conseguiram reduzir a evasão de servidores e aumentar a motivação interna.\n",
             "objetivo_programa": "Criar planos de carreira do funcionalismo público municipal, criando novas diretrizes de progressão, incentivos por desempenho e mecanismos de retenção de talentos.",
@@ -587,11 +620,11 @@
         ]
       },
       {
-        "id": "4.3",
-        "nome": "Gestão baseada em dados",
+        "id": "4.4",
+        "nome": "Implantar modelos de gestão informados por dados, escuta e resultado",
         "programas": [
           {
-            "id": "4.3.1",
+            "id": "4.4.1",
             "nome": "Observatório da Cidade",
             "justificativa": "A tomada de decisão informada por dados melhora a eficiência da administração pública, reduz desperdícios e aprimora os serviços prestados à população. A implementação de sistemas de inteligência de dados possibilitam a melhoria da alocação de recursos e aumentar a qualidade dos serviços públicos.\n",
             "objetivo_programa": "Ampliar a atuação do Observatório Municipal de Segurança Pública e Prevenção social para subsidiar a gestão pública com informações atualizadas sobre indicadores, demandas e impactos das políticas públicas",
