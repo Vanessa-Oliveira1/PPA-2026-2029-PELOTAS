@@ -28,6 +28,17 @@
       margin: 0;
       text-align: center;
     }
+    .botao-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #e11d48;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+    }
     .botoes-container {
       margin: 30px auto;
       display: flex;
@@ -55,17 +66,6 @@
       margin: 30px;
       text-align: center;
     }
-    .botao-home {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background-color: #e11d48;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
-    }
   </style>
 </head>
 
@@ -91,21 +91,25 @@
 <script>
 function carregar(pagina) {
   fetch(pagina)
-    .then(r => r.text())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Página não encontrada: ' + pagina);
+      }
+      return response.text();
+    })
     .then(html => {
       document.getElementById("conteudo-principal").innerHTML = html;
       if (pagina === 'construcao.html') {
         const script = document.createElement("script");
-        script.src = "construcao.js"; // Só se precisar de script extra
+        script.src = "construcao.js"; // Se precisar carregar script adicional da construção
         document.body.appendChild(script);
       }
     })
     .catch(error => {
       console.error("Erro ao carregar:", error);
-      document.getElementById("conteudo-principal").innerHTML = "<p style='color:red;'>Erro ao carregar construção.</p>";
+      document.getElementById("conteudo-principal").innerHTML = "<p style='color:red;'>Erro ao carregar o conteúdo: " + pagina + "</p>";
     });
 }
-
 </script>
 
 </body>
