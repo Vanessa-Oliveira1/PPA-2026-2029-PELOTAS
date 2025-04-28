@@ -13,20 +13,35 @@
 
     header {
       background-color: #f2f2f2;
-      text-align: center;
-      padding: 20px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
     }
 
-    header img {
-      height: 60px;
-      margin: 0 15px;
-      vertical-align: middle;
+    .logo {
+      height: 50px;
     }
 
-    header h1 {
+    .titulo {
       font-size: 22px;
-      margin-top: 10px;
-      color: #0043ce;
+      color: #e11d48;
+      margin: 0 20px;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .pesquisa-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .pesquisa-container input {
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
     }
 
     .menu-lateral {
@@ -56,24 +71,33 @@
       margin-left: 70px;
       padding: 20px;
     }
+
+    mark {
+      background-color: yellow;
+    }
   </style>
 </head>
 
 <body onload="carregar('construcao.html')">
 
   <header>
-    <img src="img/logo_prefeitura.png" alt="Prefeitura de Pelotas">
-    <img src="img/logo_seplag.png" alt="SEPLAG">
-    <h1>PPA Pelotas 2026–2029</h1>
+    <img src="img/logo_prefeitura.png" alt="Prefeitura de Pelotas" class="logo">
+    <h1 class="titulo">Plano Plurianual Pelotas 2026–2029</h1>
+    <div class="pesquisa-container">
+      <input type="text" id="campoPesquisa" placeholder="Pesquisar...">
+      <button onclick="pesquisar()">🔎</button>
+    </div>
+    <img src="img/logo_seplag.png" alt="SEPLAG" class="logo">
   </header>
 
   <nav class="menu-lateral">
+    <button onclick="carregar('construcao.html')" title="Página Inicial">🔄</button>
     <button onclick="carregar('ods.html')" title="ODS">🌎</button>
     <button onclick="carregar('contato.html')" title="Contato">📲</button>
   </nav>
 
   <main class="conteudo" id="conteudo-principal">
-    <!-- Aqui o conteúdo será carregado dinamicamente -->
+    <!-- O conteúdo será carregado dinamicamente -->
   </main>
 
   <script>
@@ -92,6 +116,19 @@
           document.getElementById("conteudo-principal").innerHTML = "<p style='color:red;'>Erro ao carregar página.</p>";
           console.error("Erro ao carregar:", error);
         });
+    }
+
+    function pesquisar() {
+      const termo = document.getElementById("campoPesquisa").value.trim().toLowerCase();
+      const conteudo = document.getElementById("conteudo-principal");
+      if (!termo) return;
+
+      // Limpa marcações antigas
+      conteudo.innerHTML = conteudo.innerHTML.replace(/<mark>|<\/mark>/g, '');
+
+      // Destaca novas ocorrências
+      const regex = new RegExp(`(${termo})`, "gi");
+      conteudo.innerHTML = conteudo.innerHTML.replace(regex, "<mark>$1</mark>");
     }
   </script>
 
