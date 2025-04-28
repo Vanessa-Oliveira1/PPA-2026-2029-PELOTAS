@@ -94,12 +94,18 @@ function carregar(pagina) {
     .then(r => r.text())
     .then(html => {
       document.getElementById("conteudo-principal").innerHTML = html;
+      if (pagina === 'construcao.html') {
+        const script = document.createElement("script");
+        script.src = "construcao.js"; // Só se precisar de script extra
+        document.body.appendChild(script);
+      }
     })
     .catch(error => {
-      document.getElementById("conteudo-principal").innerHTML = "<p style='color:red;'>Erro ao carregar página.</p>";
       console.error("Erro ao carregar:", error);
+      document.getElementById("conteudo-principal").innerHTML = "<p style='color:red;'>Erro ao carregar construção.</p>";
     });
 }
+
 </script>
 
 </body>
