@@ -276,6 +276,48 @@ function mostrarResumoODS(id) {
       </ul>
     `;
   }
+  if (id === 15) {
+    conteudo = `
+      <h2>Objetivo 15 – Vida Terrestre</h2>
+      <p>Proteger, recuperar e promover o uso sustentável dos ecossistemas terrestres, gerir florestas de forma sustentável, combater a desertificação, deter e reverter a degradação da terra e deter a perda de biodiversidade.</p>
+      <ul>
+        <li><strong>15.1</strong> - Assegurar a conservação, recuperação e uso sustentável de ecossistemas terrestres e de água doce.</li>
+        <li><strong>15.2</strong> - Promover a gestão sustentável de todos os tipos de florestas.</li>
+        <li><strong>15.3</strong> - Combater a desertificação, restaurar terras e solos degradados.</li>
+        <li><strong>15.4</strong> - Assegurar a conservação dos ecossistemas de montanha, incluindo sua biodiversidade.</li>
+        <li><strong>15.5</strong> - Reduzir a degradação do habitat natural e deter a perda de biodiversidade.</li>
+      </ul>
+    `;
+  }
+
+  if (id === 16) {
+    conteudo = `
+      <h2>Objetivo 16 – Paz, Justiça e Instituições Eficazes</h2>
+      <p>Promover sociedades pacíficas e inclusivas para o desenvolvimento sustentável, proporcionar o acesso à justiça para todos e construir instituições eficazes, responsáveis e inclusivas em todos os níveis.</p>
+      <ul>
+        <li><strong>16.1</strong> - Reduzir significativamente todas as formas de violência e as taxas de mortalidade relacionadas.</li>
+        <li><strong>16.2</strong> - Acabar com abuso, exploração, tráfico e todas as formas de violência contra crianças.</li>
+        <li><strong>16.3</strong> - Promover o Estado de Direito e garantir igualdade de acesso à justiça para todos.</li>
+        <li><strong>16.5</strong> - Reduzir substancialmente a corrupção e o suborno em todas as suas formas.</li>
+        <li><strong>16.6</strong> - Desenvolver instituições eficazes, responsáveis e transparentes.</li>
+        <li><strong>16.7</strong> - Assegurar a tomada de decisão responsiva, inclusiva, participativa e representativa em todos os níveis.</li>
+      </ul>
+    `;
+  }
+
+  if (id === 17) {
+    conteudo = `
+      <h2>Objetivo 17 – Parcerias e Meios de Implementação</h2>
+      <p>Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável.</p>
+      <ul>
+        <li><strong>17.1</strong> - Mobilizar recursos financeiros para países em desenvolvimento.</li>
+        <li><strong>17.2</strong> - Implementar plenamente a Assistência Oficial para o Desenvolvimento.</li>
+        <li><strong>17.6</strong> - Melhorar a cooperação regional e internacional em ciência, tecnologia e inovação.</li>
+        <li><strong>17.9</strong> - Reforçar o apoio à capacitação para os países em desenvolvimento.</li>
+        <li><strong>17.17</strong> - Incentivar e promover parcerias eficazes nas esferas pública, público-privada e da sociedade civil.</li>
+      </ul>
+    `;
+  }
 
   resumo.innerHTML = conteudo;
 }
