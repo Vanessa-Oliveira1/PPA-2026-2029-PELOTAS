@@ -60,6 +60,7 @@
 
     .conteudo {
       margin: 30px;
+      text-align: left;
     }
 
     iframe {
@@ -70,7 +71,7 @@
   </style>
 </head>
 
-<body>
+<body onload="carregar('construcao.html')">
 
   <header>
     <img src="img/logo_prefeitura.png" alt="Prefeitura" class="logo">
@@ -85,7 +86,7 @@
   </div>
 
   <main class="conteudo" id="conteudo-principal">
-    <!-- O conteúdo será carregado dinamicamente -->
+    <!-- A construção será carregada automaticamente aqui -->
   </main>
 
   <script>
@@ -94,6 +95,11 @@
         .then(r => r.text())
         .then(html => {
           document.getElementById("conteudo-principal").innerHTML = html;
+          if (pagina === 'construcao.html') {
+            const script = document.createElement("script");
+            script.src = "construcao.js";
+            document.body.appendChild(script);
+          }
         })
         .catch(error => {
           document.getElementById("conteudo-principal").innerHTML = "<p style='color:red;'>Erro ao carregar página.</p>";
