@@ -1,0 +1,92 @@
+<section class="conteudo">
+  <h1 style="text-align: center; margin-bottom: 30px;">Objetivos de Desenvolvimento Sustentável</h1>
+
+  <div class="ods-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; margin-top: 20px;">
+    
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/1.png" alt="ODS 1" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 1</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/2.png" alt="ODS 2" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 2</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/3.png" alt="ODS 3" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 3</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/4.png" alt="ODS 4" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 4</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/5.png" alt="ODS 5" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 5</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/6.png" alt="ODS 6" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 6</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/7.png" alt="ODS 7" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 7</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/8.png" alt="ODS 8" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 8</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/9.png" alt="ODS 9" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 9</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/10.png" alt="ODS 10" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 10</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/11.png" alt="ODS 11" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 11</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/12.png" alt="ODS 12" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 12</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/13.png" alt="ODS 13" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 13</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/14.png" alt="ODS 14" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 14</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/15.png" alt="ODS 15" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 15</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/16.png" alt="ODS 16" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 16</strong></span>
+    </div>
+
+    <div class="ods-item" style="background: white; border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <img src="https://odsbrasil.gov.br/content/ods/17.png" alt="ODS 17" style="width: 80px; margin: 0 auto 10px;">
+      <span><strong>ODS 17</strong></span>
+    </div>
+
+  </div>
+</section>
