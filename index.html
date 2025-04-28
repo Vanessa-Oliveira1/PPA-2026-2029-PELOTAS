@@ -8,9 +8,7 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f5f7fa;
-      text-align: center;
     }
-
     header {
       background-color: #d1d1d1;
       padding: 20px;
@@ -19,18 +17,17 @@
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
+      position: relative;
     }
-
     .logo {
       height: 60px;
     }
-
     .titulo {
       font-size: 28px;
       color: #e11d48;
       margin: 0;
+      text-align: center;
     }
-
     .botoes-container {
       margin: 30px auto;
       display: flex;
@@ -38,7 +35,6 @@
       gap: 60px;
       flex-wrap: wrap;
     }
-
     .botao {
       padding: 20px 40px;
       border: none;
@@ -49,64 +45,62 @@
       transition: transform 0.3s;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
     .botao:hover {
       transform: scale(1.05);
     }
-
     .azul { background-color: #7cc4f3; color: #000; }
     .amarelo { background-color: #fcd34d; color: #000; }
     .vermelho { background-color: #fb7185; color: #000; }
-
     .conteudo {
       margin: 30px;
-      text-align: left;
+      text-align: center;
     }
-
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
+    .botao-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #e11d48;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
     }
   </style>
 </head>
 
 <body onload="carregar('construcao.html')">
 
-  <header>
-    <img src="img/logo_prefeitura.png" alt="Prefeitura" class="logo">
-    <h1 class="titulo">Plano Plurianual<br>2026-2029</h1>
-    <img src="img/logo_seplag.png" alt="SEPLAG" class="logo">
-  </header>
+<header>
+  <a href="index.html" class="botao-home">🏠 Página Inicial</a>
+  <img src="img/logo_prefeitura.png" alt="Prefeitura" class="logo">
+  <h1 class="titulo">Plano Plurianual<br>2026-2029</h1>
+  <img src="img/logo_seplag.png" alt="SEPLAG" class="logo">
+</header>
 
-  <div class="botoes-container">
-    <button class="botao azul" onclick="carregar('ODS.html')">Objetivos de Desenvolvimento Sustentável (ODS)</button>
-    <button class="botao amarelo" onclick="carregar('monitoramento.html')">Monitoramento das ações</button>
-    <button class="botao vermelho" onclick="carregar('contato.html')">Tire suas dúvidas</button>
-  </div>
+<div class="botoes-container">
+  <button class="botao azul" onclick="carregar('ODS.html')">Objetivos de Desenvolvimento Sustentável (ODS)</button>
+  <button class="botao amarelo" onclick="carregar('monitoramento.html')">Monitoramento das ações</button>
+  <button class="botao vermelho" onclick="carregar('contato.html')">Tire suas dúvidas</button>
+</div>
 
-  <main class="conteudo" id="conteudo-principal">
-    <!-- A construção será carregada automaticamente aqui -->
-  </main>
+<main class="conteudo" id="conteudo-principal">
+  <!-- A construção será carregada automaticamente aqui -->
+</main>
 
-  <script>
-    function carregar(pagina) {
-      fetch(pagina)
-        .then(r => r.text())
-        .then(html => {
-          document.getElementById("conteudo-principal").innerHTML = html;
-          if (pagina === 'construcao.html') {
-            const script = document.createElement("script");
-            script.src = "construcao.js";
-            document.body.appendChild(script);
-          }
-        })
-        .catch(error => {
-          document.getElementById("conteudo-principal").innerHTML = "<p style='color:red;'>Erro ao carregar página.</p>";
-          console.error("Erro ao carregar:", error);
-        });
-    }
-  </script>
+<script>
+function carregar(pagina) {
+  fetch(pagina)
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("conteudo-principal").innerHTML = html;
+    })
+    .catch(error => {
+      document.getElementById("conteudo-principal").innerHTML = "<p style='color:red;'>Erro ao carregar página.</p>";
+      console.error("Erro ao carregar:", error);
+    });
+}
+</script>
 
 </body>
 </html>
