@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>ODS</title>
+<style>
+  .conteudo {
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .ods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  .ods-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+  }
+  .ods-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  .resumo {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.4s ease;
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+  }
+  img {
+    width: 80px;
+    margin: 0 auto 10px;
+  }
+</style>
+</head>
+
+<body>
+
+<section class="conteudo">
+  <h1>OBJETIVOS DE DESENVOLVIMENTO SUSTENTÁVEL</h1>
+
+  <div class="ods-grid">
+
+    <div class="ods-card" onclick="toggleResumo('resumo1')">
+      <img src="https://odsbrasil.gov.br/content/ods/1.png" alt="ODS 1">
+      <h3>ODS 1</h3>
+      <div id="resumo1" class="resumo">
+        Resumo oficial da ODS 1. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo2')">
+      <img src="https://odsbrasil.gov.br/content/ods/2.png" alt="ODS 2">
+      <h3>ODS 2</h3>
+      <div id="resumo2" class="resumo">
+        Resumo oficial da ODS 2. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo3')">
+      <img src="https://odsbrasil.gov.br/content/ods/3.png" alt="ODS 3">
+      <h3>ODS 3</h3>
+      <div id="resumo3" class="resumo">
+        Resumo oficial da ODS 3. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo4')">
+      <img src="https://odsbrasil.gov.br/content/ods/4.png" alt="ODS 4">
+      <h3>ODS 4</h3>
+      <div id="resumo4" class="resumo">
+        Resumo oficial da ODS 4. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo5')">
+      <img src="https://odsbrasil.gov.br/content/ods/5.png" alt="ODS 5">
+      <h3>ODS 5</h3>
+      <div id="resumo5" class="resumo">
+        Resumo oficial da ODS 5. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo6')">
+      <img src="https://odsbrasil.gov.br/content/ods/6.png" alt="ODS 6">
+      <h3>ODS 6</h3>
+      <div id="resumo6" class="resumo">
+        Resumo oficial da ODS 6. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo7')">
+      <img src="https://odsbrasil.gov.br/content/ods/7.png" alt="ODS 7">
+      <h3>ODS 7</h3>
+      <div id="resumo7" class="resumo">
+        Resumo oficial da ODS 7. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo8')">
+      <img src="https://odsbrasil.gov.br/content/ods/8.png" alt="ODS 8">
+      <h3>ODS 8</h3>
+      <div id="resumo8" class="resumo">
+        Resumo oficial da ODS 8. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo9')">
+      <img src="https://odsbrasil.gov.br/content/ods/9.png" alt="ODS 9">
+      <h3>ODS 9</h3>
+      <div id="resumo9" class="resumo">
+        Resumo oficial da ODS 9. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo10')">
+      <img src="https://odsbrasil.gov.br/content/ods/10.png" alt="ODS 10">
+      <h3>ODS 10</h3>
+      <div id="resumo10" class="resumo">
+        Resumo oficial da ODS 10. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo11')">
+      <img src="https://odsbrasil.gov.br/content/ods/11.png" alt="ODS 11">
+      <h3>ODS 11</h3>
+      <div id="resumo11" class="resumo">
+        Resumo oficial da ODS 11. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo12')">
+      <img src="https://odsbrasil.gov.br/content/ods/12.png" alt="ODS 12">
+      <h3>ODS 12</h3>
+      <div id="resumo12" class="resumo">
+        Resumo oficial da ODS 12. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo13')">
+      <img src="https://odsbrasil.gov.br/content/ods/13.png" alt="ODS 13">
+      <h3>ODS 13</h3>
+      <div id="resumo13" class="resumo">
+        Resumo oficial da ODS 13. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo14')">
+      <img src="https://odsbrasil.gov.br/content/ods/14.png" alt="ODS 14">
+      <h3>ODS 14</h3>
+      <div id="resumo14" class="resumo">
+        Resumo oficial da ODS 14. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo15')">
+      <img src="https://odsbrasil.gov.br/content/ods/15.png" alt="ODS 15">
+      <h3>ODS 15</h3>
+      <div id="resumo15" class="resumo">
+        Resumo oficial da ODS 15. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo16')">
+      <img src="https://odsbrasil.gov.br/content/ods/16.png" alt="ODS 16">
+      <h3>ODS 16</h3>
+      <div id="resumo16" class="resumo">
+        Resumo oficial da ODS 16. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+    <div class="ods-card" onclick="toggleResumo('resumo17')">
+      <img src="https://odsbrasil.gov.br/content/ods/17.png" alt="ODS 17">
+      <h3>ODS 17</h3>
+      <div id="resumo17" class="resumo">
+        Resumo oficial da ODS 17. (Aqui entra o texto real de cada ODS, exemplo: Erradicar a pobreza, Saúde e Bem-Estar, etc.)
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<script>
+  function toggleResumo(id) {
+    const resumo = document.getElementById(id);
+    if (resumo.style.height === "0px" || resumo.style.height === "") {
+      resumo.style.height = resumo.scrollHeight + "px";
+    } else {
+      resumo.style.height = "0px";
+    }
+  }
+</script>
+
+</body>
+</html>
