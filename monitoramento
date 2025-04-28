@@ -1,0 +1,6 @@
+<section class="conteudo">
+  <h2 style="text-align: center; margin-bottom: 20px;">Monitoramento das Ações</h2>
+  <p style="text-align: center;">Em breve: painel do Power BI incorporado aqui!</p>
+
+  <iframe src="https://app.powerbi.com/view?r=PAINEL_ID_EXEMPLO" title="Painel Power BI"></iframe>
+</section>
