@@ -1,2 +1,40 @@
-<h1> Clique nos eixos para visualizar os objetivos estratégicos e programas! </h1>
-<div id="estrutura-container"></div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Construção do PPA</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #000;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    #busca {
+      display: block;
+      margin: 0 auto 30px auto;
+      width: 320px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Clique nos eixos para visualizar os objetivos estratégicos e programas!</h1>
+  <input id="busca" type="text" placeholder="🔍 Buscar por eixo, objetivo, programa ou ODS..." />
+  <div id="estrutura-container"></div>
+
+  <script src="construcao.js"></script>
+</body>
+</html>
