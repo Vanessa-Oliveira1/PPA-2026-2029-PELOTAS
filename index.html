@@ -3,10 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>PPA Pelotas 2026-2029</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Estilo e fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- FullCalendar -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #f5f7fa;
     }
 
@@ -41,15 +50,9 @@
     }
 
     .botoes-container {
-      margin: 10px 50px 30px 50px; /* espaçamento entre header e botões */
+      margin: 10px 50px 30px 50px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .botoes-esquerda {
-      display: flex;
+      justify-content: flex-start;
       gap: 20px;
       flex-wrap: wrap;
     }
@@ -74,23 +77,24 @@
     .vermelho { background-color: #fb7185; color: #000; }
     .cinza { background-color: #e5e7eb; color: #333; }
 
-    .busca-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .busca-container input {
-      padding: 10px 16px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-      width: 240px;
-    }
-
     .conteudo {
-      margin: 30px;
       text-align: center;
+    }
+
+    .layout-principal {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0 50px;
+      gap: 40px;
+    }
+
+    #calendario {
+      width: 380px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
     }
   </style>
 </head>
@@ -104,22 +108,20 @@
 </header>
 
 <div class="botoes-container">
-  <div class="botoes-esquerda">
-    <a href="index.html" class="botao cinza">Página Inicial</a>
-    <button class="botao azul" onclick="carregar('ods_conteudo.html')">
-      Objetivos de Desenvolvimento Sustentável (ODS)
-    </button>
-    <button class="botao amarelo" onclick="carregar('monitoramento.html')">Monitoramento</button>
-    <button class="botao vermelho" onclick="carregar('contato.html')">Tire suas dúvidas</button>
-  </div>
-  <div class="busca-container">
-    <input type="text" placeholder="🔍 Buscar no PPA..." />
-  </div>
+  <a href="index.html" class="botao cinza">Página Inicial</a>
+  <button class="botao azul" onclick="carregar('ods_conteudo.html')">Objetivos de Desenvolvimento Sustentável (ODS)</button>
+  <button class="botao amarelo" onclick="carregar('monitoramento.html')">Monitoramento</button>
+  <button class="botao vermelho" onclick="carregar('contato.html')">Tire suas dúvidas</button>
 </div>
 
-<main class="conteudo" id="conteudo-principal">
-  <!-- A construção será carregada automaticamente aqui -->
-</main>
+<!-- Seção principal + Calendário ao lado -->
+<div class="layout-principal">
+  <main class="conteudo" id="conteudo-principal">
+    <!-- A construção será carregada automaticamente aqui -->
+  </main>
+
+  <div id="calendario"></div>
+</div>
 
 <script>
 function carregar(pagina) {
@@ -143,6 +145,31 @@ function carregar(pagina) {
       document.getElementById("conteudo-principal").innerHTML = "<p style='color:red;'>Erro ao carregar o conteúdo: " + pagina + "</p>";
     });
 }
+
+// Inicia o calendário
+document.addEventListener('DOMContentLoaded', function () {
+  const calendarEl = document.getElementById('calendario');
+  const calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth',
+    locale: 'pt-br',
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: ''
+    },
+    dateClick: function (info) {
+      const titulo = prompt("Adicionar atividade para " + info.dateStr + ":");
+      if (titulo) {
+        calendar.addEvent({
+          title: titulo,
+          start: info.dateStr,
+          allDay: true
+        });
+      }
+    }
+  });
+  calendar.render();
+});
 </script>
 
 </body>
