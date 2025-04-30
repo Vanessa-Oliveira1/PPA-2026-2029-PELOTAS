@@ -17,16 +17,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 0 0 50px;
+      padding: 0 50px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
 
     .logo-prefeitura {
-      height: 80px;
+      height: 110px; /* aumentada */
     }
 
     .titulo {
-      font-size: 30px;
+      font-size: 32px;
       color: #000;
       font-weight: 800;
       margin: 0 auto;
@@ -34,40 +34,32 @@
       flex-grow: 1;
     }
 
-    .botao-home {
-      position: absolute;
-      top: 20px;
-      left: 170px;
-      background: none;
-      color: #555;
-      border: 1px solid #ccc;
-      padding: 6px 14px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 14px;
-      z-index: 3;
-    }
-
     .imagem-formas {
       height: 160px;
-      margin-right: 0;
       margin-left: auto;
       display: block;
     }
 
     .botoes-container {
-      margin: 30px auto;
+      margin: 20px auto;
+      padding: 0 50px;
       display: flex;
-      justify-content: center;
-      gap: 100px;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .botoes-esquerda {
+      display: flex;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
     .botao {
-      padding: 20px 40px;
+      padding: 14px 28px;
       border: none;
       border-radius: 15px;
-      font-size: 18px;
+      font-size: 16px;
       cursor: pointer;
       font-weight: bold;
       transition: transform 0.3s;
@@ -81,6 +73,21 @@
     .azul { background-color: #7cc4f3; color: #000; }
     .amarelo { background-color: #fcd34d; color: #000; }
     .vermelho { background-color: #fb7185; color: #000; }
+    .cinza { background-color: #e5e7eb; color: #333; }
+
+    .busca-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .busca-container input {
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      width: 220px;
+    }
 
     .conteudo {
       margin: 30px;
@@ -94,14 +101,19 @@
 <header>
   <img src="img/logo_prefeitura.png" alt="Prefeitura de Pelotas" class="logo-prefeitura">
   <h1 class="titulo">Plano Plurianual de Pelotas<br>2026-2029</h1>
-  <a href="index.html" class="botao-home">Página Inicial</a>
   <img src="img/formas_geometricas.png" alt="Formas Decorativas" class="imagem-formas">
 </header>
 
 <div class="botoes-container">
-  <button class="botao azul" onclick="carregar('ods_conteudo.html')">Objetivos de Desenvolvimento Sustentável (ODS)</button>
-  <button class="botao amarelo" onclick="carregar('monitoramento.html')">Monitoramento das ações</button>
-  <button class="botao vermelho" onclick="carregar('contato.html')">Tire suas dúvidas</button>
+  <div class="botoes-esquerda">
+    <a href="index.html" class="botao cinza">Página Inicial</a>
+    <button class="botao azul" onclick="carregar('ods_conteudo.html')">ODS</button>
+    <button class="botao amarelo" onclick="carregar('monitoramento.html')">Monitoramento</button>
+    <button class="botao vermelho" onclick="carregar('contato.html')">Tire suas dúvidas</button>
+  </div>
+  <div class="busca-container">
+    <input type="text" placeholder="🔍 Buscar no PPA..." />
+  </div>
 </div>
 
 <main class="conteudo" id="conteudo-principal">
