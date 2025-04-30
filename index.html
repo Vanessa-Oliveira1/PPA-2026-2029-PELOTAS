@@ -12,73 +12,80 @@
 
     header {
       position: relative;
-      height: 160px;
+      height: 140px;
       background-color: #fff;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      justify-content: space-between;
+      padding: 0 40px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo-prefeitura {
+      height: 60px;
     }
 
     .titulo {
       font-size: 28px;
       color: #000;
       font-weight: 800;
-      z-index: 2;
       margin: 0;
+      text-align: center;
+      flex-grow: 1;
     }
 
     .botao-home {
       position: absolute;
       top: 20px;
-      left: 20px;
-      background-color: #e11d48;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
+      left: 120px;
+      background: none;
+      color: #555;
+      border: 1px solid #ccc;
+      padding: 6px 14px;
+      border-radius: 6px;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 14px;
       z-index: 3;
     }
 
-    /* Formas geométricas decorativas */
+    /* Formas geométricas no canto direito */
+    .formas-direita {
+      position: relative;
+      width: 100px;
+      height: 100%;
+    }
+
     .forma {
       position: absolute;
       opacity: 0.9;
-      z-index: 1;
     }
 
     .forma.azul {
       background-color: #2979FF;
-      width: 80px;
-      height: 80px;
+      width: 40px;
+      height: 40px;
       transform: rotate(45deg);
+      top: 20px;
+      right: 0;
     }
 
     .forma.amarelo {
       background-color: #FFD54F;
-      width: 60px;
-      height: 60px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
+      bottom: 20px;
+      right: 10px;
     }
 
     .forma.vermelho {
       background-color: #EF5350;
-      width: 100px;
-      height: 100px;
+      width: 25px;
+      height: 25px;
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      top: 60px;
+      right: 20px;
     }
-
-    /* Posições personalizadas das formas */
-    .azul.f1 { top: -20px; left: 5%; }
-    .amarelo.f2 { top: 30px; right: 10%; }
-    .vermelho.f3 { bottom: -30px; right: 5%; }
-    .azul.f4 { bottom: 10px; left: 20%; transform: rotate(-30deg); }
-    .amarelo.f5 { top: 10px; left: 35%; width: 40px; height: 40px; }
-    .vermelho.f6 { top: 60px; right: 30%; width: 60px; height: 60px; }
-    .azul.f7 { top: 0; right: 0; transform: rotate(60deg); width: 90px; height: 90px; }
 
     .botoes-container {
       margin: 30px auto;
@@ -117,17 +124,14 @@
 <body onload="carregar('construcao.html')">
 
 <header>
-  <a href="index.html" class="botao-home">🏠 Página Inicial</a>
+  <img src="img/logo_prefeitura.png" alt="Prefeitura de Pelotas" class="logo-prefeitura">
   <h1 class="titulo">Plano Plurianual de Pelotas<br>2026-2029</h1>
-
-  <!-- Formas decorativas -->
-  <div class="forma azul f1"></div>
-  <div class="forma amarelo f2"></div>
-  <div class="forma vermelho f3"></div>
-  <div class="forma azul f4"></div>
-  <div class="forma amarelo f5"></div>
-  <div class="forma vermelho f6"></div>
-  <div class="forma azul f7"></div>
+  <a href="index.html" class="botao-home">Página Inicial</a>
+  <div class="formas-direita">
+    <div class="forma azul"></div>
+    <div class="forma amarelo"></div>
+    <div class="forma vermelho"></div>
+  </div>
 </header>
 
 <div class="botoes-container">
