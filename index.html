@@ -6,28 +6,30 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', Arial, sans-serif;
       background-color: #f5f7fa;
     }
+
     header {
-      background-color: #d1d1d1;
-      padding: 20px;
+      position: relative;
+      height: 160px;
+      background-color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      position: relative;
+      text-align: center;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    .logo {
-      height: 60px;
-    }
+
     .titulo {
       font-size: 28px;
-      color: #e11d48;
+      color: #000;
+      font-weight: 800;
+      z-index: 2;
       margin: 0;
-      text-align: center;
     }
+
     .botao-home {
       position: absolute;
       top: 20px;
@@ -38,7 +40,43 @@
       border-radius: 8px;
       text-decoration: none;
       font-size: 16px;
+      z-index: 3;
     }
+
+    /* Formas decorativas */
+    .forma {
+      position: absolute;
+      opacity: 0.9;
+      z-index: 1;
+    }
+
+    .forma.azul {
+      background-color: #2979FF;
+      width: 100px;
+      height: 100px;
+      transform: rotate(45deg);
+      top: -20px;
+      left: 10%;
+    }
+
+    .forma.amarelo {
+      background-color: #FFD54F;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      top: 30px;
+      right: 15%;
+    }
+
+    .forma.vermelho {
+      background-color: #EF5350;
+      width: 120px;
+      height: 120px;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      bottom: -30px;
+      right: 5%;
+    }
+
     .botoes-container {
       margin: 30px auto;
       display: flex;
@@ -46,6 +84,7 @@
       gap: 100px;
       flex-wrap: wrap;
     }
+
     .botao {
       padding: 20px 40px;
       border: none;
@@ -54,14 +93,17 @@
       cursor: pointer;
       font-weight: bold;
       transition: transform 0.3s;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+
     .botao:hover {
       transform: scale(1.05);
     }
+
     .azul { background-color: #7cc4f3; color: #000; }
     .amarelo { background-color: #fcd34d; color: #000; }
     .vermelho { background-color: #fb7185; color: #000; }
+
     .conteudo {
       margin: 30px;
       text-align: center;
@@ -73,9 +115,11 @@
 
 <header>
   <a href="index.html" class="botao-home">🏠 Página Inicial</a>
-  <img src="img/logo_prefeitura.png" alt="Prefeitura" class="logo">
-  <h1 class="titulo">Plano Plurianual<br>2026-2029</h1>
-  <img src="img/logo_seplag.png" alt="SEPLAG" class="logo">
+  <h1 class="titulo">Plano Plurianual de Pelotas<br>2026-2029</h1>
+  <!-- Formas decorativas -->
+  <div class="forma azul"></div>
+  <div class="forma amarelo"></div>
+  <div class="forma vermelho"></div>
 </header>
 
 <div class="botoes-container">
@@ -101,7 +145,7 @@ function carregar(pagina) {
       document.getElementById("conteudo-principal").innerHTML = html;
       if (pagina === 'construcao.html') {
         const script = document.createElement("script");
-        script.src = "construcao.js"; // Se precisar carregar script adicional da construção
+        script.src = "construcao.js";
         document.body.appendChild(script);
       }
     })
