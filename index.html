@@ -43,33 +43,42 @@
       z-index: 3;
     }
 
-   /* Formas geométricas decorativas */
-.forma {
-  position: absolute;
-  opacity: 0.9;
-  z-index: 1;
-}
+    /* Formas geométricas decorativas */
+    .forma {
+      position: absolute;
+      opacity: 0.9;
+      z-index: 1;
+    }
 
-.forma.azul {
-  background-color: #2979FF;
-  width: 80px;
-  height: 80px;
-  transform: rotate(45deg);
-}
+    .forma.azul {
+      background-color: #2979FF;
+      width: 80px;
+      height: 80px;
+      transform: rotate(45deg);
+    }
 
-.forma.amarelo {
-  background-color: #FFD54F;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
+    .forma.amarelo {
+      background-color: #FFD54F;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
 
-.forma.vermelho {
-  background-color: #EF5350;
-  width: 100px;
-  height: 100px;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
+    .forma.vermelho {
+      background-color: #EF5350;
+      width: 100px;
+      height: 100px;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    /* Posições personalizadas das formas */
+    .azul.f1 { top: -20px; left: 5%; }
+    .amarelo.f2 { top: 30px; right: 10%; }
+    .vermelho.f3 { bottom: -30px; right: 5%; }
+    .azul.f4 { bottom: 10px; left: 20%; transform: rotate(-30deg); }
+    .amarelo.f5 { top: 10px; left: 35%; width: 40px; height: 40px; }
+    .vermelho.f6 { top: 60px; right: 30%; width: 60px; height: 60px; }
+    .azul.f7 { top: 0; right: 0; transform: rotate(60deg); width: 90px; height: 90px; }
 
     .botoes-container {
       margin: 30px auto;
@@ -106,6 +115,20 @@
 </head>
 
 <body onload="carregar('construcao.html')">
+
+<header>
+  <a href="index.html" class="botao-home">🏠 Página Inicial</a>
+  <h1 class="titulo">Plano Plurianual de Pelotas<br>2026-2029</h1>
+
+  <!-- Formas decorativas -->
+  <div class="forma azul f1"></div>
+  <div class="forma amarelo f2"></div>
+  <div class="forma vermelho f3"></div>
+  <div class="forma azul f4"></div>
+  <div class="forma amarelo f5"></div>
+  <div class="forma vermelho f6"></div>
+  <div class="forma azul f7"></div>
+</header>
 
 <div class="botoes-container">
   <button class="botao azul" onclick="carregar('ods_conteudo.html')">Objetivos de Desenvolvimento Sustentável (ODS)</button>
