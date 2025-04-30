@@ -5,8 +5,10 @@
   <title>PPA Pelotas 2026-2029</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Fontes e FullCalendar -->
+  <!-- Fontes e estilo -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- FullCalendar -->
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 
@@ -64,7 +66,6 @@
       font-weight: bold;
       transition: transform 0.3s;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      font-family: 'Poppins', sans-serif;
     }
 
     .botao:hover {
@@ -88,12 +89,13 @@
       gap: 40px;
     }
 
+    /* Calendário */
     #calendario {
       width: 500px;
       background: #fff;
       border-radius: 10px;
       padding: 20px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
       font-family: 'Poppins', sans-serif;
       font-size: 14px;
     }
@@ -144,12 +146,13 @@
   <button class="botao vermelho" onclick="carregar('contato.html')">Tire suas dúvidas</button>
 </div>
 
+<!-- Seção principal + calendário ao lado -->
 <div class="layout-principal">
   <main class="conteudo" id="conteudo-principal">
-    <!-- Conteúdo dinâmico carregado aqui -->
+    <!-- A construção será carregada automaticamente aqui -->
   </main>
 
-  <div>
+  <div style="width: 500px;">
     <button id="btnNovaAtividade">+ Nova atividade</button>
     <div id="calendario"></div>
   </div>
@@ -159,7 +162,9 @@
 function carregar(pagina) {
   fetch(pagina)
     .then(response => {
-      if (!response.ok) throw new Error('Página não encontrada: ' + pagina);
+      if (!response.ok) {
+        throw new Error('Página não encontrada: ' + pagina);
+      }
       return response.text();
     })
     .then(html => {
@@ -172,11 +177,11 @@ function carregar(pagina) {
     })
     .catch(error => {
       console.error("Erro ao carregar:", error);
-      document.getElementById("conteudo-principal").innerHTML =
-        "<p style='color:red;'>Erro ao carregar o conteúdo: " + pagina + "</p>";
+      document.getElementById("conteudo-principal").innerHTML = "<p style='color:red;'>Erro ao carregar o conteúdo: " + pagina + "</p>";
     });
 }
 
+// Inicializa o calendário
 document.addEventListener('DOMContentLoaded', function () {
   const calendarEl = document.getElementById('calendario');
   const calendar = new FullCalendar.Calendar(calendarEl, {
@@ -201,8 +206,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   calendar.render();
 
-  // Botão "Nova Atividade"
-  document.getElementById("btnNovaAtividade").addEventListener("click", function () {
+  // Botão "Nova atividade"
+  document.getElementById('btnNovaAtividade').addEventListener('click', function () {
     const data = prompt("Digite a data (AAAA-MM-DD):");
     const titulo = prompt("Digite o título da atividade:");
     if (data && titulo) {
