@@ -643,7 +643,7 @@
     "objetivos": [
       {
         "id": "5.1",
-        "nome": "Infraestrutura com justiça territorial",
+        "nome": "Planejar e executar obras de infraestrutura com justiça territorial",
         "programas": [
           {
             "id": "5.1.1",
@@ -690,7 +690,7 @@
       },
       {
         "id": "5.2",
-        "nome": "Urbanismo e habitação",
+        "nome": "Promover políticas integradas de urbanismo, habitação e saneamento",
         "programas": [
           {
             "id": "5.2.1",
@@ -727,7 +727,7 @@
       },
       {
         "id": "5.3",
-        "nome": "Gestão e educação ambiental",
+        "nome": "Gestão e educação ambiental, e o protagonismo dos territórios",
         "programas": [
           {
             "id": "5.3.1",
@@ -794,7 +794,7 @@
       },
       {
         "id": "5.4",
-        "nome": "Enfrentamento a emergências climáticas",
+        "nome": "Desenvolver mecanismos de prevenção e ação em face as emergências climáticas",
         "programas": [
           {
             "id": "5.4.1",
