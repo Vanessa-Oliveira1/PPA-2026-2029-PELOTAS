@@ -22,7 +22,7 @@ fetch('estrutura_ppa_2026_2029.json')
       eixoCard.style.boxShadow = '0 2px 6px rgba(0,0,0,0.08)';
 
       const eixoHeader = document.createElement('div');
-      eixoHeader.innerHTML = `<h2 style="margin: 0;">${eixo.nome}</h2><p>(${eixo.objetivos.length} objetivos, ${
+      eixoHeader.innerHTML = `<h2>${eixo.nome}</h2><p>(${eixo.objetivos.length} objetivos, ${
         eixo.objetivos.reduce((sum, obj) => sum + obj.programas.length, 0)
       } programas)</p>`;
 
@@ -40,8 +40,7 @@ fetch('estrutura_ppa_2026_2029.json')
       eixoBtn.style.borderRadius = '6px';
       eixoBtn.style.cursor = 'pointer';
 
-      eixoBtn.onclick = (event) => {
-        event.stopPropagation();
+      eixoBtn.onclick = () => {
         const isOpen = eixoContent.style.display === 'block';
         eixoContent.style.display = isOpen ? 'none' : 'block';
         eixoBtn.textContent = isOpen ? 'Ver Objetivos' : 'Ocultar Objetivos';
@@ -71,8 +70,7 @@ fetch('estrutura_ppa_2026_2029.json')
         objBtn.style.backgroundColor = '#ffffff';
         objBtn.style.cursor = 'pointer';
 
-        objBtn.onclick = (event) => {
-          event.stopPropagation();
+        objBtn.onclick = () => {
           const isOpen = objContent.style.display === 'block';
           objContent.style.display = isOpen ? 'none' : 'block';
           objBtn.textContent = isOpen ? 'Ver Programas' : 'Ocultar Programas';
@@ -87,7 +85,7 @@ fetch('estrutura_ppa_2026_2029.json')
           progDiv.style.boxShadow = '0 1px 4px rgba(0,0,0,0.06)';
 
           const odsIcons = prog.ods.map(ods =>
-            `<img src="https://odsbrasil.gov.br/content/ods/${ods}.png" onerror="this.style.display='none'" alt="ODS ${ods}" style="height:24px;margin-right:10px;vertical-align:middle;">`
+            `<img src="https://odsbrasil.gov.br/content/ods/${ods}.png" alt="ODS ${ods}" style="height:24px;margin-right:10px;vertical-align:middle;">`
           ).join('');
 
           progDiv.innerHTML = `
@@ -110,6 +108,38 @@ fetch('estrutura_ppa_2026_2029.json')
       eixoCard.appendChild(eixoBtn);
       eixoCard.appendChild(eixoContent);
       container.appendChild(eixoCard);
+    });
+
+    // 🔍 BUSCA FUNCIONAL
+    document.getElementById("busca").addEventListener("input", function () {
+      const termo = this.value.toLowerCase();
+      const cards = document.querySelectorAll("#estrutura-container > div");
+
+      cards.forEach(eixoCard => {
+        const eixoNome = eixoCard.querySelector("h2").innerText.toLowerCase();
+        let eixoVisivel = eixoNome.includes(termo);
+        let objetivoVisivelTotal = false;
+
+        const objetivos = eixoCard.querySelectorAll("div[style*='background: #f3f4f6']");
+        objetivos.forEach(objCard => {
+          const objNome = objCard.querySelector("strong").innerText.toLowerCase();
+          let objVisivel = objNome.includes(termo);
+          let programaVisivelTotal = false;
+
+          const programas = objCard.querySelectorAll("div[style*='background: #ffffff']");
+          programas.forEach(prog => {
+            const progText = prog.innerText.toLowerCase();
+            const visivel = progText.includes(termo);
+            prog.style.display = visivel ? "block" : "none";
+            if (visivel) programaVisivelTotal = true;
+          });
+
+          objCard.style.display = (objVisivel || programaVisivelTotal) ? "block" : "none";
+          if (objVisivel || programaVisivelTotal) eixoVisivel = true;
+        });
+
+        eixoCard.style.display = eixoVisivel ? "block" : "none";
+      });
     });
   })
   .catch(error => {
