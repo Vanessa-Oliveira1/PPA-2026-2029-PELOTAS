@@ -12,21 +12,21 @@
 
     header {
       position: relative;
-      height: 140px;
+      height: 160px;
       background-color: #fff;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 40px;
+      padding: 0 50px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
 
     .logo-prefeitura {
-      height: 60px;
+      height: 80px;
     }
 
     .titulo {
-      font-size: 28px;
+      font-size: 30px;
       color: #000;
       font-weight: 800;
       margin: 0;
@@ -37,7 +37,7 @@
     .botao-home {
       position: absolute;
       top: 20px;
-      left: 120px;
+      left: 170px;
       background: none;
       color: #555;
       border: 1px solid #ccc;
@@ -48,10 +48,9 @@
       z-index: 3;
     }
 
-    /* Formas geométricas no canto direito */
     .formas-direita {
       position: relative;
-      width: 100px;
+      width: 120px;
       height: 100%;
     }
 
@@ -62,30 +61,30 @@
 
     .forma.azul {
       background-color: #2979FF;
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       transform: rotate(45deg);
-      top: 20px;
-      right: 0;
     }
 
     .forma.amarelo {
       background-color: #FFD54F;
-      width: 30px;
-      height: 30px;
+      width: 35px;
+      height: 35px;
       border-radius: 50%;
-      bottom: 20px;
-      right: 10px;
     }
 
     .forma.vermelho {
       background-color: #EF5350;
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-      top: 60px;
-      right: 20px;
     }
+
+    /* Novas posições mais espaçadas */
+    .azul.f1 { top: 15px; right: 0; }
+    .amarelo.f2 { bottom: 25px; right: 10px; }
+    .vermelho.f3 { top: 60px; right: 35px; }
+    .azul.f4 { bottom: 10px; right: 60px; width: 40px; height: 40px; }
 
     .botoes-container {
       margin: 30px auto;
@@ -128,9 +127,10 @@
   <h1 class="titulo">Plano Plurianual de Pelotas<br>2026-2029</h1>
   <a href="index.html" class="botao-home">Página Inicial</a>
   <div class="formas-direita">
-    <div class="forma azul"></div>
-    <div class="forma amarelo"></div>
-    <div class="forma vermelho"></div>
+    <div class="forma azul f1"></div>
+    <div class="forma amarelo f2"></div>
+    <div class="forma vermelho f3"></div>
+    <div class="forma azul f4"></div>
   </div>
 </header>
 
