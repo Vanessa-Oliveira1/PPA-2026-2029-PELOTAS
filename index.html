@@ -22,7 +22,7 @@
     }
 
     .logo-prefeitura {
-      height: 110px; /* aumentada */
+      height: 110px;
     }
 
     .titulo {
@@ -41,8 +41,7 @@
     }
 
     .botoes-container {
-      margin: 20px auto;
-      padding: 0 50px;
+      margin: 10px 50px 30px 50px; /* espaçamento entre header e botões */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -86,7 +85,7 @@
       border-radius: 10px;
       border: 1px solid #ccc;
       font-size: 14px;
-      width: 220px;
+      width: 240px;
     }
 
     .conteudo {
@@ -104,14 +103,15 @@
   <img src="img/formas_geometricas.png" alt="Formas Decorativas" class="imagem-formas">
 </header>
 
-<div class="botoes-esquerda">
-  <a href="index.html" class="botao cinza">Página Inicial</a>
-  <button class="botao azul" onclick="carregar('ods_conteudo.html')">
-    Objetivos de Desenvolvimento Sustentável (ODS)
-  </button>
-  <button class="botao amarelo" onclick="carregar('monitoramento.html')">Monitoramento</button>
-  <button class="botao vermelho" onclick="carregar('contato.html')">Tire suas dúvidas</button>
-</div>
+<div class="botoes-container">
+  <div class="botoes-esquerda">
+    <a href="index.html" class="botao cinza">Página Inicial</a>
+    <button class="botao azul" onclick="carregar('ods_conteudo.html')">
+      Objetivos de Desenvolvimento Sustentável (ODS)
+    </button>
+    <button class="botao amarelo" onclick="carregar('monitoramento.html')">Monitoramento</button>
+    <button class="botao vermelho" onclick="carregar('contato.html')">Tire suas dúvidas</button>
+  </div>
   <div class="busca-container">
     <input type="text" placeholder="🔍 Buscar no PPA..." />
   </div>
