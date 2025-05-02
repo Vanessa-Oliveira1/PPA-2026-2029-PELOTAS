@@ -1,5 +1,7 @@
 <section class="conteudo">
-  <h1 style="text-align: center; color: #0043CE; font-size: 28px; margin-bottom: 30px;">Clique e saiba mais sobre os Objetivos de Desenvolvimento Sustentável</h1>
+  <h1 style="text-align: center; color: #0043CE; font-size: 28px; margin-bottom: 30px;">
+    Clique e saiba mais sobre os Objetivos de Desenvolvimento Sustentável
+  </h1>
 
   <!-- Grid de ODS -->
   <div class="grid-ods">
@@ -27,14 +29,14 @@
   <div id="resumoODS" class="resumo-ods"></div>
 </section>
 
-<!-- Estilo -->
 <style>
 .grid-ods {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 20px;
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 20px auto;
+  justify-items: center;
 }
 
 .ods-card img {
@@ -53,272 +55,69 @@
   padding: 30px;
   background-color: #f5f7fa;
   border-radius: 10px;
-  text-align: left;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
 .resumo-ods h2 {
   color: #0043CE;
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
-}
-
-.resumo-ods p, .resumo-ods li {
-  font-size: 18px;
-  color: #555;
+  margin-bottom: 20px;
 }
 
 .resumo-ods ul {
-  padding-left: 20px;
+  padding-left: 0;
+}
+
+.resumo-ods li {
+  background-color: #ffffff;
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-left: 6px solid #0043CE;
+  border-radius: 6px;
+  font-size: 16px;
+  list-style: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 </style>
 
-<!-- Script -->
 <script>
 function mostrarResumoODS(id) {
-  const resumo = document.getElementById('resumoODS');
-  let conteudo = '';
+  const objetivos = [
+    { titulo: 'Objetivo 1 – Erradicação da Pobreza', descricao: 'Acabar com a pobreza em todas as suas formas, em todos os lugares.', metas: ['1.1 - Erradicar a pobreza extrema.', '1.2 - Reduzir pela metade a proporção de pessoas que vivem na pobreza.', '1.3 - Implementar sistemas de proteção social.', '1.4 - Garantir acesso igualitário a recursos.', '1.5 - Reduzir a exposição de pobres a desastres.'] },
+    { titulo: 'Objetivo 2 – Fome Zero e Agricultura Sustentável', descricao: 'Acabar com a fome, alcançar a segurança alimentar e promover a agricultura sustentável.', metas: ['2.1 - Acabar com a fome.', '2.2 - Acabar com todas as formas de desnutrição.', '2.3 - Dobrar a produtividade agrícola.', '2.4 - Garantir sistemas sustentáveis de produção.', '2.5 - Manter a diversidade genética.'] },
+    { titulo: 'Objetivo 3 – Saúde e Bem-estar', descricao: 'Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades.', metas: ['3.1 - Reduzir a mortalidade materna.', '3.2 - Acabar com mortes evitáveis de crianças.', '3.3 - Combater epidemias.', '3.4 - Reduzir mortalidade precoce por doenças não transmissíveis.', '3.5 - Tratar abuso de substâncias.'] },
+    { titulo: 'Objetivo 4 – Educação de Qualidade', descricao: 'Assegurar educação inclusiva, equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida.', metas: ['4.1 - Garantir ensino primário e secundário.', '4.2 - Acesso a serviços de primeira infância.', '4.3 - Acesso igualitário ao ensino superior.', '4.4 - Aumentar habilidades relevantes.', '4.5 - Eliminar disparidades de gênero.'] },
+    { titulo: 'Objetivo 5 – Igualdade de Gênero', descricao: 'Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas.', metas: ['5.1 - Acabar com a discriminação.', '5.2 - Eliminar violência contra mulheres.', '5.3 - Eliminar práticas nocivas.', '5.4 - Valorizar trabalho doméstico.', '5.5 - Participação plena das mulheres.'] },
+    { titulo: 'Objetivo 6 – Água Potável e Saneamento', descricao: 'Garantir disponibilidade e gestão sustentável da água e saneamento para todos.', metas: ['6.1 - Acesso universal à água potável.', '6.2 - Saneamento e higiene para todos.', '6.3 - Melhorar qualidade da água.', '6.4 - Aumentar eficiência no uso da água.', '6.5 - Gestão integrada dos recursos hídricos.'] },
+    { titulo: 'Objetivo 7 – Energia Limpa e Acessível', descricao: 'Assegurar o acesso confiável, sustentável, moderno e a preço acessível à energia para todos.', metas: ['7.1 - Acesso universal a energia moderna.', '7.2 - Aumentar energia renovável.', '7.3 - Melhorar eficiência energética.'] },
+    { titulo: 'Objetivo 8 – Trabalho Decente e Crescimento Econômico', descricao: 'Promover o crescimento econômico sustentado, inclusivo e sustentável, emprego pleno e produtivo e trabalho decente para todos.', metas: ['8.1 - Crescimento econômico per capita.', '8.2 - Aumentar produtividade econômica.', '8.3 - Políticas para trabalho decente.', '8.5 - Emprego pleno e produtivo.', '8.6 - Reduzir jovens fora do trabalho e estudo.'] },
+    { titulo: 'Objetivo 9 – Indústria, Inovação e Infraestrutura', descricao: 'Construir infraestruturas resilientes, promover a industrialização inclusiva e sustentável e fomentar a inovação.', metas: ['9.1 - Infraestruturas sustentáveis.', '9.2 - Industrialização inclusiva.', '9.3 - Acesso a financiamento e mercados.', '9.4 - Atualizar infraestrutura para sustentabilidade.'] },
+    { titulo: 'Objetivo 10 – Redução das Desigualdades', descricao: 'Reduzir a desigualdade dentro dos países e entre eles.', metas: ['10.1 - Renda dos mais pobres crescer mais rápido.', '10.2 - Inclusão social e econômica.', '10.3 - Igualdade de oportunidades.', '10.4 - Políticas para igualdade.'] },
+    { titulo: 'Objetivo 11 – Cidades e Comunidades Sustentáveis', descricao: 'Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis.', metas: ['11.1 - Habitação segura e acessível.', '11.2 - Transporte sustentável.', '11.3 - Urbanização inclusiva.', '11.5 - Reduzir impacto de desastres.'] },
+    { titulo: 'Objetivo 12 – Consumo e Produção Sustentáveis', descricao: 'Assegurar padrões de produção e de consumo sustentáveis.', metas: ['12.1 - Plano decenal de consumo sustentável.', '12.2 - Uso eficiente dos recursos.', '12.3 - Reduzir desperdício de alimentos.', '12.5 - Reduzir geração de resíduos.'] },
+    { titulo: 'Objetivo 13 – Ação Contra a Mudança Global do Clima', descricao: 'Tomar medidas urgentes para combater a mudança climática e seus impactos.', metas: ['13.1 - Resiliência a desastres climáticos.', '13.2 - Políticas para mudança do clima.', '13.3 - Educação e conscientização.'] },
+    { titulo: 'Objetivo 14 – Vida na Água', descricao: 'Conservar e usar de forma sustentável os oceanos, mares e os recursos marinhos.', metas: ['14.1 - Reduzir poluição marinha.', '14.2 - Proteger ecossistemas marinhos.', '14.3 - Minimizar acidificação dos oceanos.'] },
+    { titulo: 'Objetivo 15 – Vida Terrestre', descricao: 'Proteger, recuperar e promover o uso sustentável dos ecossistemas terrestres.', metas: ['15.1 - Conservação de ecossistemas.', '15.2 - Gestão sustentável de florestas.', '15.3 - Combater desertificação.', '15.4 - Proteger biodiversidade.'] },
+    { titulo: 'Objetivo 16 – Paz, Justiça e Instituições Eficazes', descricao: 'Promover sociedades pacíficas e inclusivas, garantir acesso à justiça para todos e construir instituições eficazes.', metas: ['16.1 - Reduzir violência.', '16.2 - Proteger crianças contra violência.', '16.3 - Garantir acesso à justiça.', '16.5 - Combater corrupção.'] },
+    { titulo: 'Objetivo 17 – Parcerias e Meios de Implementação', descricao: 'Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável.', metas: ['17.1 - Mobilizar recursos financeiros.', '17.2 - Assistência oficial ao desenvolvimento.', '17.6 - Cooperação em ciência e tecnologia.', '17.17 - Parcerias multissetoriais.'] }
+  ];
 
-  if (id === 1) {
-    conteudo = `
-      <h2>Objetivo 1 – Erradicação da pobreza</h2>
-      <p>Acabar com a pobreza em todas as suas formas, em todos os lugares.</p>
-      <ul>
-        <li><strong>1.1</strong> - Erradicar a pobreza extrema em todos os lugares.</li>
-        <li><strong>1.2</strong> - Reduzir pela metade a proporção de pessoas que vivem na pobreza.</li>
-        <li><strong>1.3</strong> - Implementar sistemas de proteção social adequados.</li>
-        <li><strong>1.4</strong> - Garantir acesso igualitário a recursos econômicos, serviços básicos e controle da terra.</li>
-        <li><strong>1.5</strong> - Reduzir a vulnerabilidade a desastres econômicos, sociais e ambientais.</li>
-      </ul>
-    `;
-  }
+  const ods = objetivos[id - 1];
+  if (!ods) return;
 
-  if (id === 2) {
-    conteudo = `
-      <h2>Objetivo 2 – Fome Zero e Agricultura Sustentável</h2>
-      <p>Acabar com a fome, alcançar a segurança alimentar e promover a agricultura sustentável.</p>
-      <ul>
-        <li><strong>2.1</strong> - Acabar com a fome e assegurar acesso de todas as pessoas à alimentação segura, nutritiva e suficiente.</li>
-        <li><strong>2.2</strong> - Acabar com todas as formas de desnutrição.</li>
-        <li><strong>2.3</strong> - Dobrar a produtividade agrícola e a renda dos pequenos produtores.</li>
-        <li><strong>2.4</strong> - Garantir sistemas sustentáveis de produção de alimentos.</li>
-        <li><strong>2.5</strong> - Manter a diversidade genética de sementes, plantas cultivadas e animais domesticados.</li>
-      </ul>
-    `;
-  }
-  if (id === 3) {
-    conteudo = `
-      <h2>Objetivo 3 – Saúde e Bem-estar</h2>
-      <p>Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades.</p>
-      <ul>
-        <li><strong>3.1</strong> - Reduzir a taxa de mortalidade materna global para menos de 70 por 100.000 nascidos vivos.</li>
-        <li><strong>3.2</strong> - Acabar com as mortes evitáveis de recém-nascidos e crianças menores de 5 anos.</li>
-        <li><strong>3.3</strong> - Acabar com as epidemias de AIDS, tuberculose, malária e doenças tropicais negligenciadas.</li>
-        <li><strong>3.4</strong> - Reduzir em um terço a mortalidade prematura por doenças não transmissíveis.</li>
-        <li><strong>3.5</strong> - Reforçar a prevenção e o tratamento do abuso de substâncias.</li>
-        <li><strong>3.6</strong> - Reduzir pela metade as mortes e lesões globais por acidentes em estradas.</li>
-        <li><strong>3.7</strong> - Assegurar acesso universal a serviços de saúde sexual e reprodutiva.</li>
-        <li><strong>3.8</strong> - Alcançar a cobertura universal de saúde.</li>
-        <li><strong>3.9</strong> - Reduzir substancialmente o número de mortes e doenças causadas por produtos químicos perigosos e poluição.</li>
-      </ul>
-    `;
-  }
+  const metasHtml = ods.metas.map(meta => `<li>${meta}</li>`).join('');
 
-  if (id === 4) {
-    conteudo = `
-      <h2>Objetivo 4 – Educação de Qualidade</h2>
-      <p>Assegurar educação inclusiva e equitativa de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos.</p>
-      <ul>
-        <li><strong>4.1</strong> - Garantir que todos os meninos e meninas concluam o ensino primário e secundário.</li>
-        <li><strong>4.2</strong> - Garantir que todas as crianças tenham acesso a serviços de desenvolvimento na primeira infância e educação pré-primária.</li>
-        <li><strong>4.3</strong> - Assegurar acesso igualitário para todos à educação técnica, profissional e superior de qualidade.</li>
-        <li><strong>4.4</strong> - Aumentar substancialmente o número de jovens e adultos com competências relevantes.</li>
-        <li><strong>4.5</strong> - Eliminar disparidades de gênero na educação e garantir acesso igualitário para pessoas vulneráveis.</li>
-        <li><strong>4.6</strong> - Garantir que todos os jovens e uma proporção substancial de adultos atinjam a alfabetização e a numeracia.</li>
-      </ul>
-    `;
-  }
+  const conteudo = `
+    <h2>${ods.titulo}</h2>
+    <p>${ods.descricao}</p>
+    <ul>${metasHtml}</ul>
+  `;
 
-  if (id === 5) {
-    conteudo = `
-      <h2>Objetivo 5 – Igualdade de Gênero</h2>
-      <p>Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas.</p>
-      <ul>
-        <li><strong>5.1</strong> - Acabar com todas as formas de discriminação contra mulheres e meninas em toda parte.</li>
-        <li><strong>5.2</strong> - Eliminar todas as formas de violência contra mulheres e meninas, inclusive tráfico e exploração sexual.</li>
-        <li><strong>5.3</strong> - Eliminar todas as práticas nocivas, como o casamento infantil, precoce e forçado e mutilação genital feminina.</li>
-        <li><strong>5.4</strong> - Reconhecer e valorizar o trabalho de assistência e doméstico não remunerado.</li>
-        <li><strong>5.5</strong> - Garantir a participação plena e efetiva das mulheres e a igualdade de oportunidades de liderança.</li>
-        <li><strong>5.6</strong> - Assegurar o acesso universal à saúde sexual e reprodutiva e aos direitos reprodutivos.</li>
-      </ul>
-    `;
-  }
-  if (id === 6) {
-    conteudo = `
-      <h2>Objetivo 6 – Água Potável e Saneamento</h2>
-      <p>Garantir disponibilidade e gestão sustentável da água potável e saneamento para todos.</p>
-      <ul>
-        <li><strong>6.1</strong> - Alcançar acesso universal e equitativo à água potável segura e acessível para todos.</li>
-        <li><strong>6.2</strong> - Acesso a saneamento e higiene adequados para todos e acabar com a defecação a céu aberto.</li>
-        <li><strong>6.3</strong> - Melhorar a qualidade da água, reduzindo a poluição e eliminando o despejo de resíduos.</li>
-        <li><strong>6.4</strong> - Aumentar substancialmente a eficiência do uso da água em todos os setores.</li>
-        <li><strong>6.5</strong> - Implementar a gestão integrada dos recursos hídricos em todos os níveis.</li>
-        <li><strong>6.6</strong> - Proteger e restaurar ecossistemas relacionados com a água.</li>
-      </ul>
-    `;
-  }
-
-  if (id === 7) {
-    conteudo = `
-      <h2>Objetivo 7 – Energia Limpa e Acessível</h2>
-      <p>Garantir acesso a fontes de energia fiáveis, sustentáveis e modernas para todos.</p>
-      <ul>
-        <li><strong>7.1</strong> - Garantir acesso universal, confiável e moderno a serviços de energia.</li>
-        <li><strong>7.2</strong> - Aumentar substancialmente a participação de energias renováveis na matriz energética global.</li>
-        <li><strong>7.3</strong> - Dobrar a taxa global de melhoria da eficiência energética.</li>
-        <li><strong>7.a</strong> - Expandir infraestrutura e atualizar tecnologias para o fornecimento de energia sustentável.</li>
-      </ul>
-    `;
-  }
-
-  if (id === 8) {
-    conteudo = `
-      <h2>Objetivo 8 – Trabalho Decente e Crescimento Econômico</h2>
-      <p>Promover o crescimento econômico sustentado, inclusivo e sustentável, emprego pleno e produtivo e trabalho decente para todos.</p>
-      <ul>
-        <li><strong>8.1</strong> - Sustentar o crescimento econômico per capita.</li>
-        <li><strong>8.2</strong> - Aumentar a produtividade econômica através da diversificação, modernização tecnológica e inovação.</li>
-        <li><strong>8.3</strong> - Promover políticas orientadas para o desenvolvimento de atividades produtivas e trabalho decente.</li>
-        <li><strong>8.5</strong> - Alcançar o emprego pleno e produtivo e trabalho decente para todos, incluindo jovens e pessoas com deficiência.</li>
-        <li><strong>8.6</strong> - Reduzir substancialmente a proporção de jovens sem emprego, educação ou formação.</li>
-        <li><strong>8.8</strong> - Proteger os direitos trabalhistas e promover ambientes de trabalho seguros e protegidos para todos os trabalhadores.</li>
-      </ul>
-    `;
-  }
-  if (id === 9) {
-    conteudo = `
-      <h2>Objetivo 9 – Indústria, Inovação e Infraestrutura</h2>
-      <p>Construir infraestruturas resilientes, promover a industrialização inclusiva e sustentável e fomentar a inovação.</p>
-      <ul>
-        <li><strong>9.1</strong> - Desenvolver infraestruturas de qualidade, confiáveis, sustentáveis e resilientes.</li>
-        <li><strong>9.2</strong> - Promover a industrialização inclusiva e sustentável e aumentar a contribuição da indústria para o emprego e o PIB.</li>
-        <li><strong>9.3</strong> - Aumentar o acesso das pequenas indústrias aos serviços financeiros e à integração nos mercados de valor.</li>
-        <li><strong>9.4</strong> - Atualizar infraestruturas e indústrias para torná-las sustentáveis, com eficiência no uso de recursos.</li>
-        <li><strong>9.5</strong> - Aumentar a pesquisa científica e melhorar a capacidade tecnológica dos setores industriais.</li>
-      </ul>
-    `;
-  }
-
-  if (id === 10) {
-    conteudo = `
-      <h2>Objetivo 10 – Redução das Desigualdades</h2>
-      <p>Reduzir a desigualdade dentro dos países e entre eles.</p>
-      <ul>
-        <li><strong>10.1</strong> - Aumentar e sustentar o crescimento da renda dos 40% mais pobres a uma taxa maior que a média nacional.</li>
-        <li><strong>10.2</strong> - Empoderar e promover a inclusão social, econômica e política de todos.</li>
-        <li><strong>10.3</strong> - Garantir a igualdade de oportunidades e reduzir desigualdades de resultados.</li>
-        <li><strong>10.4</strong> - Adotar políticas fiscais, salariais e de proteção social para alcançar maior igualdade.</li>
-        <li><strong>10.5</strong> - Melhorar a regulamentação e monitoramento dos mercados e instituições financeiras globais.</li>
-      </ul>
-    `;
-  }
-
-  if (id === 11) {
-    conteudo = `
-      <h2>Objetivo 11 – Cidades e Comunidades Sustentáveis</h2>
-      <p>Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis.</p>
-      <ul>
-        <li><strong>11.1</strong> - Garantir acesso a habitação segura, adequada e a preço acessível e aos serviços básicos para todos.</li>
-        <li><strong>11.2</strong> - Proporcionar acesso a sistemas de transporte seguros, acessíveis e sustentáveis para todos.</li>
-        <li><strong>11.3</strong> - Aumentar a urbanização inclusiva e sustentável.</li>
-        <li><strong>11.4</strong> - Proteger e salvaguardar o patrimônio cultural e natural do mundo.</li>
-        <li><strong>11.5</strong> - Reduzir o número de mortes e o número de pessoas afetadas por desastres.</li>
-        <li><strong>11.6</strong> - Reduzir o impacto ambiental negativo per capita das cidades.</li>
-      </ul>
-    `;
-  }
-  if (id === 12) {
-    conteudo = `
-      <h2>Objetivo 12 – Consumo e Produção Responsáveis</h2>
-      <p>Assegurar padrões de produção e de consumo sustentáveis.</p>
-      <ul>
-        <li><strong>12.1</strong> - Implementar o Plano Decenal de Programas sobre Produção e Consumo Sustentáveis.</li>
-        <li><strong>12.2</strong> - Alcançar a gestão sustentável e o uso eficiente dos recursos naturais.</li>
-        <li><strong>12.3</strong> - Reduzir pela metade o desperdício de alimentos per capita mundialmente.</li>
-        <li><strong>12.4</strong> - Alcançar a gestão ambientalmente saudável dos produtos químicos e resíduos.</li>
-        <li><strong>12.5</strong> - Reduzir substancialmente a geração de resíduos através da prevenção, redução, reciclagem e reúso.</li>
-      </ul>
-    `;
-  }
-
-  if (id === 13) {
-    conteudo = `
-      <h2>Objetivo 13 – Ação Contra a Mudança Global do Clima</h2>
-      <p>Tomar medidas urgentes para combater a mudança climática e seus impactos.</p>
-      <ul>
-        <li><strong>13.1</strong> - Reforçar a resiliência e a capacidade de adaptação a riscos relacionados ao clima e desastres naturais.</li>
-        <li><strong>13.2</strong> - Integrar medidas de mudança do clima nas políticas, estratégias e planejamentos nacionais.</li>
-        <li><strong>13.3</strong> - Melhorar a educação, a conscientização e a capacidade humana e institucional sobre mudança do clima.</li>
-      </ul>
-    `;
-  }
-
-  if (id === 14) {
-    conteudo = `
-      <h2>Objetivo 14 – Vida na Água</h2>
-      <p>Conservar e usar de forma sustentável os oceanos, mares e os recursos marinhos para o desenvolvimento sustentável.</p>
-      <ul>
-        <li><strong>14.1</strong> - Prevenir e reduzir significativamente a poluição marinha.</li>
-        <li><strong>14.2</strong> - Gerir e proteger de forma sustentável os ecossistemas marinhos e costeiros.</li>
-        <li><strong>14.3</strong> - Minimizar e enfrentar os impactos da acidificação dos oceanos.</li>
-        <li><strong>14.4</strong> - Regular eficazmente a coleta de recursos pesqueiros.</li>
-        <li><strong>14.5</strong> - Conservar pelo menos 10% das zonas costeiras e marinhas.</li>
-      </ul>
-    `;
-  }
-  if (id === 15) {
-    conteudo = `
-      <h2>Objetivo 15 – Vida Terrestre</h2>
-      <p>Proteger, recuperar e promover o uso sustentável dos ecossistemas terrestres, gerir florestas de forma sustentável, combater a desertificação, deter e reverter a degradação da terra e deter a perda de biodiversidade.</p>
-      <ul>
-        <li><strong>15.1</strong> - Assegurar a conservação, recuperação e uso sustentável de ecossistemas terrestres e de água doce.</li>
-        <li><strong>15.2</strong> - Promover a gestão sustentável de todos os tipos de florestas.</li>
-        <li><strong>15.3</strong> - Combater a desertificação, restaurar terras e solos degradados.</li>
-        <li><strong>15.4</strong> - Assegurar a conservação dos ecossistemas de montanha, incluindo sua biodiversidade.</li>
-        <li><strong>15.5</strong> - Reduzir a degradação do habitat natural e deter a perda de biodiversidade.</li>
-      </ul>
-    `;
-  }
-
-  if (id === 16) {
-    conteudo = `
-      <h2>Objetivo 16 – Paz, Justiça e Instituições Eficazes</h2>
-      <p>Promover sociedades pacíficas e inclusivas para o desenvolvimento sustentável, proporcionar o acesso à justiça para todos e construir instituições eficazes, responsáveis e inclusivas em todos os níveis.</p>
-      <ul>
-        <li><strong>16.1</strong> - Reduzir significativamente todas as formas de violência e as taxas de mortalidade relacionadas.</li>
-        <li><strong>16.2</strong> - Acabar com abuso, exploração, tráfico e todas as formas de violência contra crianças.</li>
-        <li><strong>16.3</strong> - Promover o Estado de Direito e garantir igualdade de acesso à justiça para todos.</li>
-        <li><strong>16.5</strong> - Reduzir substancialmente a corrupção e o suborno em todas as suas formas.</li>
-        <li><strong>16.6</strong> - Desenvolver instituições eficazes, responsáveis e transparentes.</li>
-        <li><strong>16.7</strong> - Assegurar a tomada de decisão responsiva, inclusiva, participativa e representativa em todos os níveis.</li>
-      </ul>
-    `;
-  }
-
-  if (id === 17) {
-    conteudo = `
-      <h2>Objetivo 17 – Parcerias e Meios de Implementação</h2>
-      <p>Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável.</p>
-      <ul>
-        <li><strong>17.1</strong> - Mobilizar recursos financeiros para países em desenvolvimento.</li>
-        <li><strong>17.2</strong> - Implementar plenamente a Assistência Oficial para o Desenvolvimento.</li>
-        <li><strong>17.6</strong> - Melhorar a cooperação regional e internacional em ciência, tecnologia e inovação.</li>
-        <li><strong>17.9</strong> - Reforçar o apoio à capacitação para os países em desenvolvimento.</li>
-        <li><strong>17.17</strong> - Incentivar e promover parcerias eficazes nas esferas pública, público-privada e da sociedade civil.</li>
-      </ul>
-    `;
-  }
-
-  resumo.innerHTML = conteudo;
+  document.getElementById("resumoODS").innerHTML = conteudo;
 }
 </script>
