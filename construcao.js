@@ -16,9 +16,9 @@ fetch('estrutura_ppa_2026_2029.json')
       const eixoCard = document.createElement('div');
       eixoCard.style.borderLeft = `6px solid ${eixoCores[eixo.id] || '#ccc'}`;
       eixoCard.style.background = '#fff';
-      eixoCard.style.padding = '14px';
-      eixoCard.style.margin = '18px 0';
-      eixoCard.style.borderRadius = '8px';
+      eixoCard.style.padding = '20px';
+      eixoCard.style.margin = '30px 0';
+      eixoCard.style.borderRadius = '10px';
       eixoCard.style.boxShadow = '0 2px 6px rgba(0,0,0,0.08)';
 
       const eixoHeader = document.createElement('div');
