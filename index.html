@@ -49,18 +49,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 0 30px;
   position: relative;
+  margin: 30px auto;
+  max-width: 1000px;
+  padding: 0 30px;
+  gap: 30px;
 }
 
 .botao-inicial {
   position: absolute;
-  left: 30px;
-  top: 0;
+  left: 0;
 }
 
 .botoes-centrais {
@@ -70,9 +68,20 @@
   justify-content: center;
 }
 
-    .botao:hover {
-      transform: scale(1.05);
-    }
+.botao {
+  padding: 16px 36px;
+  border: none;
+  border-radius: 10px; /* mais arredondado, mas discreto */
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botao:hover {
+  transform: scale(1.05);
+}
 
     .azul {
       background-color: #7cc4f3;
