@@ -102,7 +102,22 @@
           return response.text();
         })
         .then(html => {
-          document.getElementById("conteudo-principal").innerHTML = html;
+          const container = document.getElementById("conteudo-principal");
+          container.innerHTML = html;
+
+          // Ativa scripts internos do conteúdo carregado
+          const scripts = container.querySelectorAll("script");
+          scripts.forEach(oldScript => {
+            const newScript = document.createElement("script");
+            if (oldScript.src) {
+              newScript.src = oldScript.src;
+            } else {
+              newScript.textContent = oldScript.textContent;
+            }
+            document.body.appendChild(newScript);
+          });
+
+          // Carrega script adicional da construção (se necessário)
           if (pagina.includes("construcao")) {
             const script = document.createElement("script");
             script.src = "construcao.js";
@@ -110,7 +125,8 @@
           }
         })
         .catch(error => {
-          document.getElementById("conteudo-principal").innerHTML = `<p style="color:red;">Erro ao carregar ${pagina}</p>`;
+          document.getElementById("conteudo-principal").innerHTML =
+            `<p style="color:red;">Erro ao carregar ${pagina}</p>`;
         });
     }
   </script>
