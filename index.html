@@ -46,25 +46,29 @@
     }
 
     .botoes-container {
-      margin: 30px auto;
-      padding: 0 20px;
-      max-width: 1000px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 30px;
+  position: relative;
+}
 
-    .botao {
-      padding: 18px 40px;
-      border: none;
-      border-radius: 15px;
-      font-size: 18px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: transform 0.3s;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    }
+.botao-inicial {
+  position: absolute;
+  left: 30px;
+  top: 0;
+}
+
+.botoes-centrais {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
     .botao:hover {
       transform: scale(1.05);
@@ -106,13 +110,15 @@
   </header>
 
   <div class="botoes-container">
-    <a href="index.html" class="botao cinza">Página Inicial</a>
+  <a href="index.html" class="botao cinza botao-inicial">Página Inicial</a>
+  <div class="botoes-centrais">
     <button class="botao azul" onclick="carregar('ods_conteudo.html')">
       Objetivos de Desenvolvimento Sustentável (ODS)
     </button>
     <button class="botao amarelo" onclick="carregar('monitoramento.html')">Monitoramento</button>
     <button class="botao vermelho" onclick="carregar('contato.html')">Tire suas dúvidas</button>
   </div>
+</div>
 
   <main class="conteudo" id="conteudo-principal">
     <!-- A construção será carregada automaticamente aqui -->
