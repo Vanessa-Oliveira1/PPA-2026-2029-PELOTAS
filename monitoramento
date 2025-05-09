@@ -1,6 +1,17 @@
 <section class="conteudo">
-  <h2 style="text-align: center; margin-bottom: 20px;">Monitoramento das Ações</h2>
-  <p style="text-align: center;">Em breve: painel do Power BI incorporado aqui!</p>
+  <h1 style="text-align: center; color: #0043CE; font-size: 28px; margin-bottom: 30px;">
+    Monitoramento das Ações do PPA 2026–2029
+  </h1>
 
-  <iframe src="https://app.powerbi.com/view?r=PAINEL_ID_EXEMPLO" title="Painel Power BI"></iframe>
+  <div style="max-width: 1140px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border-radius: 12px; overflow: hidden;">
+    <iframe 
+      title="PPA" 
+      width="100%" 
+      height="600" 
+      src="https://app.powerbi.com/reportEmbed?reportId=621702d0-d76f-46d6-94f5-03122adb8acc&autoAuth=true&ctid=0d758b1c-2a90-4fd6-bd84-a8a21b97473a" 
+      frameborder="0" 
+      style="border: none; display: block;"
+      allowfullscreen>
+    </iframe>
+  </div>
 </section>
