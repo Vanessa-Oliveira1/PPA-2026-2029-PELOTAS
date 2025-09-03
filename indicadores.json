@@ -1,0 +1,642 @@
+[
+  {
+    "id": 1,
+    "tema": "Governança",
+    "subtema": "Transparência",
+    "indicador": "Percentual de Conselhos de Direitos Ativos",
+    "descricao": "Relação entre Conselhos Municipais de Direitos existentes e ativos",
+    "fonte": "SMF",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": "Democracia, Cidadania e Justiça Social"
+  },
+  {
+    "id": 2,
+    "tema": "Saúde",
+    "subtema": "Mortalidade Infantil",
+    "indicador": "Diferença na taxa de mortalidade infantil entre crianças de mães negras e brancas",
+    "descricao": "Diferença entre as Taxas de Mortalidade Infantil (mães negras menos mães não negras)",
+    "fonte": "DataSUS/SINASC",
+    "ods": "ODS 3 – Saúde e Bem-Estar",
+    "eixo": ""
+  },
+  {
+    "id": 3,
+    "tema": "Educação",
+    "subtema": "Distorção Idade-Série",
+    "indicador": "Diferença na taxa de distorção idade-série nos anos finais do Ensino Fundamental entre negros e brancos",
+    "descricao": "Diferença na TDI entre negros e não-negros nos anos finais do EF",
+    "fonte": "INEP/Censo Escolar; Sistema de matrículas da SME",
+    "ods": "ODS 4 – Educação de Qualidade",
+    "eixo": ""
+  },
+  {
+    "id": 4,
+    "tema": "Segurança Pública",
+    "subtema": "Violência Racial",
+    "indicador": "Diferença na taxa de homicídios entre negros e brancos",
+    "descricao": "Diferença entre taxa de homicídios por 100 mil habitantes de negros e taxa de homicídios por 100 mil habitantes de não negros.",
+    "fonte": "DataSUS/SIM",
+    "ods": "ODS 10 – Redução das Desigualdades",
+    "eixo": ""
+  },
+  {
+    "id": 5,
+    "tema": "Segurança Pública",
+    "subtema": "Violência contra a Mulher",
+    "indicador": "Diferença na taxa de feminicídio entre mulheres negras e brancas",
+    "descricao": "Diferença entre as Taxas de Feminicídio (100 mil mulheres) (PPI menos BA)",
+    "fonte": "DataSUS/SIM",
+    "ods": "ODS 5 – Igualdade de Gênero",
+    "eixo": ""
+  },
+  {
+    "id": 6,
+    "tema": "Segurança Pública",
+    "subtema": "Violência Racial",
+    "indicador": "Diferença na taxa de homicídio juvenil masculino entre jovens negros e brancos",
+    "descricao": "Diferença entre as Taxas de Homicídio juvenil (15 a 29 anos) masculino (100 mil habitantes) (PPI menos BA)",
+    "fonte": "DataSUS/SIM",
+    "ods": "ODS 10 – Redução das Desigualdades",
+    "eixo": ""
+  },
+  {
+    "id": 7,
+    "tema": "Segurança Pública",
+    "subtema": "Violência LGBTQIA+",
+    "indicador": "Violência contra a população LGBTQIA+",
+    "descricao": "Violência contra LGBTQI+",
+    "fonte": "Disque Direitos Humanos (Disque 100)/Ministério dos Direitos Humanos e Cidadania; IBGE/Censo Demográfico 2022; Observatório Municipal",
+    "ods": "ODS 10 – Redução das Desigualdades",
+    "eixo": ""
+  },
+  {
+    "id": 8,
+    "tema": "Trabalho e Renda",
+    "subtema": "Desigualdade de Renda",
+    "indicador": "Coeficiente de Gini",
+    "descricao": "O coeficiente de Gini mede o grau de desigualdade na distribuição da renda domiciliar per capita entre os indivíduos. Seu valor pode variar teoricamente desde 0, quando não há desigualdade (as rendas de todos os indivíduos têm o mesmo valor), até 1, quando a desigualdade é máxima (apenas um indivíduo detém toda a renda da sociedade e a renda de todos os outros indivíduos é nula). (IPEA)",
+    "fonte": "Atlas do Desenvolvimento Humano no Brasil",
+    "ods": "ODS 8 – Trabalho Decente e Crescimento Econômico",
+    "eixo": ""
+  },
+  {
+    "id": 9,
+    "tema": "Segurança Pública",
+    "subtema": "Violência Letal",
+    "indicador": "Taxa de feminicídio",
+    "descricao": "Taxa de feminicídio, por 100 mil mulheres.",
+    "fonte": "DataSUS/SIM; Observatório Municipal",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": "Bem-Viver e Desenvolvimento Humano"
+  },
+  {
+    "id": 10,
+    "tema": "Segurança Pública",
+    "subtema": "Violência Letal",
+    "indicador": "Taxa de homicídio",
+    "descricao": "Número de mortes por homicídio ocorridos no município, por 100 mil habitantes.",
+    "fonte": "DataSUS/SIM; Observatório Municipal",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": ""
+  },
+  {
+    "id": 11,
+    "tema": "Segurança Pública",
+    "subtema": "Violência Letal",
+    "indicador": "Homicídio juvenil masculino",
+    "descricao": "Número de óbitos por causa externa (CID X89 a Y09, Y35 e Y36), sexo masculino, na faixa etária de 15 a 29 anos (inclusive) ocorridos no município, por 100 mil habitantes do sexo masculino, de 15 a 29 anos.",
+    "fonte": "DataSUS/SIM; Observatório Municipal",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": ""
+  },
+  {
+    "id": 12,
+    "tema": "Segurança Pública",
+    "subtema": "Criminalidade",
+    "indicador": "Mortes por armas de fogo",
+    "descricao": "Número de óbitos por armas de fogo por homicídio (CID10: X93, X94 e X95) por 100 mil habitantes.",
+    "fonte": "DataSUS/SIM/Óbitos por causas externas;Observatório Municipal",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": ""
+  },
+  {
+    "id": 13,
+    "tema": "Saúde",
+    "subtema": "Saúde Geral",
+    "indicador": "Mortalidade por suicídio",
+    "descricao": "Taxa de mortalidade por suicídio",
+    "fonte": "DataSUS/SIM/Óbitos por causas externas; Observatório",
+    "ods": "ODS 3 – Saúde e Bem-Estar",
+    "eixo": ""
+  },
+  {
+    "id": 14,
+    "tema": "Segurança Viária",
+    "subtema": "Acidentes e Mortalidade no Trânsito",
+    "indicador": "Mortes no trânsito",
+    "descricao": "Número de mortes em acidentes de trânsito (CID10 V01-V99), por 100 mil habitantes.",
+    "fonte": "DataSUS/SIM/Óbitos por causas externas; Observatório",
+    "ods": "ODS 11 – Cidades e Comunidades Sustentáveis",
+    "eixo": ""
+  },
+  {
+    "id": 15,
+    "tema": "Segurança Viária",
+    "subtema": "Acidentes e Mortalidade no Trânsito",
+    "indicador": "Taxa de acidentes de trânsito",
+    "descricao": "O indicador expressa o número total de acidentes de trânsito, para cada 100 mil habitantes.",
+    "fonte": "STT/Observatório Municipal ",
+    "ods": "ODS 11 – Cidades e Comunidades Sustentáveis",
+    "eixo": ""
+  },
+  {
+    "id": 16,
+    "tema": "Segurança Pública",
+    "subtema": "Criminalidade",
+    "indicador": "Taxa de roubos ",
+    "descricao": "Taxa de roubos (listar quais), por 100 mil habitantes",
+    "fonte": "Consultas Integradas/Observatório Municipal",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": ""
+  },
+  {
+    "id": 17,
+    "tema": "Segurança Pública",
+    "subtema": "Justiça Juvenil",
+    "indicador": "Variação anual das ocorrências de auto de apreensão de adolescente por prática de ato infracional",
+    "descricao": "O indicador mede a variação percentual das ocorrências de auto de apreensão de adolescente por prática de ato infracional",
+    "fonte": "Observatório municipal",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": ""
+  },
+  {
+    "id": 18,
+    "tema": "Direitos Humanos e Assistência Social",
+    "subtema": "Proteção Social",
+    "indicador": "Percentual de pessoas inscritas no Cadastro Único que recebem Bolsa Família",
+    "descricao": "Participação das pessoas que recebem o bolsa família sobre o total de pessoas cadastradas no Cadastro Único. A data de referência para extração do dado é sempre dezembro do ano anterior na Base do CadÚnico.",
+    "fonte": "MDS/Ministério do Desenvolvimento e Assistência Social, Família e Combate a Fome/VIS Data 3 beta",
+    "ods": "ODS 1 – Erradicação da Pobreza / ODS 10 – Redução das Desigualdades",
+    "eixo": ""
+  },
+  {
+    "id": 19,
+    "tema": "Direitos Humanos e Assistência Social",
+    "subtema": "Proteção Social",
+    "indicador": "Percentual de pessoas abaixo da linha da pobreza no Cadastro Único pós Bolsa Família",
+    "descricao": "Percentual da população abaixo da linha de pobreza após o Bolsa Família.",
+    "fonte": "MDS/Ministério do Desenvolvimento e Assistência Social, Família e Combate a Fome/VIS Data 3 beta",
+    "ods": "ODS 1 – Erradicação da Pobreza / ODS 10 – Redução das Desigualdades",
+    "eixo": ""
+  },
+  {
+    "id": 20,
+    "tema": "Saúde",
+    "subtema": "Saúde Infantil",
+    "indicador": "Baixo peso ao nascer",
+    "descricao": "Percentual de crianças nascidas vivas com menos de 2.499 g sobre o total de nascidos vivos no município.",
+    "fonte": "DataSUS/SINASC",
+    "ods": "ODS 3 – Saúde e Bem-Estar",
+    "eixo": ""
+  },
+  {
+    "id": 21,
+    "tema": "Saúde",
+    "subtema": "Imunização",
+    "indicador": "Cobertura vacinal",
+    "descricao": "Percentual da população alvo imunizada, conforme metodologia da Coordenação Geral do Programa Nacional de Imunizações - CGPNI.",
+    "fonte": "DataSUS/CGPNI - Coordenação Geral do Programa Nacional de Imunizações",
+    "ods": "ODS 3 – Saúde e Bem-Estar",
+    "eixo": ""
+  },
+  {
+    "id": 22,
+    "tema": "Saúde",
+    "subtema": "Mortalidade Infantil",
+    "indicador": "Mortalidade infantil (crianças menores de 1 ano)",
+    "descricao": "Proporção de óbitos de crianças menores de um ano em cada mil crianças nascidas vivas de mães residentes.",
+    "fonte": "DataSUS/SINASC",
+    "ods": "ODS 3 – Saúde e Bem-Estar",
+    "eixo": ""
+  },
+  {
+    "id": 23,
+    "tema": "Saúde",
+    "subtema": "Mortalidade Materna",
+    "indicador": "Mortalidade Materna",
+    "descricao": "Proporção de óbitos maternos sobre o total de nascidos vivos no município, por mil nascidos vivos.",
+    "fonte": "DataSUS/SINASC",
+    "ods": "ODS 3 – Saúde e Bem-Estar",
+    "eixo": ""
+  },
+  {
+    "id": 24,
+    "tema": "Saúde",
+    "subtema": "Saúde Materna",
+    "indicador": "Pré natal insuficiente",
+    "descricao": "Percentual de nascidos vivos cujas mães fizeram menos de 7 consultas pré-natal sobre o total de nascidos vivos no município.",
+    "fonte": "DataSUS/SINASC",
+    "ods": "ODS 3 – Saúde e Bem-Estar",
+    "eixo": ""
+  },
+  {
+    "id": 25,
+    "tema": "Saúde",
+    "subtema": "Gravidez na Adolescência",
+    "indicador": "Gravidez na adolescência",
+    "descricao": "Percentual de nascidos vivos cujas mães tinham 19 anos ou menos sobre o total de nascidos vivos de mães residentes.",
+    "fonte": "DataSUS/SINASC",
+    "ods": "ODS 3 – Saúde e Bem-Estar",
+    "eixo": ""
+  },
+  {
+    "id": 26,
+    "tema": "Educação",
+    "subtema": "Acesso e Permanência",
+    "indicador": "Percentual de crianças de 0 a 3 anos matrículadas em escolas de educação infantil",
+    "descricao": "Percentual de matrículas de crianças de 0 a 3 anos em creches em relação ao total da população de 0 a 3 anos do Município. (Número de matrículas na etapa de ensino / Número da população na faixa etária*) x 100",
+    "fonte": "INEP/Censo Escolar; DataSUS/Estimativas Populacionais; IBGE/Censo 2022",
+    "ods": "ODS 4 – Educação de Qualidade",
+    "eixo": ""
+  },
+  {
+    "id": 27,
+    "tema": "Educação",
+    "subtema": "Acesso e Permanência",
+    "indicador": "Percentual de crianças de 4 a 5 anos matrículadas em escolas de educação infantil",
+    "descricao": "Percentual de matrículas de crianças de 4 a 5 anos em escolas de educação infantil em relação ao total da população de 4 a 5 anos do Município. (Número de matrículas na etapa de ensino / Número da população na faixa etária*) x 100",
+    "fonte": "INEP/Censo Escolar; DataSUS/Estimativas Populacionais; IBGE/Censo 2023",
+    "ods": "ODS 4 – Educação de Qualidade",
+    "eixo": ""
+  },
+  {
+    "id": 28,
+    "tema": "Educação",
+    "subtema": "Qualidade da Educação",
+    "indicador": "Índice de Desenvolvimento da Educação Básica (IDEB) - anos iniciais",
+    "descricao": "Nota do Índice de Desenvolvimento da Educação Básica (IDEB) na rede municipal nos anos iniciais do ensino fundamental.",
+    "fonte": "MEC/IDEB",
+    "ods": "ODS 4 – Educação de Qualidade",
+    "eixo": ""
+  },
+  {
+    "id": 29,
+    "tema": "Educação",
+    "subtema": "Qualidade da Educação",
+    "indicador": "Índice de Desenvolvimento da Educação Básica (IDEB) - anos finais",
+    "descricao": "Nota do Índice de Desenvolvimento da Educação Básica (IDEB) na rede municipal nos anos finais do ensino fundamental.",
+    "fonte": "MEC/IDEB",
+    "ods": "ODS 4 – Educação de Qualidade",
+    "eixo": ""
+  },
+  {
+    "id": 30,
+    "tema": "Educação",
+    "subtema": "Distorção Idade-Série",
+    "indicador": "Taxa de distorção idade-série no Ensino Fundamental - rede pública",
+    "descricao": "Indica a proporção de alunos, em cada série, que têm idade de 2 ou mais anos acima da esperada para o ano em que estão matriculados na rede pública..",
+    "fonte": "INEP/Censo Escolar",
+    "ods": "ODS 4 – Educação de Qualidade",
+    "eixo": ""
+  },
+  {
+    "id": 31,
+    "tema": "Educação",
+    "subtema": "Acesso e Permanência",
+    "indicador": "Crianças e jovens de 4 a 17 anos na escola",
+    "descricao": "Percentual de crianças e jovens de 4 a 17 anos na escola sobre o total da população nesta faixa etária.",
+    "fonte": "INEP/Censo Escolar; IBGE/Censo Demográfico 2022; DataSUS/Estimativas Populacionais",
+    "ods": "ODS 4 – Educação de Qualidade",
+    "eixo": ""
+  },
+  {
+    "id": 32,
+    "tema": "Habitação",
+    "subtema": "Aglomerados Subnormais",
+    "indicador": "População residente em aglomerados subnormais",
+    "descricao": "Percentual da população urbana que reside em aglomerados subnormais em relação à população total do município.",
+    "fonte": "IBGE/Aglomerados Subnormais",
+    "ods": "ODS 11 – Cidades e Comunidades Sustentáveis",
+    "eixo": ""
+  },
+  {
+    "id": 33,
+    "tema": "Direitos Humanos e Assistência Social",
+    "subtema": "Proteção Social",
+    "indicador": "Déficit habitacional a partir do Cadastro Único",
+    "descricao": "O indicador expressa o percentual de pessoas inscritas no Cadastro Único e na Secretaria Municipal de Habitação e Regularização Fundiária que não possuem imóvel próprio e residem em área de risco e/ou imóveis inadequados/adensados decorrentes de cohabitação unifamiliar. (Número de famílias inscritas na Secretaria de Habitação que não possuam imóvel próprio (ou com imóvel próprio condenado localizado em área de risco) e com cadastro válido no Cadastro Único) / (Número\ntotal de pessoas cadastradas no Cadastro Único) x 100",
+    "fonte": "",
+    "ods": "ODS 1 – Erradicação da Pobreza / ODS 10 – Redução das Desigualdades",
+    "eixo": ""
+  },
+  {
+    "id": 34,
+    "tema": "Direitos Humanos e Assistência Social",
+    "subtema": "População em Situação de Rua",
+    "indicador": "Percentual da população em situação de rua referenciados no Centro POP ou em unidades de acolhimento",
+    "descricao": "O indicador mede o percentual da população em situação de rua referenciada no Centro de Referência Especializado para População em Situação de Rua (Centro POP)",
+    "fonte": "",
+    "ods": "ODS 1 – Erradicação da Pobreza / ODS 10 – Redução das Desigualdades",
+    "eixo": ""
+  },
+  {
+    "id": 35,
+    "tema": "Trabalho e Renda",
+    "subtema": "Emprego e Trabalho",
+    "indicador": "Percentual de idosos de baixa renda que recebem recursos de programas de tranferência de renda",
+    "descricao": "O indicador mede, em termos percentuais, a cobertura da proteção social de idosos\nacima de 60 anos de idade, em situação de baixa renda. (Número total de idosos que recebem recursos de programas de\ntransferência de renda cadastrados no Cadastro Único / Número total\nde idosos cadastrados no Cadastro Único) x 100",
+    "fonte": "",
+    "ods": "ODS 8 – Trabalho Decente e Crescimento Econômico",
+    "eixo": ""
+  },
+  {
+    "id": 36,
+    "tema": "Trabalho, Renda e Desenvolvimento Econômico",
+    "subtema": "PIB per capita",
+    "indicador": "PIB per capita",
+    "descricao": "PIB municipal sobre a população total.",
+    "fonte": "IBGE/PIB dos municipios",
+    "ods": "ODS 8 – Trabalho Decente e Crescimento Econômico",
+    "eixo": "Economia para a Vida e Inovação com Sustentabilidade"
+  },
+  {
+    "id": 37,
+    "tema": "Trabalho e Renda",
+    "subtema": "Emprego e Trabalho",
+    "indicador": "Desemprego",
+    "descricao": "O indicador é a taxa de desemprego ou, conforme IBGE comumente se refere, à taxa de desocupação.",
+    "fonte": "IBGE/Censo Demográfico ",
+    "ods": "ODS 8 – Trabalho Decente e Crescimento Econômico",
+    "eixo": ""
+  },
+  {
+    "id": 38,
+    "tema": "Trabalho e Renda",
+    "subtema": "Emprego e Trabalho",
+    "indicador": "Desemprego de jovens",
+    "descricao": "Taxa média de desemprego de jovens de 15 a 29 anos.",
+    "fonte": "IBGE/Censo Demográfico ",
+    "ods": "ODS 8 – Trabalho Decente e Crescimento Econômico",
+    "eixo": ""
+  },
+  {
+    "id": 39,
+    "tema": "Trabalho e Renda",
+    "subtema": "Emprego e Trabalho",
+    "indicador": "Variação do mercado de trabalho formal",
+    "descricao": "O indicador mede a variação percentual do número de postos de trabalhos com carteira assinada no município em um determinado ano. (Somatório do saldo da movimentação do ano de referência / Estoque inicial de janeiro do mesmo ano) x 100",
+    "fonte": "Ministério do Trabalho e Emprego (MTE), a partir de dados do Cadastro Geral de Empregados e Desempregados (CAGED)",
+    "ods": "ODS 8 – Trabalho Decente e Crescimento Econômico",
+    "eixo": ""
+  },
+  {
+    "id": 40,
+    "tema": "Trabalho, Renda e Desenvolvimento Econômico",
+    "subtema": "Dinamismo Econômico",
+    "indicador": "Variação das micro e pequenas empresas no cenário empresarial do município",
+    "descricao": "O indicador demostra a evolução percentual da abertura de empresas consideradas de micro e pequeno porte dentro do município. [(Número de pequenas e micro empresas abertas no ano n / Número de pequenas e micro empresas abertas do ano n-1)-1] x 100",
+    "fonte": "SMF",
+    "ods": "ODS 8 – Trabalho Decente e Crescimento Econômico",
+    "eixo": ""
+  },
+  {
+    "id": 41,
+    "tema": "Trabalho, Renda e Desenvolvimento Econômico",
+    "subtema": "Turismo",
+    "indicador": "Variação anual do número de turistas na cidade",
+    "descricao": "O indicador mede a aceleração ou desaceleração do total de turistas no município em relação ao ano anterior. As informações são provenientes da coleta de dados dos\nCentros de Atendimento ao Turista. ",
+    "fonte": "SETUR",
+    "ods": "ODS 8 – Trabalho Decente e Crescimento Econômico / ODS 11 – Cidades Sustentáveis",
+    "eixo": ""
+  },
+  {
+    "id": 42,
+    "tema": "Trabalho, Renda e Desenvolvimento Econômico",
+    "subtema": "Turismo",
+    "indicador": "Taxa de ocupação hoteleira",
+    "descricao": "O indicador mede o percentual de ocupação do setor hoteleiro do município. Ou seja, ocupação de leitos em hotéis, pousadas, hostels, etc., no ano. (Número de unidades de hospedagem ocupadas / Número total de unidades de hospedagem na cidade) x 100",
+    "fonte": "SETUR",
+    "ods": "ODS 8 – Trabalho Decente e Crescimento Econômico / ODS 11 – Cidades Sustentáveis",
+    "eixo": ""
+  },
+  {
+    "id": 43,
+    "tema": "Trabalho, Renda e Desenvolvimento Econômico",
+    "subtema": "Economia Solidária",
+    "indicador": "Presença da Economia Solidária no município",
+    "descricao": "O indicador refere-se ao número total de empreendimentos de Economia Solidária, por atividade econômica principal formalizados no município. São exemplos de empreendimentos de Economia Solidária: associações, cooperativas, empresas\nautogestionárias, grupos de produção, cujos participantes são trabalhadores que exercem a autogestão das atividades e da alocação dos seus resultados. (Quantidade de empreendimentos de Economia Solidária)",
+    "fonte": "Ministério do Trabalho e Emprego (MTE), através dos dados do Observatório Nacional da\nEconomia Solidária e do Cooperativismo - DIEESE",
+    "ods": "ODS 8 – Trabalho Decente e Crescimento Econômico",
+    "eixo": ""
+  },
+  {
+    "id": 44,
+    "tema": "Cultura",
+    "subtema": "Equipamentos Culturais",
+    "indicador": "Percentual de grupos fomentados no setor de cultura no município",
+    "descricao": "O indicador expressa a representatividade do setor de cultura na economia do município. (Número de grupos fomentados no setor de cultura no município / Número total de grupos proponentes) x 100",
+    "fonte": "SECULT",
+    "ods": "ODS 11 – Cidades e Comunidades Sustentáveis",
+    "eixo": ""
+  },
+  {
+    "id": 45,
+    "tema": "Governança",
+    "subtema": "Efetividade da Gestão Pública",
+    "indicador": "Efetividade – Índice de Efetividade da Gestão Municipal (IEGM)",
+    "descricao": "Calculado pelos Tribunais de Contas e rede nacional, o IEG‑M avalia a correspondência entre ações municipais e expectativas sociais, considerando sete dimensões: saúde, educação, meio ambiente, gestão fiscal, planejamento, TI e cidade protegida",
+    "fonte": "",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": "Gestão Pública Eficiente"
+  },
+  {
+    "id": 46,
+    "tema": "Governança",
+    "subtema": "Gestão Fiscal",
+    "indicador": "Índice FIRJAN de Gestão Fiscal (IFGF)",
+    "descricao": "Mede a saúde fiscal municipal com quatro sub‑indicadores: autonomia, gastos com pessoal, liquidez e investimentos. Nota de 0 a 1, comparável entre municípios",
+    "fonte": "",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": ""
+  },
+  {
+    "id": 47,
+    "tema": "Governança",
+    "subtema": "Transparência",
+    "indicador": "Escala Brasil Transparente (EBT)",
+    "descricao": "Indica nível de transparência pública, essencial como indicador de resultado de governança e controle social",
+    "fonte": "",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": ""
+  },
+  {
+    "id": 48,
+    "tema": "Governança",
+    "subtema": "Eficiência Administrativa",
+    "indicador": " Tempo médio de resposta às solicitações dos serviços de iluminação pública",
+    "descricao": "O indicador mede o tempo desde o recebimento da solicitação  e a resposta do serviço de iluminação pública no município. Soma do período de dias úteis decorridas entre o recebimento das demandas de iluminação pública e a resposta do serviço / Total de demanda de serviços de iluminação pública",
+    "fonte": "Ouvidoria Municipal",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": ""
+  },
+  {
+    "id": 49,
+    "tema": "Governança",
+    "subtema": "Eficiência Administrativa",
+    "indicador": " Tempo médio de resposta às solicitações dos serviços para poda de árvores",
+    "descricao": "O indicador mede o tempo desde o recebimento da solicitação e a resposta do serviço de poda da árvores no município. Soma do período de dias úteis decorridos entre o recebimento das demandas de poda de árvore e a resposta do serviço / Total de demandas de poda de árvore",
+    "fonte": "Ouvidoria Municipal",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": ""
+  },
+  {
+    "id": 50,
+    "tema": "Governança",
+    "subtema": "Eficiência Administrativa",
+    "indicador": " Tempo médio de resposta às solicitações dos serviços de tapa-buraco",
+    "descricao": "O indicador mede o tempo desde o recebimento da solicitação e a resposta do serviço de tapa buraco em ruas asfaltadas no município. Soma do período de dias úteis decorridos entre o recebimento das demandas de tapa buraco em ruas asfaltadas e a resposta do serviço / Total de demandas de tapa buraco em ruas asfaltadas",
+    "fonte": "Ouvidoria Municipal",
+    "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+    "eixo": ""
+  },
+  {
+    "id": 51,
+    "tema": "",
+    "subtema": "",
+    "indicador": "População atendida com esgotamento sanitário",
+    "descricao": "População total atendida com esgotamento sanitário, por 100 habitantes.",
+    "fonte": "SNIS",
+    "ods": "",
+    "eixo": "Cidade Resiliente e Justiça Ambiental"
+  },
+  {
+    "id": 52,
+    "tema": "Saneamento e Meio Ambiente",
+    "subtema": "Tratamento de Esgoto",
+    "indicador": "Índice de tratamento de esgoto",
+    "descricao": "Percentual do esgoto tratado sobre o volume de esgoto coletado",
+    "fonte": "SNIS",
+    "ods": "ODS 6 – Água Potável e Saneamento",
+    "eixo": ""
+  },
+  {
+    "id": 53,
+    "tema": "Saneamento e Meio Ambiente",
+    "subtema": "Qualidade da Água",
+    "indicador": "Esgoto tratado antes de chegar ao mar, rios e córregos",
+    "descricao": "Percentual do esgoto tratado antes de chegar ao mar, rios e córregos sobre o total de esgoto que chega ao mar.",
+    "fonte": "Atlas Esgotos/SNIRH/ANA",
+    "ods": "ODS 6 – Água Potável e Saneamento",
+    "eixo": ""
+  },
+  {
+    "id": 54,
+    "tema": "Saneamento e Meio Ambiente",
+    "subtema": "Abastecimento de Água",
+    "indicador": "População total atendida com abastecimento de água",
+    "descricao": "População total atendida com abastecimento de água, por 100 habitantes.",
+    "fonte": "SNIS",
+    "ods": "ODS 6 – Água Potável e Saneamento",
+    "eixo": ""
+  },
+  {
+    "id": 55,
+    "tema": "Habitação",
+    "subtema": "Moradia Precária",
+    "indicador": "Domicílios com acesso à energia elétrica",
+    "descricao": "Percentual de domicílios com acesso à energia elétrica sobre o total de domicílios do município.",
+    "fonte": "Censo Demográfico/IBGE",
+    "ods": "ODS 11 – Cidades e Comunidades Sustentáveis",
+    "eixo": ""
+  },
+  {
+    "id": 56,
+    "tema": "Meio Ambiente",
+    "subtema": "Gestão de Resíduos",
+    "indicador": "Resíduos sólidos domiciliares coletados per capita",
+    "descricao": "Massa de resíduos domiciliares e públicos (rdo+rpu) coletada per capita em relação à população total atendida pelo serviço de coleta. Índice calculado pelo SNIS. Referência: RS-IN028.",
+    "fonte": "SNIS",
+    "ods": "ODS 11 – Cidades Sustentáveis / ODS 12 – Consumo e Produção Responsáveis",
+    "eixo": ""
+  },
+  {
+    "id": 57,
+    "tema": "Meio Ambiente",
+    "subtema": "Gestão de Resíduos",
+    "indicador": "Recuperação de resíduos sólidos urbanos coletados seletivamente",
+    "descricao": "Taxa de recuperação de materiais recicláveis (exceto matéria orgânica e rejeitos) em relação à quantidade total coletada (RS_IN031-SNIS). Índice calculado pelo SNIS.",
+    "fonte": "SNIS",
+    "ods": "ODS 11 – Cidades Sustentáveis / ODS 12 – Consumo e Produção Responsáveis",
+    "eixo": ""
+  },
+  {
+    "id": 58,
+    "tema": "Meio Ambiente",
+    "subtema": "Gestão de Resíduos",
+    "indicador": "População atendida com coleta seletiva",
+    "descricao": "População urbana atendida com coleta seletiva sobre a população urbana total (RS_IN030-SNIS)",
+    "fonte": "SNIS",
+    "ods": "ODS 11 – Cidades Sustentáveis / ODS 12 – Consumo e Produção Responsáveis",
+    "eixo": ""
+  },
+  {
+    "id": 59,
+    "tema": "Habitação",
+    "subtema": "Moradia Precária",
+    "indicador": "Proporção de domicílios em áreas de risco",
+    "descricao": "Indicador de domicílios particulares permanentes expostos a desastres naturais. Dado oriundo da Base Territorial Estatística de Áreas de Risco (BATER), gerado pelo IBGE no ano de 2018 em consórcio com instituições que produzem as áreas de risco, como a CPRM. A produção do BATER foi produto da associação de dados sociodemográficos às áreas de risco de inundações, enxurradas e movimentos de massa para os municípios monitorados pelo CEMADEN. A produção do BATER constitui um dos principais eixos da prevenção aos desastres naturais do Plano Nacional de Gestão de Riscos e Respostas a desastres. Este indicador foi elaborado pelo cômputo do total de domicílios permanentes em áreas de risco para cada município. A normalização dos valores considerou apenas o conjunto de municípios que continham domicílios em áreas de risco, sendo atribuído o valor 0,3 como valor mínimo e 1 como valor máximo. Aos municípios sem domicílios mapeados em áreas de risco foi atribuído o valor zero. Foi aplicada a técnica de winsorization para o tratamento de outliers ao conjunto de municípios que continham domicílios em áreas de risco.",
+    "fonte": "Sistema de Informações e Análises sobre Impactos das Mudanças Climáticas - AdaptaBrasil MCTI. IBGE",
+    "ods": "ODS 11 – Cidades e Comunidades Sustentáveis",
+    "eixo": ""
+  },
+  {
+    "id": 60,
+    "tema": "Meio Ambiente",
+    "subtema": "Desmatamento",
+    "indicador": "Percentual do município desflorestado",
+    "descricao": "Percentual de áreas convertidas (hectares de cobertura florestal + hectares de áreas naturais não florestais destinados para a agropecuária ou que se transformaram em áreas não vegetadas) sobre a área total do município (em hectares). Dados são do MapBiomas: https://mapbiomas.org/estatisticas.",
+    "fonte": "MapBiomas",
+    "ods": "ODS 15 – Vida Terrestre",
+    "eixo": ""
+  },
+  {
+    "id": 61,
+    "tema": "Meio Ambiente",
+    "subtema": "Cobertura Vegetal",
+    "indicador": "Hectare de áreas florestadas e naturais por habitante",
+    "descricao": "Taxa de formações florestais naturais por habitante. Dados são do MapBiomas: https://mapbiomas.org/estatisticas: Áreas Florestadas e Naturais (ha) dividido pela população do ano correspondente.",
+    "fonte": "MapBiomas",
+    "ods": "ODS 15 – Vida Terrestre",
+    "eixo": ""
+  },
+  {
+    "id": 62,
+    "tema": "",
+    "subtema": "",
+    "indicador": " Índice de balnebilidade das praias do Laranjal",
+    "descricao": "O indicador expressa o percentual de pontos coletados das praias do Laranjal que foram considerados próprios para banho em relação ao total pontos do Laranjal coletados no ano. [(Número total de pontos coletados considerados próprios para banho das praias do Laranjal / Número total de pontos de todas as praias do Laranjal) x 100] / Quantidade de coletas\nrealizadas no ano.",
+    "fonte": "SQA",
+    "ods": "",
+    "eixo": ""
+  },
+  {
+    "id": 63,
+    "tema": "Mobilidade",
+    "subtema": "Infraestrutura Cicloviária",
+    "indicador": "Extensão de malha cicloviária",
+    "descricao": "Extensão total, em quilômetros, de malha cicloviária. O indicador expressa o acumulado do aumento da malha cicloviária construída no município, no ano determinado. Entende-se malha cicloviária como um canal ou via exclusivamente destinada para veículos de propulsão humana, como biclicletas, skates, patins, etc.",
+    "fonte": "SEURB/SMTT",
+    "ods": "ODS 11 – Cidades e Comunidades Sustentáveis",
+    "eixo": ""
+  },
+  {
+    "id": 64,
+    "tema": "Saúde",
+    "subtema": "Saúde Animal / Controle Populacional",
+    "indicador": "Quantidade de esterilizações de cães e gatos",
+    "descricao": "O indicador refere-se ao número de cirurgias de esterilização de cães e gatos realizadas.",
+    "fonte": "SQA",
+    "ods": "ODS 3 – Saúde e Bem-Estar / ODS 15 – Vida Terrestre",
+    "eixo": ""
+  }
+]
